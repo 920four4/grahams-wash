@@ -9,19 +9,27 @@ export function Footer() {
       <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6">
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
           <div className="space-y-4 lg:col-span-1">
-            {/* Brand logo on white so colors stay true on dark footer */}
+            {/* Full badge mark — clearer on a white plate against the dark footer */}
             <Link
               href="/"
-              className="inline-flex rounded-2xl bg-white px-3 py-2 shadow-sm"
+              className="inline-flex items-center rounded-2xl bg-white px-3.5 py-2.5 shadow-sm ring-1 ring-black/5"
               aria-label="Graham's Wash home"
             >
               <Image
-                src="/images/logo/Grahams-Wash-Logo-Badge.svg"
-                alt="Graham's Wash"
-                width={160}
-                height={56}
-                className="h-11 w-auto"
+                src="/images/logo/gw-transparent-bg-badge-logo.png"
+                alt="Graham's Wash — Bin Cleaning & Pressure Washing"
+                width={180}
+                height={180}
+                className="h-16 w-16 object-contain sm:h-[4.5rem] sm:w-[4.5rem]"
               />
+              <span className="ml-3 hidden min-w-0 sm:block">
+                <span className="block font-display text-base font-extrabold tracking-tight text-navy">
+                  Graham&apos;s Wash
+                </span>
+                <span className="block text-xs font-medium text-muted">
+                  Bin cleaning & pressure washing
+                </span>
+              </span>
             </Link>
             <p className="max-w-xs text-sm leading-relaxed text-white/70">
               Locally owned exterior cleaning in Rocklin. Pressure washing, solar panel cleaning, bin wash, and
