@@ -1,26 +1,111 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f6f8fc;
+  --foreground: #0b1220;
+  --card: #ffffff;
+  --muted: #5b677a;
+  --border: #e4eaf3;
+  --brand: #0177ff;
+  --brand-dark: #005fd1;
+  --brand-soft: #e8f2ff;
+  --navy: #0b1b33;
+  --success: #0d9f6e;
+  --star: #f5b301;
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+  --safe-top: env(safe-area-inset-top, 0px);
+  --mobile-nav-h: 4.5rem;
+  --sticky-cta-h: 4.25rem;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-card: var(--card);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --color-brand: var(--brand);
+  --color-brand-dark: var(--brand-dark);
+  --color-brand-soft: var(--brand-soft);
+  --color-navy: var(--navy);
+  --color-success: var(--success);
+  --color-star: var(--star);
+  --font-sans: var(--font-dm-sans);
+  --font-display: var(--font-outfit);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-dm-sans), system-ui, sans-serif;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: color-mix(in oklab, var(--brand) 28%, white);
+  color: var(--navy);
+}
+
+.font-display {
+  font-family: var(--font-outfit), system-ui, sans-serif;
+}
+
+/* App-like mobile shell spacing */
+.pb-app {
+  padding-bottom: calc(var(--mobile-nav-h) + var(--safe-bottom) + 0.5rem);
+}
+
+@media (min-width: 1024px) {
+  .pb-app {
+    padding-bottom: 0;
+  }
+}
+
+/* Soft grain on dark heroes */
+.hero-grain::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.35;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.45'/%3E%3C/svg%3E");
+  mix-blend-mode: soft-light;
+}
+
+/* Hide scrollbar on horizontal carousels but keep scroll */
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Native-feeling press */
+.pressable {
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.pressable:active {
+  transform: scale(0.97);
+}
+
+/* FAQ open animation helper */
+details summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Form focus rings */
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid var(--brand);
+  outline-offset: 2px;
 }

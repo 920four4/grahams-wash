@@ -1,36 +1,41 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Graham's Wash
 
-## Getting Started
+Modern, mobile-first marketing site for **Graham's Wash** (Rocklin, CA) — hot pressure washing, solar panel cleaning, garbage bin cleaning, and permanent Christmas lights.
 
-First, run the development server:
+**Stack:** Next.js 16 · Tailwind CSS 4 · Vercel  
+**Domain:** [grahamswash.com](https://www.grahamswash.com)
+
+## Features
+
+- App-like mobile UX (bottom nav, large touch targets, safe-area insets)
+- Dedicated service pages with real job photography
+- Contact form with service picker (Resend-ready)
+- Local SEO: metadata, sitemap, robots, LocalBusiness + FAQ + Service JSON-LD
+- Trust bar + Google rating surface + testimonials
+- Service area coverage for Greater Sacramento / Placer County
+
+## Develop
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Contact form / Resend
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Form posts to `/api/contact`. Without `RESEND_API_KEY`, leads are logged server-side and the UI still succeeds.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+cp .env.example .env.local
+# RESEND_API_KEY=re_...
+# RESEND_FROM="Graham's Wash <hello@yourdomain.com>"
+# CONTACT_TO=service@grahamswash.com
+```
 
-## Learn More
+## Deploy
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+vercel --scope 920four
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Git author for this project: `team@920four.com`
