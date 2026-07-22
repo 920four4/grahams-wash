@@ -23,7 +23,6 @@ export function HomeTransformation({ item }: { item: Transformation }) {
             priority
             sizes="(max-width: 1024px) 100vw, 50vw"
             autoPlayOnView
-            idleAnimate
             showHint
           />
           <p className="mt-3 text-center text-xs text-muted sm:text-left">

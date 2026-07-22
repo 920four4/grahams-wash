@@ -124,7 +124,7 @@ export default async function HomePage() {
               beforeAlt="Sidewalk before pressure washing"
               afterAlt="Sidewalk after pressure washing"
               aspectClass="aspect-[4/3]"
-              autoPlayOnView
+              showHint={false}
               sizes="(max-width: 1024px) 100vw, 50vw"
             />
           </div>
@@ -162,13 +162,13 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* More interactive results teaser */}
+      {/* Lightweight results teaser — static cards, not live sliders */}
       <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20">
         <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
           <SectionHeading
-            eyebrow="Results you can drag"
-            title="More before & after"
-            description="Tap into the full gallery for solar, bins, fences, and concrete — every slider is interactive."
+            eyebrow="More results"
+            title="Before & after gallery"
+            description="Browse solar, bins, fences, and concrete transformations — open any card for the full interactive slider."
           />
           <Link
             href="/results"
@@ -177,27 +177,34 @@ export default async function HomePage() {
             Open full results page <ArrowRight className="h-4 w-4" />
           </Link>
         </div>
-        <div className="mt-10 grid gap-5 sm:grid-cols-2">
+        <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {featuredTransforms
             .filter((t) => t.id !== heroTransform.id)
-            .slice(0, 4)
+            .slice(0, 3)
             .map((t) => (
-              <div key={t.id} className="space-y-3">
-                <BeforeAfterSlider
-                  beforeSrc={t.before}
-                  afterSrc={t.after}
-                  beforeAlt={`${t.title} before`}
-                  afterAlt={`${t.title} after`}
-                  aspectClass="aspect-[4/3]"
-                  autoPlayOnView
-                  showHint={false}
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                />
-                <div className="px-1">
-                  <p className="font-semibold text-navy">{t.title}</p>
-                  <p className="text-sm text-muted">{t.subtitle}</p>
+              <Link
+                key={t.id}
+                href="/results"
+                className="pressable group overflow-hidden rounded-[1.5rem] border border-border bg-white shadow-sm transition hover:border-brand/30 hover:shadow-md"
+              >
+                <div className="relative aspect-[4/3] overflow-hidden bg-navy/5">
+                  <Image
+                    src={t.after}
+                    alt={`${t.title} after cleaning`}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                    className="object-cover transition duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-navy/75 via-transparent to-transparent" />
+                  <span className="absolute left-3 top-3 rounded-full bg-white/95 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wide text-navy">
+                    Before → After
+                  </span>
+                  <div className="absolute inset-x-0 bottom-0 p-4">
+                    <p className="font-semibold text-white">{t.title}</p>
+                    <p className="mt-0.5 line-clamp-2 text-xs text-white/75">{t.subtitle}</p>
+                  </div>
                 </div>
-              </div>
+              </Link>
             ))}
         </div>
         <div className="mt-10 text-center">

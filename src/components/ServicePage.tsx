@@ -103,8 +103,6 @@ export function ServicePage({ slug }: { slug: ServiceSlug }) {
               afterAlt={`${transform.title} after`}
               aspectClass="aspect-[4/3]"
               autoPlayOnView
-              idleAnimate
-              priority
               sizes="(max-width: 1024px) 100vw, 50vw"
             />
             <div>

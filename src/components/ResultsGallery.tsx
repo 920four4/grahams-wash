@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { BeforeAfterSlider } from "@/components/BeforeAfterSlider";
@@ -38,19 +39,17 @@ export function ResultsGallery() {
 
   return (
     <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 sm:py-14">
-      {/* Hero intro */}
       <div className="max-w-2xl">
         <p className="text-sm font-semibold uppercase tracking-wider text-brand">Proof of work</p>
         <h1 className="font-display mt-2 text-4xl font-extrabold tracking-tight text-navy sm:text-5xl">
           Before & after
         </h1>
         <p className="mt-4 text-lg text-muted">
-          Drag each slider to reveal the clean result. Real jobs — solar panels, driveways, sidewalks, bins, fences,
-          and more across Rocklin and the Greater Sacramento area.
+          Drag the slider to reveal the clean result. Real jobs — solar panels, driveways, sidewalks, bins, fences, and
+          more across Rocklin and the Greater Sacramento area.
         </p>
       </div>
 
-      {/* Filters */}
       <div className="mt-8 flex gap-2 overflow-x-auto pb-1 no-scrollbar">
         {filters.map((f) => (
           <button
@@ -58,7 +57,8 @@ export function ResultsGallery() {
             type="button"
             onClick={() => {
               setFilter(f.id);
-              const next = f.id === "all" ? transformations[0] : transformations.find((t) => t.category === f.id);
+              const next =
+                f.id === "all" ? transformations[0] : transformations.find((t) => t.category === f.id);
               if (next) setActiveId(next.id);
             }}
             className={cn(
@@ -73,7 +73,7 @@ export function ResultsGallery() {
         ))}
       </div>
 
-      {/* Featured interactive stage */}
+      {/* Single live slider stage — only one heavy component at a time */}
       {active && (
         <div className="mt-10 grid gap-8 lg:grid-cols-[1.35fr_0.65fr] lg:items-start">
           <div>
@@ -87,7 +87,6 @@ export function ResultsGallery() {
                 active.aspect === "portrait" ? "aspect-[3/4] sm:aspect-[4/5] lg:aspect-[4/3]" : "aspect-[4/3]"
               }
               autoPlayOnView
-              idleAnimate
               priority
               sizes="(max-width: 1024px) 100vw, 65vw"
               showHint
@@ -124,7 +123,7 @@ export function ResultsGallery() {
         </div>
       )}
 
-      {/* Thumbnail picker grid */}
+      {/* Thumbnail picker — plain images only, no sliders */}
       <div className="mt-12">
         <h3 className="font-display text-lg font-bold text-navy">Browse all transformations</h3>
         <p className="mt-1 text-sm text-muted">Tap any card to load it in the slider above.</p>
@@ -146,12 +145,14 @@ export function ResultsGallery() {
                     : "border-border bg-white hover:border-brand/40",
                 )}
               >
-                <div className="relative aspect-[4/3] overflow-hidden">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
+                <div className="relative aspect-[4/3] overflow-hidden bg-navy/5">
+                  <Image
                     src={item.after}
                     alt=""
-                    className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                    fill
+                    sizes="(max-width: 768px) 50vw, 25vw"
+                    className="object-cover transition duration-300 group-hover:scale-105"
+                    quality={70}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-navy/80 via-navy/10 to-transparent" />
                   <span className="absolute left-2 top-2 rounded-full bg-white/90 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-navy">
@@ -166,46 +167,6 @@ export function ResultsGallery() {
             );
           })}
         </div>
-      </div>
-
-      {/* Secondary full-width showcases */}
-      <div className="mt-16 space-y-14">
-        <div className="text-center">
-          <h3 className="font-display text-2xl font-bold text-navy sm:text-3xl">More side-by-side reveals</h3>
-          <p className="mx-auto mt-2 max-w-xl text-muted">
-            Each slider animates in as you scroll. Drag any handle for a closer look.
-          </p>
-        </div>
-        {list.slice(0, 6).map((item, i) => (
-          <div
-            key={`stack-${item.id}`}
-            className={cn(
-              "grid items-center gap-6 lg:grid-cols-2 lg:gap-10",
-              i % 2 === 1 && "lg:[&>*:first-child]:order-2",
-            )}
-          >
-            <BeforeAfterSlider
-              beforeSrc={item.before}
-              afterSrc={item.after}
-              beforeAlt={`${item.title} before`}
-              afterAlt={`${item.title} after`}
-              aspectClass="aspect-[4/3]"
-              autoPlayOnView
-              idleAnimate={i === 0}
-              sizes="(max-width: 1024px) 100vw, 50vw"
-            />
-            <div>
-              <span className="text-xs font-bold uppercase tracking-wider text-brand">
-                {categoryLabels[item.category]}
-              </span>
-              <h4 className="font-display mt-2 text-2xl font-bold text-navy">{item.title}</h4>
-              <p className="mt-2 text-muted">{item.subtitle}</p>
-              <Button href="/contact" className="mt-5" variant="outline" size="sm">
-                Request a similar job
-              </Button>
-            </div>
-          </div>
-        ))}
       </div>
     </div>
   );
