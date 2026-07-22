@@ -3,8 +3,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
+import { MenuToggleIcon } from "@/components/MenuToggleIcon";
 import { navLinks } from "@/lib/site";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/Button";
@@ -93,11 +93,17 @@ export function Header() {
             </Button>
             <button
               type="button"
-              className="pressable inline-flex h-11 w-11 items-center justify-center rounded-2xl border border-border bg-white text-navy lg:hidden"
+              className={cn(
+                "pressable inline-flex h-11 w-11 items-center justify-center rounded-2xl border transition-colors lg:hidden",
+                open
+                  ? "border-brand/30 bg-brand text-white shadow-md shadow-brand/25"
+                  : "border-border bg-brand-soft text-navy hover:border-brand/25",
+              )}
               aria-label={open ? "Close menu" : "Open menu"}
+              aria-expanded={open}
               onClick={() => setOpen((v) => !v)}
             >
-              {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+              <MenuToggleIcon open={open} />
             </button>
           </div>
         </div>
