@@ -94,10 +94,10 @@ export function Header() {
             <button
               type="button"
               className={cn(
-                "pressable inline-flex h-11 w-11 items-center justify-center rounded-2xl border transition-colors lg:hidden",
+                "pressable inline-flex h-11 w-11 items-center justify-center rounded-2xl border transition-all lg:hidden",
                 open
-                  ? "border-brand/30 bg-brand text-white shadow-md shadow-brand/25"
-                  : "border-border bg-brand-soft text-navy hover:border-brand/25",
+                  ? "border-navy bg-navy text-white shadow-md"
+                  : "border-border bg-white text-navy shadow-sm hover:border-brand/40 hover:bg-brand-soft",
               )}
               aria-label={open ? "Close menu" : "Open menu"}
               aria-expanded={open}
