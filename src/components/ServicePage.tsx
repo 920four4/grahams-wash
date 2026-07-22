@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
+import { BeforeAfterSlider } from "@/components/BeforeAfterSlider";
 import { CtaBand } from "@/components/CtaBand";
 import { FaqAccordion } from "@/components/FaqAccordion";
 import { FaqJsonLd, ServiceJsonLd } from "@/components/JsonLd";
@@ -8,6 +9,7 @@ import { SectionHeading } from "@/components/SectionHeading";
 import { Testimonials } from "@/components/Testimonials";
 import { Button } from "@/components/ui/Button";
 import { faqs, services, type ServiceSlug } from "@/lib/site";
+import { transformations } from "@/lib/transformations";
 
 const faqByService: Record<ServiceSlug, string[]> = {
   "pressure-washing": [
@@ -41,10 +43,20 @@ const faqByService: Record<ServiceSlug, string[]> = {
   ],
 };
 
+const categoryBySlug: Partial<Record<ServiceSlug, "solar" | "pressure" | "bins" | "exterior">> = {
+  "pressure-washing": "pressure",
+  "solar-panel-cleaning": "solar",
+  "trash-bin-cleaning": "bins",
+};
+
 export function ServicePage({ slug }: { slug: ServiceSlug }) {
   const service = services.find((s) => s.slug === slug)!;
   const related = services.filter((s) => s.slug !== slug);
   const serviceFaqs = faqs.filter((f) => faqByService[slug].includes(f.question));
+  const cat = categoryBySlug[slug];
+  const transform =
+    transformations.find((t) => t.category === cat && t.featured) ||
+    transformations.find((t) => t.category === cat);
 
   return (
     <>
@@ -62,14 +74,54 @@ export function ServicePage({ slug }: { slug: ServiceSlug }) {
             {service.headline}
           </h1>
           <p className="mt-4 max-w-2xl text-lg text-white/80">{service.longDescription}</p>
-          <div className="mt-8">
+          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <Button href={`/contact?service=${service.slug}`} size="lg">
               Request a quote
               <ArrowRight className="h-5 w-5" />
             </Button>
+            {transform && (
+              <Button
+                href="/results"
+                variant="outline"
+                size="lg"
+                className="border-white/25 bg-white/10 text-white hover:bg-white/20"
+              >
+                See before & after
+              </Button>
+            )}
           </div>
         </div>
       </section>
+
+      {transform && (
+        <section className="border-b border-border bg-white py-12 sm:py-16">
+          <div className="mx-auto grid max-w-6xl items-center gap-8 px-4 sm:px-6 lg:grid-cols-2">
+            <BeforeAfterSlider
+              beforeSrc={transform.before}
+              afterSrc={transform.after}
+              beforeAlt={`${transform.title} before`}
+              afterAlt={`${transform.title} after`}
+              aspectClass="aspect-[4/3]"
+              autoPlayOnView
+              idleAnimate
+              priority
+              sizes="(max-width: 1024px) 100vw, 50vw"
+            />
+            <div>
+              <p className="text-sm font-semibold uppercase tracking-wider text-brand">Before & after</p>
+              <h2 className="font-display mt-2 text-3xl font-bold tracking-tight text-navy">
+                {transform.title}
+              </h2>
+              <p className="mt-3 text-muted leading-relaxed">{transform.subtitle}</p>
+              <p className="mt-3 text-sm text-muted">Drag the handle to reveal the clean result.</p>
+              <Button href="/results" variant="secondary" className="mt-6">
+                More transformations
+                <ArrowRight className="h-4 w-4" />
+              </Button>
+            </div>
+          </div>
+        </section>
+      )}
 
       <section className="mx-auto max-w-6xl px-4 py-14 sm:px-6 sm:py-16">
         <div className="grid gap-10 lg:grid-cols-2">

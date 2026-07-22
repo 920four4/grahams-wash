@@ -33,7 +33,8 @@ const tabs = [
       p.startsWith("/contact") ||
       p.startsWith("/faq") ||
       p.startsWith("/about") ||
-      p.startsWith("/reviews"),
+      p.startsWith("/reviews") ||
+      p.startsWith("/results"),
   },
 ];
 

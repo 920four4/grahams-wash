@@ -1,10 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, CheckCircle2, Thermometer } from "lucide-react";
-import { BeforeAfterGrid } from "@/components/BeforeAfterGrid";
 import { CityPills } from "@/components/CityPills";
 import { CtaBand } from "@/components/CtaBand";
 import { FaqAccordion } from "@/components/FaqAccordion";
+import { HomeTransformation } from "@/components/HomeTransformation";
 import { FaqJsonLd } from "@/components/JsonLd";
 import { SectionHeading } from "@/components/SectionHeading";
 import { ServiceCards } from "@/components/ServiceCards";
@@ -13,6 +13,8 @@ import { TrustBar } from "@/components/TrustBar";
 import { Button } from "@/components/ui/Button";
 import { getGoogleReviews } from "@/lib/google-reviews";
 import { faqs } from "@/lib/site";
+import { getFeaturedTransformations, getHomeHeroTransformation } from "@/lib/transformations";
+import { BeforeAfterSlider } from "@/components/BeforeAfterSlider";
 
 const homeFaqs = faqs.filter((f) =>
   [
@@ -27,6 +29,8 @@ const homeFaqs = faqs.filter((f) =>
 
 export default async function HomePage() {
   const google = await getGoogleReviews();
+  const heroTransform = getHomeHeroTransformation();
+  const featuredTransforms = getFeaturedTransformations(4);
 
   return (
     <>
@@ -73,12 +77,12 @@ export default async function HomePage() {
                 <ArrowRight className="h-5 w-5" />
               </Button>
               <Button
-                href="/services/pressure-washing"
+                href="/results"
                 variant="outline"
                 size="lg"
                 className="w-full border-white/25 bg-white/10 text-white backdrop-blur hover:bg-white/20 sm:w-auto"
               >
-                View pressure washing
+                See before & after
               </Button>
             </div>
             <ul className="mt-8 flex flex-wrap gap-x-5 gap-y-2 text-sm text-white/75">
@@ -95,6 +99,9 @@ export default async function HomePage() {
 
       <TrustBar />
 
+      {/* Flagship interactive transformation */}
+      <HomeTransformation item={heroTransform} />
+
       {/* Services */}
       <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20">
         <SectionHeading
@@ -110,13 +117,15 @@ export default async function HomePage() {
       {/* Why hot water */}
       <section className="border-y border-border bg-white py-16 sm:py-20">
         <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 sm:px-6 lg:grid-cols-2">
-          <div className="relative aspect-[4/3] overflow-hidden rounded-[2rem] shadow-xl">
-            <Image
-              src="/images/before-after/driveway-levi.webp"
-              alt="Before and after driveway pressure washing in Rocklin"
-              fill
+          <div>
+            <BeforeAfterSlider
+              beforeSrc="/images/compare/sidewalk-before.webp"
+              afterSrc="/images/compare/sidewalk-after.webp"
+              beforeAlt="Sidewalk before pressure washing"
+              afterAlt="Sidewalk after pressure washing"
+              aspectClass="aspect-[4/3]"
+              autoPlayOnView
               sizes="(max-width: 1024px) 100vw, 50vw"
-              className="object-cover"
             />
           </div>
           <div>
@@ -153,15 +162,49 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* Before / after */}
+      {/* More interactive results teaser */}
       <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20">
-        <SectionHeading
-          eyebrow="Results"
-          title="Before and after"
-          description="Real jobs around Rocklin and nearby cities. The goal is simple: leave it cleaner than it looked when we arrived."
-        />
-        <div className="mt-10">
-          <BeforeAfterGrid />
+        <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+          <SectionHeading
+            eyebrow="Results you can drag"
+            title="More before & after"
+            description="Tap into the full gallery for solar, bins, fences, and concrete — every slider is interactive."
+          />
+          <Link
+            href="/results"
+            className="inline-flex shrink-0 items-center gap-1 text-sm font-semibold text-brand hover:underline"
+          >
+            Open full results page <ArrowRight className="h-4 w-4" />
+          </Link>
+        </div>
+        <div className="mt-10 grid gap-5 sm:grid-cols-2">
+          {featuredTransforms
+            .filter((t) => t.id !== heroTransform.id)
+            .slice(0, 4)
+            .map((t) => (
+              <div key={t.id} className="space-y-3">
+                <BeforeAfterSlider
+                  beforeSrc={t.before}
+                  afterSrc={t.after}
+                  beforeAlt={`${t.title} before`}
+                  afterAlt={`${t.title} after`}
+                  aspectClass="aspect-[4/3]"
+                  autoPlayOnView
+                  showHint={false}
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
+                <div className="px-1">
+                  <p className="font-semibold text-navy">{t.title}</p>
+                  <p className="text-sm text-muted">{t.subtitle}</p>
+                </div>
+              </div>
+            ))}
+        </div>
+        <div className="mt-10 text-center">
+          <Button href="/results" size="lg">
+            Explore all transformations
+            <ArrowRight className="h-5 w-5" />
+          </Button>
         </div>
       </section>
 

@@ -345,6 +345,7 @@ export const navLinks = [
   { href: "/services/solar-panel-cleaning", label: "Solar" },
   { href: "/services/trash-bin-cleaning", label: "Bins" },
   { href: "/services/permanent-christmas-lights", label: "Lights" },
+  { href: "/results", label: "Results" },
   { href: "/reviews", label: "Reviews" },
   { href: "/service-areas", label: "Areas" },
   { href: "/about", label: "About" },
