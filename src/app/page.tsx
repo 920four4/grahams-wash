@@ -11,7 +11,8 @@ import { ServiceCards } from "@/components/ServiceCards";
 import { Testimonials } from "@/components/Testimonials";
 import { TrustBar } from "@/components/TrustBar";
 import { Button } from "@/components/ui/Button";
-import { faqs, site } from "@/lib/site";
+import { getGoogleReviews } from "@/lib/google-reviews";
+import { faqs } from "@/lib/site";
 
 const homeFaqs = faqs.filter((f) =>
   [
@@ -24,7 +25,9 @@ const homeFaqs = faqs.filter((f) =>
   ].includes(f.question),
 );
 
-export default function HomePage() {
+export default async function HomePage() {
+  const google = await getGoogleReviews();
+
   return (
     <>
       <FaqJsonLd items={homeFaqs} />
@@ -46,12 +49,15 @@ export default function HomePage() {
 
         <div className="relative mx-auto flex min-h-[min(88vh,760px)] max-w-6xl flex-col justify-end px-4 pb-14 pt-24 sm:px-6 sm:pb-20 sm:pt-28">
           <div className="max-w-2xl">
-            <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3 py-1.5 text-xs font-semibold text-white/90 backdrop-blur">
+            <a
+              href="/reviews"
+              className="mb-5 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3 py-1.5 text-xs font-semibold text-white/90 backdrop-blur transition hover:bg-white/15"
+            >
               <span className="flex h-5 items-center gap-1 rounded-full bg-star/20 px-2 text-star">
-                ★ {site.googleRating.toFixed(1)}
+                ★ {google.rating.toFixed(1)}
               </span>
-              {site.googleReviewCount} Google reviews · Rocklin, CA
-            </div>
+              {google.reviewCount} Google reviews · Rocklin, CA
+            </a>
             <h1 className="font-display text-4xl font-extrabold leading-[1.05] tracking-tight text-white sm:text-5xl lg:text-6xl">
               Pressure Washing in Rocklin, CA
               <span className="mt-2 block text-brand">Hot wash. Solar. Bins. Lights.</span>

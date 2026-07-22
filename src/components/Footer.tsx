@@ -47,6 +47,11 @@ export function Footer() {
                 </li>
               ))}
               <li>
+                <Link href="/reviews" className="text-sm text-white/80 transition hover:text-white">
+                  Google reviews
+                </Link>
+              </li>
+              <li>
                 <Link href="/faq" className="text-sm text-white/80 transition hover:text-white">
                   FAQ
                 </Link>

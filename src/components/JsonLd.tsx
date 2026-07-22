@@ -1,6 +1,13 @@
+import { GOOGLE_PLACE } from "@/lib/google-reviews";
 import { cities, services, site } from "@/lib/site";
 
-export function LocalBusinessJsonLd() {
+export function LocalBusinessJsonLd({
+  rating = site.googleRating,
+  reviewCount = site.googleReviewCount,
+}: {
+  rating?: number;
+  reviewCount?: number;
+} = {}) {
   const data = {
     "@context": "https://schema.org",
     "@graph": [
@@ -21,18 +28,18 @@ export function LocalBusinessJsonLd() {
         },
         geo: {
           "@type": "GeoCoordinates",
-          latitude: "38.7907",
-          longitude: "-121.2358",
+          latitude: "38.69724",
+          longitude: "-121.26255",
         },
         areaServed: cities.map((name) => ({ "@type": "City", name })),
         aggregateRating: {
           "@type": "AggregateRating",
-          ratingValue: String(site.googleRating),
-          reviewCount: String(site.googleReviewCount),
+          ratingValue: String(rating),
+          reviewCount: String(reviewCount),
           bestRating: "5",
           worstRating: "1",
         },
-        sameAs: [site.social.instagram],
+        sameAs: [site.social.instagram, GOOGLE_PLACE.mapsUrl],
         hasOfferCatalog: {
           "@type": "OfferCatalog",
           name: "Exterior cleaning and lighting",

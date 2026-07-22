@@ -14,7 +14,7 @@ export const site = {
   googleRating: 5.0,
   googleReviewCount: 46,
   googleMapsUrl:
-    "https://www.google.com/maps/search/?api=1&query=Graham%27s+Wash+Rocklin+CA",
+    "https://www.google.com/maps/place/?q=place_id:ChIJNfZgYm1I7iwRRVuvXDsturQ",
   social: {
     instagram: "https://www.instagram.com/grahamswash/",
   },
@@ -345,6 +345,7 @@ export const navLinks = [
   { href: "/services/solar-panel-cleaning", label: "Solar" },
   { href: "/services/trash-bin-cleaning", label: "Bins" },
   { href: "/services/permanent-christmas-lights", label: "Lights" },
+  { href: "/reviews", label: "Reviews" },
   { href: "/service-areas", label: "Areas" },
   { href: "/about", label: "About" },
   { href: "/faq", label: "FAQ" },

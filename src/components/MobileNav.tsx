@@ -29,7 +29,11 @@ const tabs = [
     href: "/contact",
     label: "Contact",
     icon: MessageCircle,
-    match: (p: string) => p.startsWith("/contact") || p.startsWith("/faq") || p.startsWith("/about"),
+    match: (p: string) =>
+      p.startsWith("/contact") ||
+      p.startsWith("/faq") ||
+      p.startsWith("/about") ||
+      p.startsWith("/reviews"),
   },
 ];
 
