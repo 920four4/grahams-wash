@@ -1,43 +1,43 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, CheckCircle2, Phone } from "lucide-react";
+import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { CtaBand } from "@/components/CtaBand";
 import { FaqAccordion } from "@/components/FaqAccordion";
 import { FaqJsonLd, ServiceJsonLd } from "@/components/JsonLd";
 import { SectionHeading } from "@/components/SectionHeading";
 import { Testimonials } from "@/components/Testimonials";
 import { Button } from "@/components/ui/Button";
-import { faqs, services, site, type ServiceSlug } from "@/lib/site";
+import { faqs, services, type ServiceSlug } from "@/lib/site";
 
 const faqByService: Record<ServiceSlug, string[]> = {
   "pressure-washing": [
-    "What can you power wash?",
-    "Is it safe for my surfaces?",
-    "Soft wash vs. pressure washing—which do I need?",
-    "Can you remove oil stains from concrete?",
-    "How fast is the service?",
-    "How much do you charge?",
+    "What can you pressure wash?",
+    "Is pressure washing safe for my home?",
+    "What’s the difference between soft wash and pressure washing?",
+    "Can you remove oil stains from a driveway?",
+    "How quickly can you schedule a job?",
+    "How much does it cost?",
   ],
   "solar-panel-cleaning": [
-    "How often should solar panels be cleaned in the Sacramento area?",
-    "Will solar cleaning void my panel warranty?",
-    "Is it safe for my surfaces?",
-    "Do I need to be home for service?",
-    "How much do you charge?",
+    "How often should solar panels be cleaned around Sacramento?",
+    "Is solar panel cleaning safe for my warranty?",
+    "Is pressure washing safe for my home?",
+    "Do I need to be home?",
+    "How much does it cost?",
   ],
   "trash-bin-cleaning": [
-    "Do you clean inside and outside the trash bins?",
-    "Do I need to be home for service?",
-    "How fast is the service?",
+    "Do you clean inside and outside trash bins?",
+    "Do I need to be home?",
+    "How quickly can you schedule a job?",
     "Do you offer neighbor or group discounts?",
-    "How much do you charge?",
+    "How much does it cost?",
   ],
   "permanent-christmas-lights": [
-    "What type of lights do you install?",
-    "Can permanent lights be used year-round?",
-    "How do permanent installs differ from temporary Christmas hanging?",
+    "What kind of permanent lights do you install?",
+    "Can permanent lights stay up all year?",
+    "How is this different from temporary Christmas lights?",
     "What cities do you service?",
-    "How much do you charge?",
+    "How much does it cost?",
   ],
 };
 
@@ -53,14 +53,7 @@ export function ServicePage({ slug }: { slug: ServiceSlug }) {
 
       <section className="relative overflow-hidden">
         <div className="absolute inset-0">
-          <Image
-            src={service.image}
-            alt={service.name}
-            fill
-            priority
-            sizes="100vw"
-            className="object-cover"
-          />
+          <Image src={service.image} alt={service.name} fill priority sizes="100vw" className="object-cover" />
           <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/80 to-navy/45" />
         </div>
         <div className="relative mx-auto max-w-6xl px-4 pb-16 pt-24 sm:px-6 sm:pb-20 sm:pt-28">
@@ -69,19 +62,10 @@ export function ServicePage({ slug }: { slug: ServiceSlug }) {
             {service.headline}
           </h1>
           <p className="mt-4 max-w-2xl text-lg text-white/80">{service.longDescription}</p>
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+          <div className="mt-8">
             <Button href={`/contact?service=${service.slug}`} size="lg">
-              Get a quote
+              Request a quote
               <ArrowRight className="h-5 w-5" />
-            </Button>
-            <Button
-              href={`tel:${site.phoneTel}`}
-              variant="outline"
-              size="lg"
-              className="border-white/25 bg-white/10 text-white hover:bg-white/20"
-              icon={<Phone className="h-5 w-5" />}
-            >
-              {site.phoneDisplay}
             </Button>
           </div>
         </div>
@@ -92,8 +76,8 @@ export function ServicePage({ slug }: { slug: ServiceSlug }) {
           <div>
             <SectionHeading
               eyebrow="Why it matters"
-              title={`Quality-first ${service.shortName.toLowerCase()}`}
-              description="One careful operator, pro equipment, and methods matched to the surface—not a race for the lowest bid."
+              title={`${service.shortName} done carefully`}
+              description="One operator, the right equipment, and methods matched to the surface — quality over rushing the job."
             />
             <ul className="mt-8 space-y-3">
               {service.highlights.map((h) => (
@@ -154,7 +138,7 @@ export function ServicePage({ slug }: { slug: ServiceSlug }) {
       <Testimonials limit={3} />
 
       <section className="mx-auto max-w-6xl px-4 py-14 sm:px-6">
-        <SectionHeading eyebrow="Also available" title="Bundle while Graham is on site" />
+        <SectionHeading eyebrow="Also available" title="Other services from Graham" />
         <div className="mt-8 grid gap-4 sm:grid-cols-3">
           {related.map((s) => (
             <Link
@@ -174,7 +158,7 @@ export function ServicePage({ slug }: { slug: ServiceSlug }) {
 
       <CtaBand
         title={`Ready for ${service.shortName.toLowerCase()}?`}
-        subtitle="Text photos if you have them—Graham will get back with timing and a fair quote."
+        subtitle="Use the contact form — share a few details or photos if you have them, and Graham will reply with next steps."
       />
     </>
   );

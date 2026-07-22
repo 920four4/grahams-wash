@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { CheckCircle2, Loader2, Send } from "lucide-react";
-import { services, site } from "@/lib/site";
+import { services } from "@/lib/site";
 import { Button } from "@/components/ui/Button";
 import { cn } from "@/lib/utils";
 
@@ -39,7 +39,10 @@ const initial: FormState = {
 export function ContactForm({ defaultService }: { defaultService?: string }) {
   const [form, setForm] = useState<FormState>({
     ...initial,
-    service: defaultService && services.some((s) => s.slug === defaultService) ? defaultService : defaultService || "",
+    service:
+      defaultService && services.some((s) => s.slug === defaultService)
+        ? defaultService
+        : defaultService || "",
   });
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [error, setError] = useState("");
@@ -61,13 +64,13 @@ export function ContactForm({ defaultService }: { defaultService?: string }) {
       });
       const data = await res.json().catch(() => ({}));
       if (!res.ok) {
-        throw new Error(data.error || "Something went wrong. Please call or text instead.");
+        throw new Error(data.error || "Something went wrong. Please try again in a moment.");
       }
       setStatus("success");
       setForm(initial);
     } catch (err) {
       setStatus("error");
-      setError(err instanceof Error ? err.message : "Failed to send. Please call or text Graham.");
+      setError(err instanceof Error ? err.message : "Failed to send. Please try again.");
     }
   }
 
@@ -77,13 +80,9 @@ export function ContactForm({ defaultService }: { defaultService?: string }) {
         <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-success/15 text-success">
           <CheckCircle2 className="h-7 w-7" />
         </div>
-        <h3 className="font-display mt-4 text-2xl font-bold text-navy">Got it — talk soon!</h3>
+        <h3 className="font-display mt-4 text-2xl font-bold text-navy">Message received</h3>
         <p className="mx-auto mt-2 max-w-sm text-muted">
-          Graham will reach out using your preferred method. Need something faster? Call or text{" "}
-          <a href={`tel:${site.phoneTel}`} className="font-semibold text-brand">
-            {site.phoneDisplay}
-          </a>
-          .
+          Graham will get back to you using the contact method you chose. Thanks for reaching out.
         </p>
         <Button className="mt-6" variant="outline" onClick={() => setStatus("idle")}>
           Send another message
@@ -96,7 +95,7 @@ export function ContactForm({ defaultService }: { defaultService?: string }) {
     "w-full rounded-2xl border border-border bg-white px-4 py-3.5 text-[15px] text-navy placeholder:text-muted/60 transition focus:border-brand";
 
   return (
-    <form onSubmit={onSubmit} className="space-y-4" noValidate>
+    <form onSubmit={onSubmit} className="space-y-4 relative" noValidate>
       <div className="grid gap-4 sm:grid-cols-2">
         <label className="block sm:col-span-1">
           <span className="mb-1.5 block text-sm font-semibold text-navy">Name *</span>
@@ -111,7 +110,7 @@ export function ContactForm({ defaultService }: { defaultService?: string }) {
           />
         </label>
         <label className="block">
-          <span className="mb-1.5 block text-sm font-semibold text-navy">Phone *</span>
+          <span className="mb-1.5 block text-sm font-semibold text-navy">Your phone *</span>
           <input
             required
             name="phone"
@@ -120,7 +119,7 @@ export function ContactForm({ defaultService }: { defaultService?: string }) {
             className={field}
             value={form.phone}
             onChange={(e) => update("phone", e.target.value)}
-            placeholder="(916) 555-0123"
+            placeholder="So Graham can reach you"
           />
         </label>
       </div>
@@ -192,7 +191,7 @@ export function ContactForm({ defaultService }: { defaultService?: string }) {
       </fieldset>
 
       <fieldset>
-        <legend className="mb-2 text-sm font-semibold text-navy">Preferred contact</legend>
+        <legend className="mb-2 text-sm font-semibold text-navy">How should Graham reply?</legend>
         <div className="flex flex-wrap gap-2">
           {(
             [
@@ -216,21 +215,23 @@ export function ContactForm({ defaultService }: { defaultService?: string }) {
             </button>
           ))}
         </div>
+        <p className="mt-2 text-xs text-muted">
+          Prefer a text? Choose “Text me” and Graham will reach out to the number you provided.
+        </p>
       </fieldset>
 
       <label className="block">
-        <span className="mb-1.5 block text-sm font-semibold text-navy">Tell Graham about the job</span>
+        <span className="mb-1.5 block text-sm font-semibold text-navy">Tell us about the job</span>
         <textarea
           name="message"
           rows={4}
           className={cn(field, "resize-y min-h-[120px]")}
           value={form.message}
           onChange={(e) => update("message", e.target.value)}
-          placeholder="Driveway oil stains, solar panels, number of bins, 2-story lights… anything that helps quote faster."
+          placeholder="Driveway oil stains, solar panels, number of bins, 2-story lights — anything that helps quote faster."
         />
       </label>
 
-      {/* Honeypot */}
       <div className="absolute -left-[9999px] opacity-0" aria-hidden>
         <label>
           Website
@@ -259,17 +260,10 @@ export function ContactForm({ defaultService }: { defaultService?: string }) {
         ) : (
           <>
             <Send className="h-5 w-5" />
-            Send to Graham
+            Send message
           </>
         )}
       </Button>
-      <p className="text-xs text-muted">
-        Prefer not to wait? Call or text{" "}
-        <a href={`tel:${site.phoneTel}`} className="font-semibold text-brand">
-          {site.phoneDisplay}
-        </a>{" "}
-        anytime.
-      </p>
     </form>
   );
 }

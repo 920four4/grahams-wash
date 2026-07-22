@@ -7,7 +7,7 @@ import { services, cities, site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Service Areas | Rocklin, Roseville, Lincoln & Sacramento Area",
   description:
-    "Graham's Wash serves Rocklin and 20+ nearby cities—pressure washing, solar, bins, permanent lights. See if we cover your neighborhood.",
+    "Graham's Wash serves Rocklin and 20+ nearby cities — pressure washing, solar cleaning, bins, and permanent lights. See if your city is covered.",
   alternates: { canonical: "/service-areas" },
 };
 
@@ -18,11 +18,11 @@ export default function ServiceAreasPage() {
         <div className="max-w-2xl">
           <p className="text-sm font-semibold uppercase tracking-wider text-brand">Service areas</p>
           <h1 className="font-display mt-2 text-4xl font-extrabold tracking-tight text-navy sm:text-5xl">
-            Based in Rocklin. Happy to help the neighborhood.
+            Based in Rocklin. Serving nearby cities.
           </h1>
           <p className="mt-4 text-lg text-muted">
-            Graham lives in {site.city} and regularly serves homes across Placer County and northern Sacramento County—a
-            practical ~20–30 mile radius depending on the job. Outside the list? Reach out anyway.
+            Graham lives in {site.city} and regularly works across Placer County and northern Sacramento County. Outside
+            the list? Still send a message through the contact form and he&apos;ll confirm.
           </p>
         </div>
 
@@ -61,8 +61,8 @@ export default function ServiceAreasPage() {
         </div>
       </div>
       <CtaBand
-        title="In the zone?"
-        subtitle="Tell Graham your city and what needs cleaning—or lighting—and he'll confirm availability fast."
+        title="In the service area?"
+        subtitle="Tell Graham your city and what needs cleaning or lighting through the contact form."
       />
     </>
   );

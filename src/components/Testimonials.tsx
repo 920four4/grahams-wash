@@ -9,13 +9,13 @@ export function Testimonials({ limit }: { limit?: number }) {
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
           <div className="max-w-xl">
-            <p className="text-sm font-semibold uppercase tracking-wider text-brand">What neighbors say</p>
+            <p className="text-sm font-semibold uppercase tracking-wider text-brand">Reviews</p>
             <h2 className="font-display mt-2 text-3xl font-bold tracking-tight sm:text-4xl">
-              Real results. Happy customers.
+              What customers say
             </h2>
             <p className="mt-3 text-white/65">
-              Graham&apos;s Wash is known across the Greater Sacramento area for careful work, clear communication, and
-              curb appeal you notice from the street.
+              Homeowners around Rocklin and nearby cities trust Graham for careful work, clear communication, and clean
+              results you notice from the street.
             </p>
           </div>
           <a

@@ -3,9 +3,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, Phone, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
-import { navLinks, site } from "@/lib/site";
+import { navLinks } from "@/lib/site";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/Button";
 
@@ -74,14 +74,7 @@ export function Header() {
           </nav>
 
           <div className="flex items-center gap-2">
-            <a
-              href={`tel:${site.phoneTel}`}
-              className="pressable hidden h-11 items-center gap-2 rounded-2xl bg-navy px-4 text-sm font-semibold text-white sm:inline-flex"
-            >
-              <Phone className="h-4 w-4" />
-              {site.phoneDisplay}
-            </a>
-            <Button href="/contact" size="sm" className="hidden md:inline-flex lg:h-11 lg:px-5 lg:text-sm">
+            <Button href="/contact" size="sm" className="hidden sm:inline-flex lg:h-11 lg:px-5 lg:text-sm">
               Get a quote
             </Button>
             <button
@@ -96,7 +89,6 @@ export function Header() {
         </div>
       </header>
 
-      {/* Mobile full-screen menu */}
       <div
         className={cn(
           "fixed inset-0 z-40 bg-navy/40 backdrop-blur-sm transition-opacity lg:hidden",
@@ -122,15 +114,7 @@ export function Header() {
               {link.label}
             </Link>
           ))}
-          <div className="mt-4 grid grid-cols-2 gap-3">
-            <Button href={`tel:${site.phoneTel}`} variant="dark" className="w-full">
-              Call
-            </Button>
-            <Button href={`sms:${site.phoneTel}`} variant="secondary" className="w-full">
-              Text
-            </Button>
-          </div>
-          <Button href="/contact" className="mt-3 w-full" size="lg">
+          <Button href="/contact" className="mt-4 w-full" size="lg">
             Request a free quote
           </Button>
         </nav>

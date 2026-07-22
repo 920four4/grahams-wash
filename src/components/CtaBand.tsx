@@ -1,10 +1,9 @@
-import { MessageCircle, Phone } from "lucide-react";
-import { site } from "@/lib/site";
+import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 
 export function CtaBand({
-  title = "Something that needs a wash?",
-  subtitle = "From driveways to solar panels to permanent lights—text Graham and get a straightforward quote.",
+  title = "Ready to get something cleaned?",
+  subtitle = "Tell Graham what you need through the contact form. You’ll get a clear reply with next steps and timing.",
 }: {
   title?: string;
   subtitle?: string;
@@ -17,27 +16,10 @@ export function CtaBand({
         <div className="relative max-w-2xl">
           <h2 className="font-display text-3xl font-bold tracking-tight sm:text-4xl">{title}</h2>
           <p className="mt-3 text-base text-white/85 sm:text-lg">{subtitle}</p>
-          <div className="mt-7 flex flex-col gap-3 sm:flex-row">
+          <div className="mt-7">
             <Button href="/contact" variant="dark" size="lg" className="bg-white text-brand hover:bg-white/95">
-              Request a quote
-            </Button>
-            <Button
-              href={`tel:${site.phoneTel}`}
-              variant="outline"
-              size="lg"
-              className="border-white/30 bg-transparent text-white hover:bg-white/10"
-              icon={<Phone className="h-5 w-5" />}
-            >
-              {site.phoneDisplay}
-            </Button>
-            <Button
-              href={`sms:${site.phoneTel}`}
-              variant="outline"
-              size="lg"
-              className="border-white/30 bg-transparent text-white hover:bg-white/10 sm:hidden"
-              icon={<MessageCircle className="h-5 w-5" />}
-            >
-              Text Graham
+              Go to contact form
+              <ArrowRight className="h-5 w-5" />
             </Button>
           </div>
         </div>

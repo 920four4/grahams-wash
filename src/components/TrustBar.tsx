@@ -10,12 +10,12 @@ const items = [
   {
     icon: MapPin,
     title: "Rocklin based",
-    subtitle: "Neighbor-level reliability",
+    subtitle: "Greater Sacramento area",
   },
   {
     icon: Clock3,
-    title: "Often same / next day",
-    subtitle: "Fast replies by text",
+    title: "Often same or next day",
+    subtitle: "Fast replies after you reach out",
   },
   {
     icon: ShieldCheck,

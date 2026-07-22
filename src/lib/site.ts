@@ -3,17 +3,14 @@ export const site = {
   legalName: "Graham's Wash",
   tagline: "Wash. Refresh. Repeat.",
   description:
-    "Local Rocklin pressure washing with hot water up to 210°F. Driveways, siding, solar panels, trash bins & permanent holiday lights.",
+    "Pressure washing in Rocklin, CA — hot water power washing, solar panel cleaning, trash bin cleaning, and permanent Christmas lights. Locally owned. Quality work.",
   url: "https://www.grahamswash.com",
-  phone: "916-591-4058",
-  phoneTel: "+19165914058",
-  phoneDisplay: "(916) 591-4058",
   email: "service@grahamswash.com",
   owner: "Graham",
   city: "Rocklin",
   region: "CA",
   country: "US",
-  serviceAreaLabel: "Rocklin & Greater Sacramento",
+  serviceAreaLabel: "Rocklin and the Greater Sacramento area",
   googleRating: 5.0,
   googleReviewCount: 46,
   googleMapsUrl:
@@ -71,11 +68,11 @@ export const services: {
     slug: "pressure-washing",
     name: "Hot Pressure Washing",
     shortName: "Pressure Wash",
-    headline: "Hot pressure washing that actually cuts through the gunk",
+    headline: "Pressure washing in Rocklin with hot water when it matters",
     blurb:
-      "Driveways, sidewalks, fences, patios, and siding—blasted clean with hot water up to 210°F when the job needs it.",
+      "Driveways, sidewalks, fences, patios, and siding — cleaned thoroughly, with hot water up to 210°F when grease and oil need it.",
     longDescription:
-      "Graham brings pro-grade hot pressure washing to Rocklin and the Greater Sacramento area. Oil stains, mildew, irrigation stains, and years of buildup don't stand a chance. When a surface needs a gentler touch, soft wash methods protect paint, wood, and stucco while still getting results you can see from the street.",
+      "Graham provides professional pressure washing for homes and small businesses across Rocklin and nearby cities. Oil stains, mildew, irrigation marks, and built-up grime are handled carefully. When a surface needs a lighter touch, he uses gentler methods so paint, wood, and stucco stay protected while still looking clean from the street.",
     icon: "droplets",
     href: "/services/pressure-washing",
     image: "/images/pressure/house-clean.webp",
@@ -90,24 +87,24 @@ export const services: {
       "/images/pressure/sidewalk-clean.webp",
     ],
     highlights: [
-      "Hot water up to 210°F for greasy oil messes",
-      "Soft wash option for delicate siding & paint",
-      "Driveways, sidewalks, fences, patios, decks",
-      "Same-day or next-day often available",
+      "Hot water up to 210°F for oil and grease",
+      "Gentler wash options for siding and paint",
+      "Driveways, sidewalks, fences, patios, and decks",
+      "Often available same day or next day",
     ],
-    metaTitle: "Pressure Washing in Rocklin & Roseville | Hot Water Power Washing",
+    metaTitle: "Pressure Washing Rocklin & Roseville | Hot Water Power Washing",
     metaDescription:
-      "Hot pressure washing for driveways, fences, patios & siding. Soft wash when surfaces need care. Same/next-day often. Serving Rocklin & Greater Sacramento.",
+      "Professional pressure washing in Rocklin and Roseville. Driveways, fences, patios, and siding. Hot water when needed. Request a quote online.",
   },
   {
     slug: "solar-panel-cleaning",
-    name: "Solar Panel Washing",
-    shortName: "Solar Wash",
-    headline: "Pure-water solar cleaning that protects your panels",
+    name: "Solar Panel Cleaning",
+    shortName: "Solar Cleaning",
+    headline: "Solar panel cleaning in Rocklin — safe for glass, better performance",
     blurb:
-      "Soft brush + 4-stage filtered water. No high pressure on glass—just peak performance and a cleaner look.",
+      "Soft brush and filtered pure water. No high pressure on the glass — just cleaner panels and better output.",
     longDescription:
-      "Dust, pollen, bird droppings, and Sacramento valley haze steal efficiency from your solar array. Graham cleans panels the right way: a boar's-hair brush and 100% pure 4-stage-filtered water. No harsh pressure on glass, no streaks, no warranty-scaring shortcuts.",
+      "Dust, pollen, and bird droppings cut into what your solar system can produce. Graham cleans panels with a soft brush and multi-stage filtered water — not a pressure washer on the glass. Safer for the surface, clearer results, and a method that fits how most panel manufacturers want cleaning done.",
     icon: "sun",
     href: "/services/solar-panel-cleaning",
     image: "/images/solar/z2-after.webp",
@@ -122,24 +119,24 @@ export const services: {
       "/images/solar/solatrim-2.webp",
     ],
     highlights: [
-      "4-stage filtered pure water",
-      "Soft boar's-hair brush—never high PSI on glass",
-      "Visible difference vs. dirty neighbor arrays",
-      "Pairs perfectly with a full exterior wash",
+      "Filtered pure water",
+      "Soft brush — no high pressure on glass",
+      "Clear before-and-after results",
+      "Easy to combine with a full exterior wash",
     ],
-    metaTitle: "Solar Panel Cleaning Rocklin CA | Pure Water Panel Washing",
+    metaTitle: "Solar Panel Cleaning Rocklin CA | Safe Panel Washing",
     metaDescription:
-      "Safe solar panel washing with filtered pure water and soft brushes—no high pressure on glass. Boost efficiency. Rocklin, Roseville & nearby.",
+      "Solar panel cleaning in Rocklin and nearby cities. Soft brush and filtered water — no high pressure on glass. Request a quote online.",
   },
   {
     slug: "trash-bin-cleaning",
     name: "Garbage Bin Cleaning",
     shortName: "Bin Cleaning",
-    headline: "Bins that don't announce themselves when you open the lid",
+    headline: "Trash bin cleaning that takes care of the smell and the mess",
     blurb:
-      "Inside-and-out hot wash for garbage and recycle bins. Say goodbye to sticky messes and funky smells.",
+      "Inside-and-out hot wash for garbage and recycle bins. Cleaner lids, less odor, better curb presence.",
     longDescription:
-      "Trash bins take a beating every week. Graham deep-cleans garbage and recycle cans inside and out with hot water sanitation—so your curb doesn't smell like last month's leftovers. One-time refresh or add-on when he's already at your place for a pressure wash.",
+      "Bins get dirty every week. Graham cleans garbage and recycle cans inside and out with hot water so residue and odors don’t hang around. Book a one-time clean or add bins when he’s already out for a pressure wash.",
     icon: "trash",
     href: "/services/trash-bin-cleaning",
     image: "/images/bins/bin-before-after.webp",
@@ -149,23 +146,23 @@ export const services: {
     ],
     highlights: [
       "Hot wash inside and outside",
-      "Garbage + recycle bins",
-      "Great one-time or recurring add-on",
-      "No need to be home in most cases",
+      "Garbage and recycle bins",
+      "One-time or as an add-on",
+      "Usually no need to be home",
     ],
-    metaTitle: "Trash Can Cleaning Rocklin & Roseville | Bin Wash & Deodorize",
+    metaTitle: "Trash Can Cleaning Rocklin & Roseville | Bin Wash",
     metaDescription:
-      "Deep clean smelly garbage and recycle bins—inside and out. Hot-wash sanitation. One-time or add-on with your pressure wash. Text Graham's Wash.",
+      "Trash and recycle bin cleaning in Rocklin and Roseville. Inside and out. One-time or add-on with your wash. Request a quote online.",
   },
   {
     slug: "permanent-christmas-lights",
     name: "Permanent Christmas Lights",
     shortName: "Holiday Lights",
-    headline: "Year-round lights that disappear by day—and wow at night",
+    headline: "Permanent Christmas lights in Rocklin — up year-round, ready when you are",
     blurb:
-      "Discreet permanent roofline lights (Govee). Flip a switch for Christmas, game day, or any holiday theme.",
+      "Low-profile permanent lights along the roofline. Change colors for holidays, game days, or everyday warm white.",
     longDescription:
-      "No more ladder nights and tangled storage bins. Graham installs permanent outdoor lighting that stays up year-round—nearly invisible during the day, spectacular when you want color. One- and two-story homes across Rocklin, Roseville, Lincoln, and the surrounding cities.",
+      "Skip the yearly ladder work and storage bins full of strands. Graham installs permanent outdoor lights that stay up all year — hard to notice during the day, bright when you want color. Available for one- and two-story homes in Rocklin, Roseville, Lincoln, and surrounding cities.",
     icon: "sparkles",
     href: "/services/permanent-christmas-lights",
     image: "/images/lights/night-2.webp",
@@ -184,14 +181,14 @@ export const services: {
       "/images/lights/day-house.webp",
     ],
     highlights: [
-      "Discreet by day, brilliant at night",
-      "Color themes for every holiday & season",
-      "1- and 2-story home installs",
-      "Smarter than renting lights every year",
+      "Low profile by day, bright at night",
+      "Colors and scenes for every season",
+      "One- and two-story homes",
+      "Often cheaper long-term than yearly installs",
     ],
     metaTitle: "Permanent Christmas Lights Rocklin | Year-Round Holiday Lighting",
     metaDescription:
-      "Discreet permanent outdoor lights (Govee) for every holiday and season. 1- and 2-story installs in Rocklin, Roseville, Lincoln & more. Free quote.",
+      "Permanent Christmas and holiday lights in Rocklin, Roseville, and Lincoln. Year-round install for one- and two-story homes. Request a quote online.",
   },
 ];
 
@@ -204,42 +201,42 @@ export const testimonials = [
     name: "Sarah M.",
     city: "Rocklin",
     rating: 5,
-    text: "Graham made our driveway look brand new. Showed up when he said he would, worked carefully around the plants, and the oil stains are actually gone. Highly recommend.",
+    text: "Graham made our driveway look brand new. Showed up when he said he would, careful around the plants, and the oil stains are actually gone.",
     service: "Pressure Washing",
   },
   {
     name: "Mike R.",
     city: "Roseville",
     rating: 5,
-    text: "Texted for a quote and had the bins and driveway done the next day. Super easy process and the house looks so much better from the street.",
+    text: "Requested a quote online and had the bins and driveway done the next day. Easy process, and the house looks so much better from the street.",
     service: "Pressure Wash + Bins",
   },
   {
     name: "Jennifer L.",
     city: "Lincoln",
     rating: 5,
-    text: "Our solar panels were filthy compared to the neighbors. After Graham cleaned them you can see the difference immediately. Careful, professional, fair price.",
+    text: "Our solar panels were filthy compared to the neighbors. After Graham cleaned them, you can see the difference right away. Careful work, fair price.",
     service: "Solar Panel Cleaning",
   },
   {
     name: "David K.",
     city: "Loomis",
     rating: 5,
-    text: "Permanent lights install was clean and tidy. You barely notice the channels during the day, and at night the house is a showstopper. Worth every penny.",
+    text: "Permanent lights install was clean and tidy. You barely notice them during the day, and at night the house looks great. Worth it.",
     service: "Permanent Lights",
   },
   {
     name: "Amanda T.",
     city: "Granite Bay",
     rating: 5,
-    text: "One-man operation that feels personal in the best way. Graham answers texts, does careful work, and leaves everything cleaner than he found it.",
+    text: "One-man operation that feels personal in the best way. Clear communication, careful work, and everything left cleaner than he found it.",
     service: "Full Exterior Wash",
   },
   {
     name: "Chris P.",
     city: "Folsom",
     rating: 5,
-    text: "Had the patio, fence, and sidewalks done. Hot water made a huge difference on the greasy spots by the garage. Will book him every year.",
+    text: "Had the patio, fence, and sidewalks done. Hot water made a big difference on the greasy spots by the garage. Will book him every year.",
     service: "Hot Pressure Washing",
   },
 ] as const;
@@ -248,97 +245,97 @@ export const faqs = [
   {
     question: "What cities do you service?",
     answer:
-      "Graham's Wash is based in Rocklin and serves Auburn, Penryn, Newcastle, Loomis, Lincoln, Roseville, Rocklin, Granite Bay, Folsom, El Dorado Hills (EDH), Orangevale, Citrus Heights, Antelope, Sacramento, Fair Oaks, Carmichael, North Highlands, Rancho Cordova, Arden-Arcade, and Rio Linda. Not sure if you're in range? Text or call—if Graham can't make it out, he'll help point you in the right direction.",
+      "Graham is based in Rocklin and serves Auburn, Penryn, Newcastle, Loomis, Lincoln, Roseville, Rocklin, Granite Bay, Folsom, El Dorado Hills, Orangevale, Citrus Heights, Antelope, Sacramento, Fair Oaks, Carmichael, North Highlands, Rancho Cordova, Arden-Arcade, and Rio Linda. Not sure if you’re covered? Send a note through the contact form and he’ll let you know.",
     category: "general" as const,
   },
   {
-    question: "What can you power wash?",
+    question: "What can you pressure wash?",
     answer:
-      "Almost every exterior surface—concrete patios, driveways, sidewalks, solar panels, wood decks, tile roofing, fences, siding, windows, and more. Not everything should get high pressure. Graham matches the method to the surface so you get maximum cleanliness with minimum wear.",
+      "Most outdoor surfaces — driveways, sidewalks, patios, decks, fences, siding, and more. Not everything should get high pressure. Graham picks the right approach for each surface so it comes clean without damage.",
     category: "pressure" as const,
   },
   {
-    question: "How fast is the service?",
+    question: "How quickly can you schedule a job?",
     answer:
-      "Most jobs can be done next day, and often even the same day as your inquiry. Graham lives in Rocklin and is happy to help neighbors. He shows up when promised, exceeds expectations, and leaves you satisfied—guaranteed.",
+      "Many jobs are same day or next day, depending on the schedule. Graham lives in Rocklin and keeps response times short. You’ll get timing details after you reach out through the contact form.",
     category: "general" as const,
   },
   {
-    question: "Is it safe for my surfaces?",
+    question: "Is pressure washing safe for my home?",
     answer:
-      "High-pressure water can damage some surfaces—that's why Graham uses the right approach for each job. Solar panels get a soft boar's-hair brush and pure 4-stage-filtered water (no high PSI on glass). Delicate siding often gets a soft wash focused on cleaning agents rather than brute force. Specialized equipment can heat water to 210°F to cut through greasy messes when appropriate.",
+      "It depends on the surface. High pressure can hurt some materials, so Graham doesn’t use a one-size-fits-all approach. Siding and paint often get a gentler wash. Solar panels are cleaned with a soft brush and pure water — not high pressure on the glass. Hot water (up to 210°F) is used when grease and oil need extra help.",
     category: "pressure" as const,
   },
   {
     question: "Do you serve my area?",
     answer:
-      "If you're in Rocklin or the surrounding Greater Sacramento / Placer County cities listed on this site, yes. Outside the usual zone? Reach out anyway—Graham has good relationships with other local pros and will help get you taken care of one way or another.",
+      "If you’re in Rocklin or one of the nearby cities listed on this site, yes. Outside that area? Still send a message — if Graham can’t take the job, he’ll be honest about it.",
     category: "general" as const,
   },
   {
-    question: "How much do you charge?",
+    question: "How much does it cost?",
     answer:
-      "Rates reflect years of hands-on work and investment in specialized equipment—fair, not rock-bottom. Graham is always happy to work within a budget to find something effective and affordable. One easy way to save: rope in a neighbor or two for group rates on the same street.",
+      "Pricing depends on the job size and surface. Quotes are fair and based on the work involved — not the cheapest option in town, and not padded either. Neighbor group rates are available if a few homes on the same street book together. Use the contact form for a quote.",
     category: "general" as const,
   },
   {
-    question: "Soft wash vs. pressure washing—which do I need?",
+    question: "What’s the difference between soft wash and pressure washing?",
     answer:
-      "Pressure (and hot pressure) is perfect for concrete, heavy oil, and tough grime. Soft wash uses lower pressure plus the right cleaners for paint, stucco, and wood that could etch or scar under high PSI. Graham walks the job and recommends the safer path that still looks amazing.",
+      "Pressure washing (including hot water) works well on concrete, heavy dirt, and oil. Soft wash uses lower pressure and cleaning solutions that are better for paint, stucco, and wood. Graham looks at the job and recommends what fits.",
     category: "pressure" as const,
   },
   {
-    question: "Can you remove oil stains from concrete?",
+    question: "Can you remove oil stains from a driveway?",
     answer:
-      "Hot water pressure washing is one of the best tools for driveway oil. Results depend on how deep and old the stain is, but most homeowners are surprised how much comes up. Ask for a photo quote if you want a realistic expectation first.",
+      "Hot water pressure washing helps a lot with driveway oil. How much comes out depends on how old and deep the stain is. Share a photo through the contact form if you want a realistic expectation first.",
     category: "pressure" as const,
   },
   {
-    question: "How often should solar panels be cleaned in the Sacramento area?",
+    question: "How often should solar panels be cleaned around Sacramento?",
     answer:
-      "Valley dust, pollen, and dry seasons build up faster than coastal areas. Many homeowners benefit from 1–2 cleanings a year; more if you're under trees or near construction. A before/after efficiency check on your inverter app often makes the ROI obvious.",
+      "Dust and pollen build up quickly in this area. Many homes do well with one or two cleanings a year — more if you’re under trees or near construction. Checking your solar app before and after cleaning is a simple way to see the difference.",
     category: "solar" as const,
   },
   {
-    question: "Will solar cleaning void my panel warranty?",
+    question: "Is solar panel cleaning safe for my warranty?",
     answer:
-      "Graham avoids high-pressure blasts on glass and uses pure filtered water with a soft brush—the careful method manufacturers expect. If you have specific warranty language, share it and he'll work within it.",
+      "Graham uses filtered water and a soft brush — not high pressure on the glass — which is the careful approach most manufacturers prefer. If you have specific warranty wording, include it when you request a quote.",
     category: "solar" as const,
   },
   {
-    question: "Do you clean inside and outside the trash bins?",
+    question: "Do you clean inside and outside trash bins?",
     answer:
-      "Yes. Inside, outside, lids—the works. Hot wash helps knock down residue and odor so bin day isn't a nose-wrinkling event.",
+      "Yes — inside, outside, and lids. Hot water helps cut residue and odor.",
     category: "bins" as const,
   },
   {
-    question: "Do I need to be home for service?",
+    question: "Do I need to be home?",
     answer:
-      "Usually no. As long as Graham can access the area (and outdoor water when needed for certain washes), you can go about your day. Details get confirmed when you book.",
+      "Usually not. As long as Graham can reach the work area (and outdoor water when needed), you can go about your day. Details are confirmed when you book.",
     category: "general" as const,
   },
   {
-    question: "What type of lights do you install?",
+    question: "What kind of permanent lights do you install?",
     answer:
-      "Permanent outdoor lighting systems (including Govee-class smart lights) designed to stay mounted year-round. They're discreet when off and full-color when you want a theme—Christmas, holidays, team colors, or everyday warm white.",
+      "Permanent outdoor lights meant to stay mounted year-round. They’re low profile when off, and you can change colors for Christmas, other holidays, team colors, or simple warm white.",
     category: "lights" as const,
   },
   {
-    question: "Can permanent lights be used year-round?",
+    question: "Can permanent lights stay up all year?",
     answer:
-      "That's the point. Leave them up. Change colors and scenes from your phone for every season without another ladder climb or storage bin full of dead strands.",
+      "Yes. That’s the idea. Leave them up and change the look from your phone when the season changes — no yearly take-down.",
     category: "lights" as const,
   },
   {
-    question: "How do permanent installs differ from temporary Christmas hanging?",
+    question: "How is this different from temporary Christmas lights?",
     answer:
-      "Temporary hangs go up and down every year (clips, timers, storage, burned-out bulbs). Permanent channels or tracks stay mounted, look cleaner, and cost less over a few seasons when you stop paying for install/remove every December.",
+      "Temporary lights go up and down every year — clips, storage, burned-out bulbs, and the same work every December. Permanent lights stay mounted, look cleaner day to day, and usually cost less over a few seasons.",
     category: "lights" as const,
   },
   {
     question: "Do you offer neighbor or group discounts?",
     answer:
-      "Yes. If a few homes on the same street book together, Graham can often offer group rates—less drive time, more shine for everyone.",
+      "Yes. If a few homes on the same street book together, Graham can often offer a better rate.",
     category: "general" as const,
   },
 ];

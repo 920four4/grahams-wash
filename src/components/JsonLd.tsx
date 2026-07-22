@@ -9,7 +9,6 @@ export function LocalBusinessJsonLd() {
         "@id": `${site.url}/#business`,
         name: site.name,
         url: site.url,
-        telephone: site.phoneTel,
         email: site.email,
         image: `${site.url}/images/logo/gw-transparent-bg-badge-logo.png`,
         priceRange: "$$",
@@ -63,11 +62,7 @@ export function LocalBusinessJsonLd() {
   );
 }
 
-export function FaqJsonLd({
-  items,
-}: {
-  items: { question: string; answer: string }[];
-}) {
+export function FaqJsonLd({ items }: { items: { question: string; answer: string }[] }) {
   const data = {
     "@context": "https://schema.org",
     "@type": "FAQPage",

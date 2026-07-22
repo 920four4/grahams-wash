@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Mail, MapPin, Phone } from "lucide-react";
+import { MapPin } from "lucide-react";
 import { cities, services, site } from "@/lib/site";
 
 export function Footer() {
@@ -9,16 +9,23 @@ export function Footer() {
       <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6">
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
           <div className="space-y-4 lg:col-span-1">
-            <Image
-              src="/images/logo/Grahams-Wash-Logo-Badge.svg"
-              alt="Graham's Wash"
-              width={160}
-              height={56}
-              className="h-12 w-auto brightness-0 invert"
-            />
+            {/* Brand logo on white so colors stay true on dark footer */}
+            <Link
+              href="/"
+              className="inline-flex rounded-2xl bg-white px-3 py-2 shadow-sm"
+              aria-label="Graham's Wash home"
+            >
+              <Image
+                src="/images/logo/Grahams-Wash-Logo-Badge.svg"
+                alt="Graham's Wash"
+                width={160}
+                height={56}
+                className="h-11 w-auto"
+              />
+            </Link>
             <p className="max-w-xs text-sm leading-relaxed text-white/70">
-              One-man quality from a Rocklin neighbor. Hot pressure washing, pure-water solar cleaning, bin wash, and
-              permanent holiday lights—done right.
+              Locally owned exterior cleaning in Rocklin. Pressure washing, solar panel cleaning, bin wash, and
+              permanent holiday lights — focused on quality and clear communication.
             </p>
             <div className="flex items-center gap-2 text-sm font-medium text-white/90">
               <span className="inline-flex items-center gap-1 rounded-full bg-white/10 px-3 py-1">
@@ -66,27 +73,10 @@ export function Footer() {
 
           <div>
             <h3 className="font-display text-sm font-semibold uppercase tracking-wider text-white/50">Get in touch</h3>
-            <ul className="mt-4 space-y-3">
-              <li>
-                <a
-                  href={`tel:${site.phoneTel}`}
-                  className="flex items-center gap-2 text-sm font-semibold text-white hover:text-brand"
-                >
-                  <Phone className="h-4 w-4 text-brand" />
-                  {site.phoneDisplay}
-                </a>
-                <p className="ml-6 text-xs text-white/50">Call or text — same number</p>
-              </li>
-              <li>
-                <a
-                  href={`mailto:${site.email}`}
-                  className="flex items-center gap-2 text-sm text-white/80 hover:text-white"
-                >
-                  <Mail className="h-4 w-4 text-brand" />
-                  {site.email}
-                </a>
-              </li>
-            </ul>
+            <p className="mt-4 text-sm leading-relaxed text-white/70">
+              The best way to reach Graham is through the contact form. Leave your details and how you’d like to hear
+              back — text, call, or email.
+            </p>
             <Link
               href="/contact"
               className="mt-5 inline-flex h-11 items-center justify-center rounded-2xl bg-brand px-5 text-sm font-semibold text-white shadow-lg shadow-brand/30 transition hover:bg-brand-dark"
@@ -100,7 +90,7 @@ export function Footer() {
           <p>
             © {new Date().getFullYear()} {site.name}. Locally owned in {site.city}, California.
           </p>
-          <p>Quality work. Honest communication. Spotless results.</p>
+          <p>Quality work. Clear communication. Clean results.</p>
         </div>
       </div>
     </footer>

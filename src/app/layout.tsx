@@ -22,7 +22,7 @@ const outfit = Outfit({
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: "Pressure Washing Rocklin CA | Graham's Wash — Hot Wash, Solar & Lights",
+    default: "Pressure Washing Rocklin CA | Graham's Wash — Solar, Bins & Lights",
     template: `%s | ${site.name}`,
   },
   description: site.description,

@@ -91,7 +91,7 @@ export async function POST(request: Request) {
         // fail hard only when Resend is required via env flag.
         if (process.env.RESEND_REQUIRED === "true") {
           return NextResponse.json(
-            { error: "Could not send message. Please call or text instead." },
+            { error: "Could not send message. Please try again in a moment." },
             { status: 502 },
           );
         }
@@ -100,7 +100,7 @@ export async function POST(request: Request) {
       console.error("[contact-resend-exception]", err);
       if (process.env.RESEND_REQUIRED === "true") {
         return NextResponse.json(
-          { error: "Could not send message. Please call or text instead." },
+          { error: "Could not send message. Please try again in a moment." },
           { status: 502 },
         );
       }
