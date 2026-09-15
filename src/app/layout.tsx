@@ -1,9 +1,11 @@
 import type { Metadata, Viewport } from "next";
 import { DM_Sans, Outfit } from "next/font/google";
 import { Footer } from "@/components/Footer";
+import { GoogleAnalytics } from "@/components/GoogleAnalytics";
 import { Header } from "@/components/Header";
 import { LocalBusinessJsonLd } from "@/components/JsonLd";
 import { MobileNav } from "@/components/MobileNav";
+import { getGoogleReviews } from "@/lib/google-reviews";
 import { site } from "@/lib/site";
 import "./globals.css";
 
@@ -49,6 +51,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: site.name,
     description: site.description,
+    images: ["/images/hero/neighborhood.webp"],
   },
   robots: { index: true, follow: true },
   alternates: { canonical: "/" },
@@ -73,11 +76,14 @@ export const viewport: Viewport = {
   viewportFit: "cover",
 };
 
-export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+export default async function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+  const google = await getGoogleReviews();
+
   return (
     <html lang="en" className={`${dmSans.variable} ${outfit.variable} h-full antialiased`}>
       <body className="flex min-h-full flex-col bg-background font-sans text-foreground">
-        <LocalBusinessJsonLd />
+        <GoogleAnalytics />
+        <LocalBusinessJsonLd rating={google.rating} reviewCount={google.reviewCount} />
         <Header />
         <main className="flex-1 pb-app">{children}</main>
         <Footer />

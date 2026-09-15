@@ -1,4 +1,14 @@
+import { checkBotId } from "botid/server";
 import { NextResponse } from "next/server";
+import {
+  customerConfirmationEmail,
+  grahamLeadEmail,
+  opsInbox,
+  parseRecipients,
+  resolveOpsRecipients,
+  sendResendEmail,
+} from "@/lib/email";
+import { site } from "@/lib/site";
 
 type Payload = {
   name?: string;
@@ -11,7 +21,17 @@ type Payload = {
   website?: string;
 };
 
+const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
 export async function POST(request: Request) {
+  const verification = await checkBotId();
+  if (verification.isBot) {
+    return NextResponse.json(
+      { error: "Could not send message. Please try again in a moment." },
+      { status: 403 },
+    );
+  }
+
   let body: Payload;
   try {
     body = await request.json();
@@ -19,7 +39,6 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "Invalid request body." }, { status: 400 });
   }
 
-  // Honeypot
   if (body.website) {
     return NextResponse.json({ ok: true });
   }
@@ -28,7 +47,7 @@ export async function POST(request: Request) {
   const phone = (body.phone || "").trim();
   const city = (body.city || "").trim();
   const service = (body.service || "").trim();
-  const email = (body.email || "").trim();
+  const email = (body.email || "").trim().toLowerCase();
   const preferredContact = (body.preferredContact || "text").trim();
   const message = (body.message || "").trim();
 
@@ -43,8 +62,17 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "Please enter a valid phone number." }, { status: 400 });
   }
 
-  // Resend wiring comes later — log lead payload for now and succeed.
-  // When RESEND_API_KEY is present, send email to service@grahamswash.com.
+  if (email && !EMAIL_RE.test(email)) {
+    return NextResponse.json({ error: "Please enter a valid email address." }, { status: 400 });
+  }
+
+  if (preferredContact === "email" && !email) {
+    return NextResponse.json(
+      { error: "Please add an email address so Graham can reply by email." },
+      { status: 400 },
+    );
+  }
+
   const lead = {
     name,
     phone,
@@ -53,57 +81,45 @@ export async function POST(request: Request) {
     service,
     preferredContact,
     message,
-    receivedAt: new Date().toISOString(),
   };
 
-  console.info("[contact-lead]", JSON.stringify(lead));
+  console.info("[contact-lead]", JSON.stringify({ ...lead, receivedAt: new Date().toISOString() }));
 
-  if (process.env.RESEND_API_KEY) {
-    try {
-      const res = await fetch("https://api.resend.com/emails", {
-        method: "POST",
-        headers: {
-          Authorization: `Bearer ${process.env.RESEND_API_KEY}`,
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          from: process.env.RESEND_FROM || "Graham's Wash Website <onboarding@resend.dev>",
-          to: [process.env.CONTACT_TO || "service@grahamswash.com"],
-          reply_to: email || undefined,
-          subject: `New quote request: ${service} — ${name} (${city})`,
-          text: [
-            `Name: ${name}`,
-            `Phone: ${phone}`,
-            `Email: ${email || "—"}`,
-            `City: ${city}`,
-            `Service: ${service}`,
-            `Preferred contact: ${preferredContact}`,
-            "",
-            "Message:",
-            message || "—",
-          ].join("\n"),
-        }),
-      });
-      if (!res.ok) {
-        const errText = await res.text();
-        console.error("[contact-resend-error]", errText);
-        // Still return success to user if we captured the lead server-side;
-        // fail hard only when Resend is required via env flag.
-        if (process.env.RESEND_REQUIRED === "true") {
-          return NextResponse.json(
-            { error: "Could not send message. Please try again in a moment." },
-            { status: 502 },
-          );
-        }
-      }
-    } catch (err) {
-      console.error("[contact-resend-exception]", err);
-      if (process.env.RESEND_REQUIRED === "true") {
-        return NextResponse.json(
-          { error: "Could not send message. Please try again in a moment." },
-          { status: 502 },
-        );
-      }
+  const requireResend = process.env.RESEND_REQUIRED === "true";
+  const grahamTo = resolveOpsRecipients();
+  const bcc = parseRecipients(process.env.CONTACT_BCC, site.opsBcc);
+  const grahamMail = grahamLeadEmail(lead);
+  const grahamResult = await sendResendEmail({
+    to: grahamTo,
+    bcc,
+    subject: grahamMail.subject,
+    text: grahamMail.text,
+    html: grahamMail.html,
+    replyTo: email || undefined,
+  });
+
+  if (!grahamResult.ok) {
+    console.error("[contact-resend-graham]", grahamResult.error);
+    if (requireResend) {
+      return NextResponse.json(
+        { error: "Could not send message. Please try again in a moment." },
+        { status: 502 },
+      );
+    }
+  }
+
+  if (email) {
+    const customerMail = customerConfirmationEmail(lead);
+    const customerResult = await sendResendEmail({
+      to: [email],
+      bcc,
+      subject: customerMail.subject,
+      text: customerMail.text,
+      html: customerMail.html,
+      replyTo: opsInbox(),
+    });
+    if (!customerResult.ok) {
+      console.error("[contact-resend-customer]", customerResult.error);
     }
   }
 

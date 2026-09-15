@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+import { withBotId } from "botid/next/config";
 
 const nextConfig: NextConfig = {
   images: {
@@ -15,18 +16,21 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
-      {
-        source: "/holiday-lights",
-        destination: "/services/permanent-christmas-lights",
-        permanent: true,
-      },
-      {
-        source: "/services",
-        destination: "/",
-        permanent: false,
-      },
+      { source: "/holiday-lights", destination: "/services/permanent-christmas-lights", permanent: true },
+      { source: "/christmas-lights", destination: "/services/permanent-christmas-lights", permanent: true },
+      { source: "/permanent-lights", destination: "/services/permanent-christmas-lights", permanent: true },
+      { source: "/lights", destination: "/services/permanent-christmas-lights", permanent: true },
+      { source: "/solar", destination: "/services/solar-panel-cleaning", permanent: true },
+      { source: "/solar-panels", destination: "/services/solar-panel-cleaning", permanent: true },
+      { source: "/solar-panel-cleaning", destination: "/services/solar-panel-cleaning", permanent: true },
+      { source: "/pressure-washing", destination: "/services/pressure-washing", permanent: true },
+      { source: "/power-washing", destination: "/services/pressure-washing", permanent: true },
+      { source: "/bins", destination: "/services/trash-bin-cleaning", permanent: true },
+      { source: "/trash-bin", destination: "/services/trash-bin-cleaning", permanent: true },
+      { source: "/trash-bins", destination: "/services/trash-bin-cleaning", permanent: true },
+      { source: "/trash-bin-cleaning", destination: "/services/trash-bin-cleaning", permanent: true },
     ];
   },
 };
 
-export default nextConfig;
+export default withBotId(nextConfig);

@@ -54,6 +54,13 @@ export function ContactForm({ defaultService }: { defaultService?: string }) {
   async function onSubmit(e: React.FormEvent) {
     e.preventDefault();
     setError("");
+
+    if (form.preferredContact === "email" && !form.email.trim()) {
+      setStatus("error");
+      setError("Please add an email address so Graham can reply by email.");
+      return;
+    }
+
     setStatus("loading");
 
     try {
@@ -126,11 +133,14 @@ export function ContactForm({ defaultService }: { defaultService?: string }) {
 
       <div className="grid gap-4 sm:grid-cols-2">
         <label className="block">
-          <span className="mb-1.5 block text-sm font-semibold text-navy">Email</span>
+          <span className="mb-1.5 block text-sm font-semibold text-navy">
+            Email{form.preferredContact === "email" ? " *" : ""}
+          </span>
           <input
             name="email"
             type="email"
             autoComplete="email"
+            required={form.preferredContact === "email"}
             className={field}
             value={form.email}
             onChange={(e) => update("email", e.target.value)}

@@ -6,13 +6,17 @@ export const site = {
     "Pressure washing in Rocklin, CA — hot water power washing, solar panel cleaning, trash bin cleaning, and permanent Christmas lights. Locally owned. Quality work.",
   url: "https://www.grahamswash.com",
   email: "service@grahamswash.com",
+  adminEmail: "admin@grahamswash.com",
+  opsBcc: "z@zlatkobijelic.com",
+  phone: "(916) 591-4058",
+  phoneHref: "tel:+19165914058",
   owner: "Graham",
   city: "Rocklin",
   region: "CA",
   country: "US",
   serviceAreaLabel: "Rocklin and the Greater Sacramento area",
   googleRating: 5.0,
-  googleReviewCount: 46,
+  googleReviewCount: 48,
   googleMapsUrl:
     "https://www.google.com/maps/place/?q=place_id:ChIJNfZgYm1I7iwRRVuvXDsturQ",
   social: {

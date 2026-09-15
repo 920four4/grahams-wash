@@ -95,6 +95,22 @@ export function Footer() {
               The best way to reach Graham is through the contact form. Leave your details and how you’d like to hear
               back — text, call, or email.
             </p>
+            <p className="mt-4 space-y-1 text-sm">
+              <a href={site.phoneHref} className="block font-semibold text-white hover:text-brand">
+                {site.phone}
+              </a>
+              <a href={`mailto:${site.email}`} className="block text-white/70 hover:text-white">
+                {site.email}
+              </a>
+              <a
+                href={site.social.instagram}
+                target="_blank"
+                rel="noreferrer"
+                className="block text-white/70 hover:text-white"
+              >
+                Instagram
+              </a>
+            </p>
             <Link
               href="/contact"
               className="mt-5 inline-flex h-11 items-center justify-center rounded-2xl bg-brand px-5 text-sm font-semibold text-white shadow-lg shadow-brand/30 transition hover:bg-brand-dark"

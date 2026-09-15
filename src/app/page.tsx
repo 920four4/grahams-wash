@@ -97,7 +97,7 @@ export default async function HomePage() {
         </div>
       </section>
 
-      <TrustBar />
+      <TrustBar rating={google.rating} reviewCount={google.reviewCount} />
 
       {/* Flagship interactive transformation */}
       <HomeTransformation item={heroTransform} />

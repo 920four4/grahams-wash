@@ -1,30 +1,36 @@
 import { Clock3, MapPin, ShieldCheck, Star } from "lucide-react";
 import { site } from "@/lib/site";
 
-const items = [
-  {
-    icon: Star,
-    title: `${site.googleRating.toFixed(1)} on Google`,
-    subtitle: `${site.googleReviewCount} five-star reviews`,
-  },
-  {
-    icon: MapPin,
-    title: "Rocklin based",
-    subtitle: "Greater Sacramento area",
-  },
-  {
-    icon: Clock3,
-    title: "Often same or next day",
-    subtitle: "Fast replies after you reach out",
-  },
-  {
-    icon: ShieldCheck,
-    title: "Right method, every surface",
-    subtitle: "Hot wash · soft wash · pure water",
-  },
-];
+export function TrustBar({
+  rating = site.googleRating,
+  reviewCount = site.googleReviewCount,
+}: {
+  rating?: number;
+  reviewCount?: number;
+} = {}) {
+  const items = [
+    {
+      icon: Star,
+      title: `${rating.toFixed(1)} on Google`,
+      subtitle: `${reviewCount} five-star reviews`,
+    },
+    {
+      icon: MapPin,
+      title: "Rocklin based",
+      subtitle: "Greater Sacramento area",
+    },
+    {
+      icon: Clock3,
+      title: "Often same or next day",
+      subtitle: "Fast replies after you reach out",
+    },
+    {
+      icon: ShieldCheck,
+      title: "Right method, every surface",
+      subtitle: "Hot wash · soft wash · pure water",
+    },
+  ];
 
-export function TrustBar() {
   return (
     <section className="border-y border-border bg-white">
       <div className="mx-auto grid max-w-6xl gap-0 sm:grid-cols-2 lg:grid-cols-4">
