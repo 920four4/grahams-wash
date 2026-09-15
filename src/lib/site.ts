@@ -4,7 +4,7 @@ export const site = {
   tagline: "Wash. Refresh. Repeat.",
   description:
     "Pressure washing in Rocklin, CA — hot water power washing, solar panel cleaning, trash bin cleaning, and permanent Christmas lights. Locally owned. Quality work.",
-  url: "https://www.grahamswash.com",
+  url: "https://grahamswash.com",
   email: "service@grahamswash.com",
   adminEmail: "admin@grahamswash.com",
   opsBcc: "z@zlatkobijelic.com",

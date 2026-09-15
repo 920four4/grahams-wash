@@ -3,7 +3,7 @@
 Modern, mobile-first marketing site for **Graham's Wash** (Rocklin, CA) — hot pressure washing, solar panel cleaning, garbage bin cleaning, and permanent Christmas lights.
 
 **Stack:** Next.js 16 · Tailwind CSS 4 · Vercel  
-**Domain:** [grahamswash.com](https://www.grahamswash.com)
+**Domain:** [grahamswash.com](https://grahamswash.com)
 
 ## Features
 
