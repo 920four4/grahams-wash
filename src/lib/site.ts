@@ -24,6 +24,15 @@ export const site = {
   },
 } as const;
 
+export const quoteServices = [
+  { value: "pressure-washing", label: "Hot Pressure Washing" },
+  { value: "solar-panel-cleaning", label: "Solar Panel Cleaning" },
+  { value: "trash-bin-cleaning", label: "Garbage Bin Cleaning" },
+  { value: "permanent-christmas-lights", label: "Permanent Christmas Lights" },
+  { value: "birdproofing", label: "Birdproofing roof / solar panels" },
+  { value: "multiple", label: "Multiple services / not sure" },
+] as const;
+
 export const cities = [
   "Rocklin",
   "Roseville",

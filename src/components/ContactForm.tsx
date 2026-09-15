@@ -2,19 +2,12 @@
 
 import { useState } from "react";
 import { CheckCircle2, Loader2, Send } from "lucide-react";
-import { services } from "@/lib/site";
+import { quoteServices, services } from "@/lib/site";
 import { track } from "@/lib/analytics";
 import { Button } from "@/components/ui/Button";
 import { cn } from "@/lib/utils";
 
-const serviceOptions = [
-  { value: "pressure-washing", label: "Hot Pressure Washing" },
-  { value: "solar-panel-cleaning", label: "Solar Panel Cleaning" },
-  { value: "trash-bin-cleaning", label: "Garbage Bin Cleaning" },
-  { value: "permanent-christmas-lights", label: "Permanent Christmas Lights" },
-  { value: "birdproofing", label: "Birdproofing roof / solar panels" },
-  { value: "multiple", label: "Multiple services / not sure" },
-];
+const serviceOptions = quoteServices;
 
 type FormState = {
   name: string;

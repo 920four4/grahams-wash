@@ -1,13 +1,8 @@
-import { site } from "@/lib/site";
+import { quoteServices, site } from "@/lib/site";
 
-export const SERVICE_LABELS: Record<string, string> = {
-  "pressure-washing": "Hot Pressure Washing",
-  "solar-panel-cleaning": "Solar Panel Cleaning",
-  "trash-bin-cleaning": "Garbage Bin Cleaning",
-  "permanent-christmas-lights": "Permanent Christmas Lights",
-  birdproofing: "Birdproofing roof / solar panels",
-  multiple: "Multiple services / not sure",
-};
+export const SERVICE_LABELS: Record<string, string> = Object.fromEntries(
+  quoteServices.map((item) => [item.value, item.label]),
+);
 
 export const CONTACT_METHOD_LABELS: Record<string, string> = {
   text: "Text",
@@ -33,8 +28,9 @@ function escapeHtml(value: string) {
     .replaceAll('"', "&quot;");
 }
 
-function serviceLabel(slug: string) {
-  return SERVICE_LABELS[slug] || slug;
+export function serviceLabel(slug: string) {
+  const key = slug.trim();
+  return SERVICE_LABELS[key] || SERVICE_LABELS[key.toLowerCase()] || key;
 }
 
 function contactMethodLabel(method: string) {
@@ -115,6 +111,8 @@ export function grahamLeadEmail(lead: Lead) {
 
   const html = wrapHtml(
     `<p style="margin:0 0 8px;font-size:20px;line-height:1.3;font-weight:600;">New quote request</p>
+     <p style="margin:0 0 4px;font-size:13px;color:#666666;">Service</p>
+     <p style="margin:0 0 16px;font-size:18px;line-height:1.4;font-weight:700;color:#111111;">${escapeHtml(service)}</p>
      <p style="margin:0 0 20px;font-size:15px;line-height:1.6;color:#444444;">Reply by ${escapeHtml(method.toLowerCase())}.</p>
      <table role="presentation" width="100%" cellpadding="0" cellspacing="0">${htmlRows}</table>
      <p style="margin:20px 0 4px;font-size:13px;color:#666666;">Message</p>
@@ -127,13 +125,15 @@ export function grahamLeadEmail(lead: Lead) {
 export function customerConfirmationEmail(lead: Lead) {
   const service = serviceLabel(lead.service);
   const method = contactMethodLabel(lead.preferredContact);
-  const subject = `We received your quote request`;
+  const subject = `We received your quote request — ${service}`;
   const text = [
     `Hi ${lead.name},`,
     "",
-    `Thanks for reaching out to Graham's Wash. We received your request for ${service} in ${lead.city}.`,
+    "Thanks for reaching out to Graham's Wash. Here's what we received:",
     "",
-    `Graham will get back to you by ${method.toLowerCase()}.`,
+    `Service: ${service}`,
+    `City: ${lead.city}`,
+    `We'll reply by: ${method.toLowerCase()}`,
     lead.message ? `\nYour note:\n${lead.message}\n` : "",
     "If you need to add anything, just reply to this email.",
     "",
@@ -145,7 +145,11 @@ export function customerConfirmationEmail(lead: Lead) {
 
   const html = wrapHtml(
     `<p style="margin:0 0 16px;font-size:15px;line-height:1.6;">Hi ${escapeHtml(lead.name)},</p>
-     <p style="margin:0 0 16px;font-size:15px;line-height:1.6;">Thanks for reaching out. We received your request for ${escapeHtml(service)} in ${escapeHtml(lead.city)}.</p>
+     <p style="margin:0 0 16px;font-size:15px;line-height:1.6;">Thanks for reaching out. Here's what we received:</p>
+     <p style="margin:0 0 4px;font-size:13px;color:#666666;">Service</p>
+     <p style="margin:0 0 16px;font-size:18px;line-height:1.4;font-weight:700;color:#111111;">${escapeHtml(service)}</p>
+     <p style="margin:0 0 4px;font-size:13px;color:#666666;">City</p>
+     <p style="margin:0 0 16px;font-size:15px;line-height:1.6;">${escapeHtml(lead.city)}</p>
      <p style="margin:0 0 16px;font-size:15px;line-height:1.6;">Graham will get back to you by ${escapeHtml(method.toLowerCase())}.</p>
      ${
        lead.message
@@ -158,24 +162,13 @@ export function customerConfirmationEmail(lead: Lead) {
   return { subject, text, html };
 }
 
-/** Graham's inboxes — do not deliver here until he confirms. */
-const HELD_INBOXES = new Set(
-  [site.email, site.adminEmail].map((addr) => addr.toLowerCase()),
-);
-
-function isHeldInbox(address: string) {
-  return HELD_INBOXES.has(address.trim().toLowerCase());
-}
-
 export function opsInbox() {
-  return site.opsBcc;
+  return site.email;
 }
 
 export function resolveOpsRecipients() {
-  const requested = parseRecipients(process.env.CONTACT_TO, site.opsBcc).filter(
-    (addr) => !isHeldInbox(addr),
-  );
-  return requested.length ? requested : [site.opsBcc];
+  const requested = parseRecipients(process.env.CONTACT_TO, site.email);
+  return requested.length ? requested : [site.email];
 }
 
 export async function sendResendEmail(payload: {
@@ -191,17 +184,11 @@ export async function sendResendEmail(payload: {
     return { ok: false as const, skipped: true as const, error: "RESEND_API_KEY is not set" };
   }
 
-  const from = process.env.RESEND_FROM || `Graham's Wash <${site.adminEmail}>`;
-  const to = payload.to.filter((addr) => !isHeldInbox(addr));
-  if (!to.length) {
-    to.push(site.opsBcc);
-  }
+  const from = process.env.RESEND_FROM || `Graham's Wash <${site.email}>`;
+  const to = payload.to.length ? payload.to : [site.email];
   const toSet = new Set(to.map((addr) => addr.toLowerCase()));
-  const bcc = (payload.bcc || []).filter(
-    (addr) => !isHeldInbox(addr) && !toSet.has(addr.toLowerCase()),
-  );
-  const replyTo =
-    payload.replyTo && !isHeldInbox(payload.replyTo) ? payload.replyTo : site.opsBcc;
+  const bcc = (payload.bcc || []).filter((addr) => !toSet.has(addr.toLowerCase()));
+  const replyTo = payload.replyTo || site.email;
   const res = await fetch("https://api.resend.com/emails", {
     method: "POST",
     headers: {
