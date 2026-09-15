@@ -70,12 +70,7 @@ export default async function ContactPage({
               Rocklin-based, serving Roseville, Lincoln, Loomis, Granite Bay, Folsom, and more across the Greater
               Sacramento area.
             </p>
-            <p className="mt-3 text-sm font-semibold text-navy">
-              <a href={site.phoneHref} className="hover:text-brand">
-                {site.phone}
-              </a>
-            </p>
-            <p className="mt-1 text-sm text-muted">
+            <p className="mt-3 text-sm text-muted">
               <a href={`mailto:${site.email}`} className="hover:text-navy">
                 {site.email}
               </a>

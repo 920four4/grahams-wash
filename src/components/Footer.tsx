@@ -96,9 +96,6 @@ export function Footer() {
               back — text, call, or email.
             </p>
             <p className="mt-4 space-y-1 text-sm">
-              <a href={site.phoneHref} className="block font-semibold text-white hover:text-brand">
-                {site.phone}
-              </a>
               <a href={`mailto:${site.email}`} className="block text-white/70 hover:text-white">
                 {site.email}
               </a>

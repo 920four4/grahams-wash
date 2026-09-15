@@ -17,7 +17,6 @@ export function LocalBusinessJsonLd({
         name: site.name,
         url: site.url,
         email: site.email,
-        telephone: "+1-916-591-4058",
         image: `${site.url}/images/logo/gw-transparent-bg-badge-logo.png`,
         priceRange: "$$",
         description: site.description,

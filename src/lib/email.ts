@@ -5,6 +5,7 @@ export const SERVICE_LABELS: Record<string, string> = {
   "solar-panel-cleaning": "Solar Panel Cleaning",
   "trash-bin-cleaning": "Garbage Bin Cleaning",
   "permanent-christmas-lights": "Permanent Christmas Lights",
+  birdproofing: "Birdproofing roof / solar panels",
   multiple: "Multiple services / not sure",
 };
 
@@ -72,9 +73,7 @@ function wrapHtml(inner: string) {
             <tr>
               <td style="padding:36px 0 0 0;border-top:1px solid #eeeeee;font-size:13px;line-height:1.6;color:#666666;">
                 Graham's Wash · Rocklin, CA<br/>
-                <a href="${site.phoneHref}" style="color:#111111;text-decoration:none;">${site.phone}</a>
-                ·
-                <a href="mailto:${site.adminEmail}" style="color:#111111;text-decoration:none;">${site.adminEmail}</a>
+                <a href="${site.url}/contact" style="color:#111111;text-decoration:none;">${site.url.replace("https://", "")}/contact</a>
               </td>
             </tr>
           </table>
