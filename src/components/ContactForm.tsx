@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { CheckCircle2, Loader2, Send } from "lucide-react";
 import { services } from "@/lib/site";
+import { track } from "@/lib/analytics";
 import { Button } from "@/components/ui/Button";
 import { cn } from "@/lib/utils";
 
@@ -47,8 +48,20 @@ export function ContactForm({ defaultService }: { defaultService?: string }) {
   });
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [error, setError] = useState("");
+  const [started, setStarted] = useState(false);
 
   function update<K extends keyof FormState>(key: K, value: FormState[K]) {
+    if (!started) {
+      setStarted(true);
+      track("form_start", {
+        form_id: "contact",
+        form_name: "quote_request",
+        service: form.service || defaultService || "(none)",
+      });
+    }
+    if (key === "service" && typeof value === "string") {
+      track("form_select_service", { service: value });
+    }
     setForm((f) => ({ ...f, [key]: value }));
   }
 
@@ -74,11 +87,28 @@ export function ContactForm({ defaultService }: { defaultService?: string }) {
       if (!res.ok) {
         throw new Error(data.error || "Something went wrong. Please try again in a moment.");
       }
+      track("generate_lead", {
+        form_id: "contact",
+        form_name: "quote_request",
+        service: form.service,
+        preferred_contact: form.preferredContact,
+        city: form.city,
+        value: 1,
+        currency: "USD",
+      });
       setStatus("success");
       setForm(initial);
+      setStarted(false);
     } catch (err) {
       setStatus("error");
-      setError(err instanceof Error ? err.message : "Failed to send. Please try again.");
+      const message = err instanceof Error ? err.message : "Failed to send. Please try again.";
+      setError(message);
+      track("form_error", {
+        form_id: "contact",
+        form_name: "quote_request",
+        service: form.service,
+        error_message: message.slice(0, 100),
+      });
     }
   }
 

@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { DM_Sans, Outfit } from "next/font/google";
 import { Footer } from "@/components/Footer";
+import { AnalyticsEvents } from "@/components/AnalyticsEvents";
 import { GoogleAnalytics } from "@/components/GoogleAnalytics";
 import { Header } from "@/components/Header";
 import { LocalBusinessJsonLd } from "@/components/JsonLd";
@@ -83,6 +84,7 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
     <html lang="en" className={`${dmSans.variable} ${outfit.variable} h-full antialiased`}>
       <body className="flex min-h-full flex-col bg-background font-sans text-foreground">
         <GoogleAnalytics />
+        <AnalyticsEvents />
         <LocalBusinessJsonLd rating={google.rating} reviewCount={google.reviewCount} />
         <Header />
         <main className="flex-1 pb-app">{children}</main>

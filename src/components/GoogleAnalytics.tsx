@@ -1,6 +1,5 @@
 import Script from "next/script";
-
-const GA_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || "G-P01WYBWNB8";
+import { GA_ID } from "@/lib/analytics";
 
 export function GoogleAnalytics() {
   if (!GA_ID) return null;
@@ -12,7 +11,7 @@ export function GoogleAnalytics() {
         {`window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
-gtag('config', '${GA_ID}');`}
+gtag('config', '${GA_ID}', { send_page_view: false });`}
       </Script>
     </>
   );
