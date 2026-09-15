@@ -40,20 +40,47 @@ function contactMethodLabel(method: string) {
   return CONTACT_METHOD_LABELS[method] || method;
 }
 
+const logoUrl = `${site.url}/apple-touch-icon.png`;
+
 function wrapHtml(inner: string) {
   return `<!doctype html>
 <html>
-  <body style="margin:0;padding:0;background:#ffffff;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;color:#111111;">
-    <div style="max-width:560px;margin:0 auto;padding:32px 24px;">
-      <p style="margin:0 0 28px;font-size:15px;font-weight:600;color:#0177ff;">Graham's Wash</p>
-      ${inner}
-      <p style="margin:36px 0 0;padding-top:20px;border-top:1px solid #eeeeee;font-size:13px;line-height:1.6;color:#666666;">
-        Graham's Wash · Rocklin, CA<br/>
-        <a href="${site.phoneHref}" style="color:#111111;text-decoration:none;">${site.phone}</a>
-        ·
-        <a href="mailto:${site.adminEmail}" style="color:#111111;text-decoration:none;">${site.adminEmail}</a>
-      </p>
-    </div>
+  <body style="margin:0;padding:0;background:#ffffff;font-family:Arial,Helvetica,sans-serif;color:#111111;">
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#ffffff;">
+      <tr>
+        <td align="center" style="padding:32px 24px;">
+          <table role="presentation" width="560" cellpadding="0" cellspacing="0" border="0" style="max-width:560px;width:100%;">
+            <tr>
+              <td style="padding:0 0 28px 0;">
+                <table role="presentation" cellpadding="0" cellspacing="0" border="0">
+                  <tr>
+                    <td style="vertical-align:middle;padding:0 10px 0 0;">
+                      <a href="${site.url}" style="text-decoration:none;">
+                        <img src="${logoUrl}" width="40" height="40" alt="Graham's Wash" border="0" style="display:block;width:40px;height:40px;border:0;border-radius:8px;" />
+                      </a>
+                    </td>
+                    <td style="vertical-align:middle;">
+                      <a href="${site.url}" style="font-size:16px;font-weight:700;color:#0177ff;text-decoration:none;">Graham's Wash</a>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td>${inner}</td>
+            </tr>
+            <tr>
+              <td style="padding:36px 0 0 0;border-top:1px solid #eeeeee;font-size:13px;line-height:1.6;color:#666666;">
+                Graham's Wash · Rocklin, CA<br/>
+                <a href="${site.phoneHref}" style="color:#111111;text-decoration:none;">${site.phone}</a>
+                ·
+                <a href="mailto:${site.adminEmail}" style="color:#111111;text-decoration:none;">${site.adminEmail}</a>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
   </body>
 </html>`;
 }
