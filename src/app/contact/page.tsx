@@ -60,7 +60,8 @@ export default async function ContactPage({
             <p className="font-display text-xl font-bold">Photos help</p>
             <p className="mt-2 text-sm text-white/70">
               If you can, mention the surface, approximate size, or issues you&apos;re seeing (oil stains, dirty panels,
-              smelly bins, 1- or 2-story roofline). Graham will follow up with the contact method you choose.
+              smelly bins, 1- or 2-story roofline). There&apos;s no photo upload on this form — if Graham needs pictures,
+              he&apos;ll ask for them by text or email after you send this.
             </p>
           </div>
 
