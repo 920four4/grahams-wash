@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { MapPin } from "lucide-react";
 import { CtaBand } from "@/components/CtaBand";
+import { BreadcrumbJsonLd } from "@/components/JsonLd";
 import { services, cities, site } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -14,6 +15,12 @@ export const metadata: Metadata = {
 export default function ServiceAreasPage() {
   return (
     <>
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Home", href: "/" },
+          { name: "Service areas", href: "/service-areas" },
+        ]}
+      />
       <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16">
         <div className="max-w-2xl">
           <p className="text-sm font-semibold uppercase tracking-wider text-brand">Service areas</p>

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { CtaBand } from "@/components/CtaBand";
+import { BreadcrumbJsonLd } from "@/components/JsonLd";
 import { ResultsGallery } from "@/components/ResultsGallery";
 
 export const metadata: Metadata = {
@@ -17,6 +18,12 @@ export const metadata: Metadata = {
 export default function ResultsPage() {
   return (
     <>
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Home", href: "/" },
+          { name: "Before & after", href: "/results" },
+        ]}
+      />
       <ResultsGallery />
       <CtaBand
         title="Want results like these?"

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { ContactForm } from "@/components/ContactForm";
+import { BreadcrumbJsonLd } from "@/components/JsonLd";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -18,6 +19,13 @@ export default async function ContactPage({
   const defaultService = params.service;
 
   return (
+    <>
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Home", href: "/" },
+          { name: "Contact", href: "/contact" },
+        ]}
+      />
     <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16">
       <div className="max-w-2xl">
         <p className="text-sm font-semibold uppercase tracking-wider text-brand">Contact</p>
@@ -88,5 +96,6 @@ export default async function ContactPage({
         </div>
       </div>
     </div>
+    </>
   );
 }

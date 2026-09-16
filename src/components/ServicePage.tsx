@@ -4,7 +4,7 @@ import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { BeforeAfterSlider } from "@/components/BeforeAfterSlider";
 import { CtaBand } from "@/components/CtaBand";
 import { FaqAccordion } from "@/components/FaqAccordion";
-import { FaqJsonLd, ServiceJsonLd } from "@/components/JsonLd";
+import { BreadcrumbJsonLd, FaqJsonLd, ServiceJsonLd } from "@/components/JsonLd";
 import { SectionHeading } from "@/components/SectionHeading";
 import { Testimonials } from "@/components/Testimonials";
 import { Button } from "@/components/ui/Button";
@@ -68,8 +68,20 @@ export function ServicePage({ slug }: { slug: ServiceSlug }) {
 
   return (
     <>
-      <ServiceJsonLd name={service.name} description={service.longDescription} url={service.href} />
+      <ServiceJsonLd
+        name={service.name}
+        description={service.longDescription}
+        url={service.href}
+        image={service.image}
+      />
       <FaqJsonLd items={serviceFaqs} />
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Home", href: "/" },
+          { name: "Services", href: "/services" },
+          { name: service.name, href: service.href },
+        ]}
+      />
 
       <section className="relative overflow-hidden">
         <div className="absolute inset-0">

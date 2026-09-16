@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { CheckCircle2 } from "lucide-react";
 import { CtaBand } from "@/components/CtaBand";
+import { BreadcrumbJsonLd } from "@/components/JsonLd";
 import { Button } from "@/components/ui/Button";
 import { site } from "@/lib/site";
 
@@ -34,6 +35,12 @@ const values = [
 export default function AboutPage() {
   return (
     <>
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Home", href: "/" },
+          { name: "About", href: "/about" },
+        ]}
+      />
       <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16">
         <div className="grid items-center gap-10 lg:grid-cols-2">
           <div>

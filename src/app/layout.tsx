@@ -39,6 +39,8 @@ export const metadata: Metadata = {
     "trash can cleaning Roseville",
     "permanent Christmas lights Rocklin",
     "hot pressure washing Sacramento",
+    "birdproofing solar panels Rocklin",
+    "solar bird screen Sacramento",
   ],
   openGraph: {
     type: "website",

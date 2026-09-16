@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { ReviewsPageContent } from "@/components/ReviewsPageContent";
 import { CtaBand } from "@/components/CtaBand";
+import { BreadcrumbJsonLd, ReviewsJsonLd } from "@/components/JsonLd";
 import { getGoogleReviews, GOOGLE_PLACE } from "@/lib/google-reviews";
 import { site } from "@/lib/site";
 
@@ -20,40 +21,14 @@ export const revalidate = 21600; // 6 hours — aligns with review cache
 export default async function ReviewsPage() {
   const data = await getGoogleReviews();
 
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    name: site.name,
-    url: `${site.url}/reviews`,
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: String(data.rating),
-      reviewCount: String(data.reviewCount),
-      bestRating: "5",
-      worstRating: "1",
-    },
-    review: data.reviews
-      .filter((r) => r.text.length > 20)
-      .slice(0, 12)
-      .map((r) => ({
-        "@type": "Review",
-        author: { "@type": "Person", name: r.author },
-        datePublished: r.isoDate || undefined,
-        reviewBody: r.text,
-        reviewRating: {
-          "@type": "Rating",
-          ratingValue: String(r.rating),
-          bestRating: "5",
-          worstRating: "1",
-        },
-      })),
-  };
-
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      <ReviewsJsonLd reviews={data.reviews} />
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Home", href: "/" },
+          { name: "Google reviews", href: "/reviews" },
+        ]}
       />
       <ReviewsPageContent
         reviews={data.reviews}

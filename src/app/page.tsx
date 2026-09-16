@@ -5,7 +5,7 @@ import { CityPills } from "@/components/CityPills";
 import { CtaBand } from "@/components/CtaBand";
 import { FaqAccordion } from "@/components/FaqAccordion";
 import { HomeTransformation } from "@/components/HomeTransformation";
-import { FaqJsonLd } from "@/components/JsonLd";
+import { FaqJsonLd, ReviewsJsonLd } from "@/components/JsonLd";
 import { SectionHeading } from "@/components/SectionHeading";
 import { ServiceCards } from "@/components/ServiceCards";
 import { Testimonials } from "@/components/Testimonials";
@@ -35,6 +35,7 @@ export default async function HomePage() {
   return (
     <>
       <FaqJsonLd items={homeFaqs} />
+      <ReviewsJsonLd reviews={google.reviews} />
 
       {/* Hero */}
       <section className="relative overflow-hidden">

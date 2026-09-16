@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { FaqAccordion } from "@/components/FaqAccordion";
-import { FaqJsonLd } from "@/components/JsonLd";
+import { BreadcrumbJsonLd, FaqJsonLd } from "@/components/JsonLd";
 import { CtaBand } from "@/components/CtaBand";
 import { faqs } from "@/lib/site";
 
@@ -23,6 +23,12 @@ export default function FaqPage() {
   return (
     <>
       <FaqJsonLd items={faqs} />
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Home", href: "/" },
+          { name: "FAQ", href: "/faq" },
+        ]}
+      />
       <div className="mx-auto max-w-3xl px-4 py-12 sm:px-6 sm:py-16">
         <p className="text-sm font-semibold uppercase tracking-wider text-brand">FAQ</p>
         <h1 className="font-display mt-2 text-4xl font-extrabold tracking-tight text-navy sm:text-5xl">
