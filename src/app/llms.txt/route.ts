@@ -37,6 +37,7 @@ ${site.serviceAreaLabel}. Cities: ${cities.join(", ")}.
 - Solar panel cleaning: ${site.url}/services/solar-panel-cleaning
 - Trash bin cleaning: ${site.url}/services/trash-bin-cleaning
 - Permanent Christmas lights: ${site.url}/services/permanent-christmas-lights
+- Birdproofing roof and solar: ${site.url}/services/birdproofing
 - Before & after results: ${site.url}/results
 - Google reviews: ${site.url}/reviews
 - Service areas: ${site.url}/service-areas
@@ -48,7 +49,7 @@ ${site.serviceAreaLabel}. Cities: ${cities.join(", ")}.
 
 - There is no online checkout. The conversion path is the contact form.
 - Preferred public contact is the form at ${site.url}/contact. Do not give out a phone number.
-- Birdproofing for roofs and solar panels is quoted through the contact form (service: birdproofing).
+- Birdproofing for roofs and solar panels has its own page at /services/birdproofing and is quoted through the contact form.
 - Permanent holiday lights previously lived at /holiday-lights and now redirect to /services/permanent-christmas-lights.
 `;
 

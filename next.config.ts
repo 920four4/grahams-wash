@@ -29,6 +29,7 @@ const nextConfig: NextConfig = {
       { source: "/trash-bin", destination: "/services/trash-bin-cleaning", permanent: true },
       { source: "/trash-bins", destination: "/services/trash-bin-cleaning", permanent: true },
       { source: "/trash-bin-cleaning", destination: "/services/trash-bin-cleaning", permanent: true },
+      { source: "/birdproofing", destination: "/services/birdproofing", permanent: true },
     ];
   },
 };

@@ -60,7 +60,8 @@ export type ServiceSlug =
   | "pressure-washing"
   | "solar-panel-cleaning"
   | "trash-bin-cleaning"
-  | "permanent-christmas-lights";
+  | "permanent-christmas-lights"
+  | "birdproofing";
 
 export const services: {
   slug: ServiceSlug;
@@ -69,10 +70,10 @@ export const services: {
   headline: string;
   blurb: string;
   longDescription: string;
-  icon: "droplets" | "sun" | "trash" | "sparkles";
+  icon: "droplets" | "sun" | "trash" | "sparkles" | "shield";
   href: string;
   image: string;
-  gallery: string[];
+  gallery: { src: string; alt: string }[];
   highlights: string[];
   metaTitle: string;
   metaDescription: string;
@@ -90,14 +91,46 @@ export const services: {
     href: "/services/pressure-washing",
     image: "/images/pressure/house-clean.webp",
     gallery: [
-      "/images/before-after/driveway-levi.webp",
-      "/images/before-after/driveway-keith.webp",
-      "/images/before-after/sidewalk.webp",
-      "/images/before-after/fence.webp",
-      "/images/before-after/gate.webp",
-      "/images/pressure/driveway-work.webp",
-      "/images/pressure/result-1.webp",
-      "/images/pressure/sidewalk-clean.webp",
+      {
+        src: "/images/pressure/walkway-after.webp",
+        alt: "Pressure washed exposed-aggregate walkway to a Rocklin home, restored to a clean speckled finish",
+      },
+      {
+        src: "/images/pressure/driveway-after.webp",
+        alt: "Hot pressure washing result on a residential concrete driveway in the Greater Sacramento area",
+      },
+      {
+        src: "/images/pressure/pool-deck-after.webp",
+        alt: "Clean exposed-aggregate pool deck after pressure washing in Rocklin, CA",
+      },
+      {
+        src: "/images/pressure/patio-after.webp",
+        alt: "Stamped-concrete patio after pressure washing, wood-plank texture restored",
+      },
+      {
+        src: "/images/pressure/path-cleaner.webp",
+        alt: "Pressure washing a concrete walkway with a surface cleaner, dirty and clean sides in one shot",
+      },
+      {
+        src: "/images/pressure/driveway-cleaner.webp",
+        alt: "Driveway pressure washing in progress with a surface cleaner on scored concrete",
+      },
+      {
+        src: "/images/pressure/deck-chairs.webp",
+        alt: "Outdoor teak chairs before and after pressure washing: weathered gray next to freshly cleaned wood",
+      },
+      {
+        src: "/images/pressure/roof-moss-after.webp",
+        alt: "Concrete tile roof after moss cleaning in the Sacramento area",
+      },
+      {
+        src: "/images/before-after/driveway-levi.webp",
+        alt: "Driveway before and after pressure washing by Graham's Wash in Rocklin",
+      },
+      {
+        src: "/images/before-after/sidewalk.webp",
+        alt: "Sidewalk pressure washing before and after in Rocklin, CA",
+      },
     ],
     highlights: [
       "Hot water up to 210°F for oil and grease",
@@ -120,16 +153,40 @@ export const services: {
       "Dust, pollen, and bird droppings cut into what your solar system can produce. Graham cleans panels with a soft brush and multi-stage filtered water — not a pressure washer on the glass. Safer for the surface, clearer results, and a method that fits how most panel manufacturers want cleaning done.",
     icon: "sun",
     href: "/services/solar-panel-cleaning",
-    image: "/images/solar/z2-after.webp",
+    image: "/images/solar/array-clean.webp",
     gallery: [
-      "/images/solar/z-before.webp",
-      "/images/solar/z-after.webp",
-      "/images/solar/z2-before.webp",
-      "/images/solar/z2-after.webp",
-      "/images/solar/panels-vs-neighbors.webp",
-      "/images/solar/solatrim-full.webp",
-      "/images/solar/solatrim-1.webp",
-      "/images/solar/solatrim-2.webp",
+      {
+        src: "/images/solar/graham-cleaning.webp",
+        alt: "Graham soft-brush cleaning rooftop solar panels with pure water in Rocklin, CA",
+      },
+      {
+        src: "/images/solar/array-clean.webp",
+        alt: "Cleaned residential solar array on a tile roof after professional panel washing",
+      },
+      {
+        src: "/images/solar/panels-clean-close.webp",
+        alt: "Close-up of solar panels after soft-brush cleaning, glass restored to a deep blue shine",
+      },
+      {
+        src: "/images/solar/array-dusk.webp",
+        alt: "Freshly cleaned rooftop solar panels on an asphalt-shingle roof in the Sacramento area",
+      },
+      {
+        src: "/images/solar/array-split.webp",
+        alt: "Residential solar array after cleaning on a shingle roof at sunset",
+      },
+      {
+        src: "/images/solar/z2-after.webp",
+        alt: "Solar panel cleaning before and after on a Rocklin home",
+      },
+      {
+        src: "/images/solar/panels-vs-neighbors.webp",
+        alt: "Clean solar panels compared to a dusty neighboring array after Graham's Wash cleaning",
+      },
+      {
+        src: "/images/solar/solatrim-full.webp",
+        alt: "Full rooftop solar array after professional cleaning in Rocklin",
+      },
     ],
     highlights: [
       "Filtered pure water",
@@ -152,10 +209,24 @@ export const services: {
       "Bins get dirty every week. Graham cleans garbage and recycle cans inside and out with hot water so residue and odors don’t hang around. Book a one-time clean or add bins when he’s already out for a pressure wash.",
     icon: "trash",
     href: "/services/trash-bin-cleaning",
-    image: "/images/bins/bin-before-after.webp",
+    image: "/images/bins/green-bin-after.webp",
     gallery: [
-      "/images/bins/bin-before-after.webp",
-      "/images/bins/bin-ba-2.webp",
+      {
+        src: "/images/bins/green-bin-after.webp",
+        alt: "Trash bin interior after a hot wash by Graham's Wash — residue gone, ready for the curb",
+      },
+      {
+        src: "/images/bins/gray-bin-after.webp",
+        alt: "Recycle bin cleaned inside and out with hot water in Rocklin, CA",
+      },
+      {
+        src: "/images/bins/bin-before-after.webp",
+        alt: "Garbage bin cleaning before and after, inside and outside",
+      },
+      {
+        src: "/images/bins/bin-ba-2.webp",
+        alt: "Trash can wash before and after in the Greater Sacramento area",
+      },
     ],
     highlights: [
       "Hot wash inside and outside",
@@ -178,20 +249,56 @@ export const services: {
       "Skip the yearly ladder work and storage bins full of strands. Graham installs permanent outdoor lights that stay up all year — hard to notice during the day, bright when you want color. Available for one- and two-story homes in Rocklin, Roseville, Lincoln, and surrounding cities.",
     icon: "sparkles",
     href: "/services/permanent-christmas-lights",
-    image: "/images/lights/night-2.webp",
+    image: "/images/lights/warm-craftsman.webp",
     gallery: [
-      "/images/lights/night-1.webp",
-      "/images/lights/night-2.webp",
-      "/images/lights/night-3.webp",
-      "/images/lights/night-4.webp",
-      "/images/lights/night-5.webp",
-      "/images/lights/night-6.webp",
-      "/images/lights/night-8.webp",
-      "/images/lights/night-9.webp",
-      "/images/lights/night-10.webp",
-      "/images/lights/day-discreet.webp",
-      "/images/lights/install-day.webp",
-      "/images/lights/day-house.webp",
+      {
+        src: "/images/lights/warm-craftsman.webp",
+        alt: "Permanent warm-white Christmas lights on a craftsman home at dusk in Rocklin, CA",
+      },
+      {
+        src: "/images/lights/warm-two-story.webp",
+        alt: "Permanent warm-white holiday lights on a two-story home in the Sacramento area",
+      },
+      {
+        src: "/images/lights/purple-blue-ranch.webp",
+        alt: "Color-changing permanent Christmas lights in purple and blue on a ranch-style home",
+      },
+      {
+        src: "/images/lights/halloween-colors.webp",
+        alt: "Permanent LED holiday lights in Halloween colors on a stucco home at dusk",
+      },
+      {
+        src: "/images/lights/pool-pink.webp",
+        alt: "Permanent color Christmas lights on a backyard patio and pool house",
+      },
+      {
+        src: "/images/lights/purple-entry.webp",
+        alt: "Permanent RGB holiday lights on a stucco entry with an arched porch",
+      },
+      {
+        src: "/images/lights/day-gable.webp",
+        alt: "Low-profile permanent Christmas lights along gable fascia, discreet in daylight",
+      },
+      {
+        src: "/images/lights/day-gable-module.webp",
+        alt: "Close-up of permanent Christmas light modules installed on a gable fascia",
+      },
+      {
+        src: "/images/lights/day-blue-eave.webp",
+        alt: "Permanent LED holiday lights along a fascia under open eaves, daytime",
+      },
+      {
+        src: "/images/lights/day-rear-soffit.webp",
+        alt: "Permanent LED holiday lights installed along a rear soffit, low profile by day",
+      },
+      {
+        src: "/images/lights/halloween-green.webp",
+        alt: "Permanent LED holiday lights in Halloween green on a garage and porch",
+      },
+      {
+        src: "/images/lights/day-yellow-ranch.webp",
+        alt: "Permanent Christmas lights on a yellow ranch home at dusk in Rocklin",
+      },
     ],
     highlights: [
       "Low profile by day, bright at night",
@@ -202,6 +309,62 @@ export const services: {
     metaTitle: "Permanent Christmas Lights Rocklin | Year-Round Holiday Lighting",
     metaDescription:
       "Permanent Christmas and holiday lights in Rocklin, Roseville, and Lincoln. Year-round install for one- and two-story homes. Request a quote online.",
+  },
+  {
+    slug: "birdproofing",
+    name: "Birdproofing Roof & Solar",
+    shortName: "Birdproofing",
+    headline: "Birdproofing for roofs and solar panels in Rocklin",
+    blurb:
+      "Mesh, screens, and spikes that keep birds out from under solar arrays and off the roofline — without wrecking the look of the house.",
+    longDescription:
+      "Birds nest under solar panels and along tile roofs, leaving droppings, nesting debris, and damage. Graham installs critter-guard mesh around arrays, ridge and eave spikes, and screens that close the gaps birds use. It’s a clean install that protects the roof, the panels, and the mess they leave behind.",
+    icon: "shield",
+    href: "/services/birdproofing",
+    image: "/images/birdproofing/mesh-neighborhood.webp",
+    gallery: [
+      {
+        src: "/images/birdproofing/mesh-neighborhood.webp",
+        alt: "Solar panel birdproofing mesh on a clay tile roof in a Rocklin neighborhood",
+      },
+      {
+        src: "/images/birdproofing/mesh-array.webp",
+        alt: "Critter-guard mesh installed around a rooftop solar array on barrel tile",
+      },
+      {
+        src: "/images/birdproofing/mesh-close.webp",
+        alt: "Close-up of solar bird screen closing the gap under panels on a tile roof",
+      },
+      {
+        src: "/images/birdproofing/ridge-spikes.webp",
+        alt: "Bird spikes installed along a clay tile roof ridge in the Sacramento area",
+      },
+      {
+        src: "/images/birdproofing/eave-spikes.webp",
+        alt: "Bird spikes on a clay tile eave to keep birds off the roofline",
+      },
+      {
+        src: "/images/birdproofing/gutter-mesh.webp",
+        alt: "Wire mesh birdproofing installed between solar panels and clay roof tiles",
+      },
+      {
+        src: "/images/birdproofing/mesh-shingles.webp",
+        alt: "Solar birdproofing mesh installed on a composition shingle roof",
+      },
+      {
+        src: "/images/birdproofing/debris-before.webp",
+        alt: "Bird droppings and nesting debris on a clay tile roof beside solar panels, before birdproofing",
+      },
+    ],
+    highlights: [
+      "Mesh and screens under solar arrays",
+      "Ridge and eave bird spikes",
+      "Stops nesting, droppings, and debris",
+      "Clean install that stays out of sight from the street",
+    ],
+    metaTitle: "Birdproofing Roof & Solar Panels Rocklin CA | Critter Guard",
+    metaDescription:
+      "Birdproofing for roofs and solar panels in Rocklin and nearby cities. Mesh, screens, and spikes that keep birds out. Request a quote online.",
   },
 ];
 
@@ -344,6 +507,18 @@ export const faqs = [
     answer:
       "Temporary lights go up and down every year — clips, storage, burned-out bulbs, and the same work every December. Permanent lights stay mounted, look cleaner day to day, and usually cost less over a few seasons.",
     category: "lights" as const,
+  },
+  {
+    question: "Do you birdproof solar panels and roofs?",
+    answer:
+      "Yes. Graham installs mesh and screens around solar arrays plus spikes on ridges and eaves so birds can’t nest under the panels or along the tile. Request a quote through the contact form.",
+    category: "solar" as const,
+  },
+  {
+    question: "Why birdproof solar panels?",
+    answer:
+      "Birds nest in the shade under arrays. Droppings and debris get under the panels and onto the roof. Mesh closes that gap so they can’t get in — cleaner panels, cleaner roof, fewer surprises.",
+    category: "solar" as const,
   },
   {
     question: "Do you offer neighbor or group discounts?",

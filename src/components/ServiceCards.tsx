@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowUpRight, Droplets, Sparkles, Sun, Trash2 } from "lucide-react";
+import { ArrowUpRight, Droplets, Shield, Sparkles, Sun, Trash2 } from "lucide-react";
 import { services } from "@/lib/site";
 
 const icons = {
@@ -8,6 +8,7 @@ const icons = {
   sun: Sun,
   trash: Trash2,
   sparkles: Sparkles,
+  shield: Shield,
 };
 
 export function ServiceCards() {
@@ -24,7 +25,7 @@ export function ServiceCards() {
             <div className="relative aspect-[16/10] overflow-hidden bg-navy/5">
               <Image
                 src={service.image}
-                alt={service.name}
+                alt={service.gallery[0]?.alt || service.name}
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"
                 className="object-cover transition duration-500 group-hover:scale-105"

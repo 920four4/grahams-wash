@@ -41,12 +41,20 @@ const faqByService: Record<ServiceSlug, string[]> = {
     "What cities do you service?",
     "How much does it cost?",
   ],
+  birdproofing: [
+    "Do you birdproof solar panels and roofs?",
+    "Why birdproof solar panels?",
+    "How quickly can you schedule a job?",
+    "Do I need to be home?",
+    "How much does it cost?",
+  ],
 };
 
-const categoryBySlug: Partial<Record<ServiceSlug, "solar" | "pressure" | "bins" | "exterior">> = {
+const categoryBySlug: Partial<Record<ServiceSlug, "solar" | "pressure" | "bins" | "exterior" | "birdproofing">> = {
   "pressure-washing": "pressure",
   "solar-panel-cleaning": "solar",
   "trash-bin-cleaning": "bins",
+  birdproofing: "birdproofing",
 };
 
 export function ServicePage({ slug }: { slug: ServiceSlug }) {
@@ -65,7 +73,14 @@ export function ServicePage({ slug }: { slug: ServiceSlug }) {
 
       <section className="relative overflow-hidden">
         <div className="absolute inset-0">
-          <Image src={service.image} alt={service.name} fill priority sizes="100vw" className="object-cover" />
+          <Image
+            src={service.image}
+            alt={service.gallery[0]?.alt || service.name}
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover"
+          />
           <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/80 to-navy/45" />
         </div>
         <div className="relative mx-auto max-w-6xl px-4 pb-16 pt-24 sm:px-6 sm:pb-20 sm:pt-28">
@@ -139,14 +154,14 @@ export function ServicePage({ slug }: { slug: ServiceSlug }) {
             </ul>
           </div>
           <div className="grid grid-cols-2 gap-3">
-            {service.gallery.slice(0, 4).map((src, i) => (
+            {service.gallery.slice(0, 4).map((shot, i) => (
               <div
-                key={src}
+                key={shot.src}
                 className={`relative overflow-hidden rounded-2xl border border-border ${i === 0 ? "col-span-2 aspect-[16/9]" : "aspect-square"}`}
               >
                 <Image
-                  src={src}
-                  alt={`${service.name} work sample ${i + 1}`}
+                  src={shot.src}
+                  alt={shot.alt}
                   fill
                   sizes="(max-width: 768px) 100vw, 40vw"
                   className="object-cover"
@@ -162,11 +177,11 @@ export function ServicePage({ slug }: { slug: ServiceSlug }) {
           <div className="mx-auto max-w-6xl px-4 sm:px-6">
             <SectionHeading eyebrow="Gallery" title="Recent work" />
             <div className="mt-8 grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-4">
-              {service.gallery.slice(4).map((src, i) => (
-                <div key={src} className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-border">
+              {service.gallery.slice(4).map((shot) => (
+                <div key={shot.src} className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-border">
                   <Image
-                    src={src}
-                    alt={`${service.name} gallery ${i + 5}`}
+                    src={shot.src}
+                    alt={shot.alt}
                     fill
                     sizes="(max-width: 768px) 50vw, 25vw"
                     className="object-cover"

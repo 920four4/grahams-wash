@@ -2,7 +2,8 @@ export type TransformationCategory =
   | "solar"
   | "pressure"
   | "bins"
-  | "exterior";
+  | "exterior"
+  | "birdproofing";
 
 export type Transformation = {
   id: string;
@@ -22,6 +23,7 @@ export const categoryLabels: Record<TransformationCategory, string> = {
   pressure: "Pressure washing",
   bins: "Trash bins",
   exterior: "Fences & exteriors",
+  birdproofing: "Birdproofing",
 };
 
 export const transformations: Transformation[] = [
@@ -172,6 +174,79 @@ export const transformations: Transformation[] = [
     after: "/images/compare/general-after.webp",
     aspect: "portrait",
     serviceHref: "/services/pressure-washing",
+  },
+  {
+    id: "walkway-new",
+    title: "Front walkway",
+    subtitle: "Exposed-aggregate path from dull gray to a clean, bright approach.",
+    category: "pressure",
+    before: "/images/compare/walkway-before.webp",
+    after: "/images/compare/walkway-after.webp",
+    aspect: "portrait",
+    featured: true,
+    serviceHref: "/services/pressure-washing",
+  },
+  {
+    id: "driveway-new",
+    title: "Driveway reset",
+    subtitle: "Hot pressure washing cutting through years of driveway film.",
+    category: "pressure",
+    before: "/images/compare/driveway-new-before.webp",
+    after: "/images/compare/driveway-new-after.webp",
+    aspect: "landscape",
+    serviceHref: "/services/pressure-washing",
+  },
+  {
+    id: "pool-deck",
+    title: "Pool deck",
+    subtitle: "Exposed-aggregate around the water, cleaned without wrecking the finish.",
+    category: "pressure",
+    before: "/images/compare/pool-deck-before.webp",
+    after: "/images/compare/pool-deck-after.webp",
+    aspect: "landscape",
+    featured: true,
+    serviceHref: "/services/pressure-washing",
+  },
+  {
+    id: "patio-stamp",
+    title: "Stamped patio",
+    subtitle: "Algae and black stains lifted off wood-stamp concrete.",
+    category: "pressure",
+    before: "/images/compare/patio-before.webp",
+    after: "/images/compare/patio-after.webp",
+    aspect: "portrait",
+    serviceHref: "/services/pressure-washing",
+  },
+  {
+    id: "roof-moss",
+    title: "Tile roof moss",
+    subtitle: "Moss packed in the joints, then gone — same roof, different story.",
+    category: "pressure",
+    before: "/images/compare/roof-moss-before.webp",
+    after: "/images/compare/roof-moss-after.webp",
+    aspect: "landscape",
+    serviceHref: "/services/pressure-washing",
+  },
+  {
+    id: "bin-green",
+    title: "Trash bin interior",
+    subtitle: "Hot wash inside the can — residue and odor taken seriously.",
+    category: "bins",
+    before: "/images/compare/bin-green-before.webp",
+    after: "/images/compare/bin-green-after.webp",
+    aspect: "square",
+    featured: true,
+    serviceHref: "/services/trash-bin-cleaning",
+  },
+  {
+    id: "bin-gray",
+    title: "Recycle bin wash",
+    subtitle: "Same treatment for recycle cans — inside, outside, lids.",
+    category: "bins",
+    before: "/images/compare/bin-gray-before.webp",
+    after: "/images/compare/bin-gray-after.webp",
+    aspect: "square",
+    serviceHref: "/services/trash-bin-cleaning",
   },
 ];
 

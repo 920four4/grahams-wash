@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import Script from "next/script";
 import { DM_Sans, Outfit } from "next/font/google";
 import { Footer } from "@/components/Footer";
 import { AnalyticsEvents } from "@/components/AnalyticsEvents";
@@ -90,6 +91,8 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
         <main className="flex-1 pb-app">{children}</main>
         <Footer />
         <MobileNav />
+        {/* 920four mark · visible credit, dofollow backlink */}
+        <Script src="https://920four.com/mark.js?v=1" data-ref="grahams-wash" strategy="afterInteractive" />
       </body>
     </html>
   );

@@ -1,14 +1,46 @@
 import Image from "next/image";
 
 const shots = [
-  { src: "/images/before-after/driveway-levi.webp", alt: "Driveway before and after pressure washing", label: "Driveway" },
-  { src: "/images/before-after/driveway-keith.webp", alt: "Concrete cleaning before and after", label: "Concrete" },
-  { src: "/images/before-after/sidewalk.webp", alt: "Sidewalk pressure washing before and after", label: "Sidewalk" },
-  { src: "/images/before-after/fence.webp", alt: "Fence brightening before and after", label: "Fence" },
-  { src: "/images/before-after/gate.webp", alt: "Gate cleaning before and after", label: "Gate" },
-  { src: "/images/bins/bin-before-after.webp", alt: "Trash bin cleaning before and after", label: "Trash bins" },
-  { src: "/images/solar/panels-vs-neighbors.webp", alt: "Clean solar panels compared to neighbors", label: "Solar panels" },
-  { src: "/images/before-after/trailer.webp", alt: "Trailer exterior cleaning before and after", label: "Trailer" },
+  {
+    src: "/images/pressure/walkway-after.webp",
+    alt: "Pressure washed exposed-aggregate walkway in Rocklin, CA",
+    label: "Walkway",
+  },
+  {
+    src: "/images/pressure/pool-deck-after.webp",
+    alt: "Clean exposed-aggregate pool deck after pressure washing",
+    label: "Pool deck",
+  },
+  {
+    src: "/images/pressure/patio-after.webp",
+    alt: "Stamped-concrete patio after pressure washing",
+    label: "Patio",
+  },
+  {
+    src: "/images/solar/graham-cleaning.webp",
+    alt: "Graham soft-brush cleaning rooftop solar panels in Rocklin",
+    label: "Solar",
+  },
+  {
+    src: "/images/birdproofing/mesh-neighborhood.webp",
+    alt: "Solar panel birdproofing mesh on a clay tile roof",
+    label: "Birdproofing",
+  },
+  {
+    src: "/images/bins/green-bin-after.webp",
+    alt: "Trash bin interior after a hot wash by Graham's Wash",
+    label: "Bins",
+  },
+  {
+    src: "/images/lights/warm-craftsman.webp",
+    alt: "Permanent warm-white Christmas lights on a craftsman home",
+    label: "Lights",
+  },
+  {
+    src: "/images/before-after/driveway-levi.webp",
+    alt: "Driveway before and after pressure washing in Rocklin",
+    label: "Driveway",
+  },
 ];
 
 export function BeforeAfterGrid({ limit = 8 }: { limit?: number }) {
