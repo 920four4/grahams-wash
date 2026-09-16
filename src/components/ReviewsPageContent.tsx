@@ -17,12 +17,14 @@ export function ReviewsPageContent({
   rating,
   reviewCount,
   mapsUrl,
+  source,
 }: {
   reviews: GoogleReview[];
   topics: ReviewTopic[];
   rating: number;
   reviewCount: number;
   mapsUrl: string;
+  source: "snapshot" | "fallback";
 }) {
   const [query, setQuery] = useState("");
   const [filter, setFilter] = useState<FilterKey>("all");
@@ -90,8 +92,9 @@ export function ReviewsPageContent({
             Real Google reviews. Real results.
           </h1>
           <p className="mt-4 text-lg text-muted">
-            Every review below is pulled live from Google. Scroll through what neighbors say about pressure washing,
-            solar cleaning, bin wash, and permanent lights — then reach out when you&apos;re ready.
+            {source === "snapshot"
+              ? "These are Graham’s Google reviews, stored on the site so they load without hitting Google on every visit."
+              : `Graham is at ${reviewCount} Google reviews. The full written set will show here after the next snapshot refresh — until then, a few featured notes and the complete list on Google.`}
           </p>
         </div>
 

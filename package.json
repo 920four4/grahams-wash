@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "refresh:reviews": "node scripts/refresh-google-reviews.mjs"
   },
   "dependencies": {
     "botid": "^1.5.11",

@@ -16,8 +16,6 @@ export const metadata: Metadata = {
   },
 };
 
-export const revalidate = 21600; // 6 hours — aligns with review cache
-
 export default async function ReviewsPage() {
   const data = await getGoogleReviews();
 
@@ -36,6 +34,7 @@ export default async function ReviewsPage() {
         rating={data.rating}
         reviewCount={data.reviewCount}
         mapsUrl={GOOGLE_PLACE.mapsUrl}
+        source={data.source}
       />
       <CtaBand
         title="Impressed by the reviews?"
