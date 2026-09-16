@@ -1,8 +1,951 @@
 {
   "rating": 5,
   "reviewCount": 48,
-  "topics": [],
-  "reviews": [],
-  "fetchedAt": null,
+  "topics": [
+    {
+      "keyword": "solar panel cleaning",
+      "mentions": 18
+    },
+    {
+      "keyword": "permanent lights installation",
+      "mentions": 7
+    },
+    {
+      "keyword": "driveway cleaning",
+      "mentions": 6
+    },
+    {
+      "keyword": "pressure washing",
+      "mentions": 7
+    },
+    {
+      "keyword": "bin cleaning",
+      "mentions": 6
+    },
+    {
+      "keyword": "gutter cleaning",
+      "mentions": 3
+    },
+    {
+      "keyword": "concrete cleaning",
+      "mentions": 2
+    },
+    {
+      "keyword": "roof cleaning",
+      "mentions": 2
+    },
+    {
+      "keyword": "solar panels",
+      "mentions": 17
+    },
+    {
+      "keyword": "odor removal",
+      "mentions": 2
+    }
+  ],
+  "reviews": [
+    {
+      "id": "Ci9DQUlRQUNvZENodHljRjlvT2xCUlZEZEtZbkZFVTFsVk9WcHZVM2hGU1hCUWMyYxAB",
+      "author": "Daniel Nilson",
+      "authorThumbnail": "https://lh3.googleusercontent.com/a-/ALV-UjVD2wj5nvAaY2e6kZX0RuiKytp5mi7PPMPLMWxSPGqRysGHZVtlgQ=s120-c-rp-mo-br100",
+      "authorLink": "https://www.google.com/maps/contrib/108496643201824882049?hl=en-GB",
+      "isLocalGuide": true,
+      "rating": 5,
+      "date": "2 weeks ago",
+      "isoDate": "2026-08-27T01:52:00Z",
+      "text": "Graham is amazing. His work speaks for itself, but him as a person speaks volumes. He cleaned our solar panels, cleared all the pigeons out, and secured the solar panels so the pigeons are no longer an issue. He's honest, hardworking, and knows what he's doing. If you need anything done, call him. You won't regret it. Highly recommend.",
+      "images": [],
+      "likes": 0,
+      "link": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2xCUlZEZEtZbkZFVTFsVk9WcHZVM2hGU1hCUWMyYxAB!2m1!1s0x0:0xb4ba2d3b5caf5b45!3m1!1s2@1:CAIQACodChtycF9oOlBRVDdKYnFEU1lVOVpvU3hFSXBQc2c%7C%7C?hl=en-GB"
+    },
+    {
+      "id": "Ci9DQUlRQUNvZENodHljRjlvT25GME1UZGhWa3BRVTBWM05rWXRPVlpQTVRGVk1FRRAB",
+      "author": "Laura Griffin",
+      "authorThumbnail": "https://lh3.googleusercontent.com/a/ACg8ocL9dq0TIdiyhQs-s51I3qqThddMYr3poNitX-2wd4bVTEjgEg=s120-c-rp-mo-br100",
+      "authorLink": "https://www.google.com/maps/contrib/106135765791108495315?hl=en-GB",
+      "isLocalGuide": true,
+      "rating": 5,
+      "date": "3 weeks ago",
+      "isoDate": "2026-08-23T01:45:27Z",
+      "text": "Graham did a great job installing our holiday lights. He really paid attention to the details which I appreciated. Can’t wait to use them for Halloween!",
+      "images": [],
+      "likes": 0,
+      "link": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT25GME1UZGhWa3BRVTBWM05rWXRPVlpQTVRGVk1FRRAB!2m1!1s0x0:0xb4ba2d3b5caf5b45!3m1!1s2@1:CAIQACodChtycF9oOnF0MTdhVkpQU0V3NkYtOVZPMTFVMEE%7C%7C?hl=en-GB",
+      "response": {
+        "date": "3 weeks ago",
+        "text": "Laura, thank you for trusting me with your home. I'm grateful that you chose Graham’s Wash from many different quotes. I take a lot of pride in the little details, so it means a lot that you noticed. Halloween will be a blast, and I will definitely bring my kids to your Christmas show!"
+      }
+    },
+    {
+      "id": "Ci9DQUlRQUNvZENodHljRjlvT2prNWN5MXZRbWxJYnpSV1ZrZDNUMEZXT1Zad1VFRRAB",
+      "author": "Felicia Maddox",
+      "authorThumbnail": "https://lh3.googleusercontent.com/a-/ALV-UjX7hbYbuG5lwWllH04xRu9d2xNA65jM09J7w_SgI9Eaw3wVdjET=s120-c-rp-mo-ba12-br100",
+      "authorLink": "https://www.google.com/maps/contrib/101987959582915330989?hl=en-GB",
+      "isLocalGuide": true,
+      "rating": 5,
+      "date": "2 months ago",
+      "isoDate": "2026-06-27T20:27:33Z",
+      "text": "Was out looking out at my lights during the day, and Graham did a phenomenal job. Just look at the corners and tight fit of the lights. I could not do a better job. That’s saying something because I am meticulous. His workmanship and demeanor was great. I wish he did remodel work. Don’t second-guess, have him install, worth every penny.",
+      "images": [
+        "https://lh3.googleusercontent.com/grass-cs/ACvplmO0hhWp-7aTQZiPSaBO7vs80tGdaO-8JlRy7j7pLStQR4o1HoFRu3HfXnE7JP9szPMP8jl71OQcSR-NcJ85uzW-1H-KOUIwUwdQMdMv_BJOVclzqv3yffR_ZjqELF0W8-6XnliGO0Po9nY=k-no",
+        "https://lh3.googleusercontent.com/grass-cs/ACvplmO3aJJBQHFsemZqgskLt8HONgmKAX2HUvPWyMfS5swFGY1bde-NTR1IOaFbThFAgPx9wdGi_uQJTJx0_JrX7otNdx9N6UWw3GT17KY1wJRQJsuyCEQa2J_ztmvi-Sc3oUM6iOsHlR6nFLk-=k-no"
+      ],
+      "likes": 0,
+      "link": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2prNWN5MXZRbWxJYnpSV1ZrZDNUMEZXT1Zad1VFRRAB!2m1!1s0x0:0xb4ba2d3b5caf5b45!3m1!1s2@1:CAIQACodChtycF9oOjk5cy1vQmlIbzRWVkd3T0FWOVZwUEE%7C%7C?hl=en-GB",
+      "response": {
+        "date": "2 months ago",
+        "text": "Felicia - what wonderful words! Thank you so much for sharing. I am fortunate to love this work, and I'm glad to hear that it shows. Thank you for putting your trust in Graham'sWash. Looking forward to seeing you soon for the driveway wash!"
+      }
+    },
+    {
+      "id": "Ci9DQUlRQUNvZENodHljRjlvT21wUFV5MXdTRmQzTW5CWVYydFBhamRHTlhsT2RGRRAB",
+      "author": "Cathy Nikdel",
+      "authorThumbnail": "https://lh3.googleusercontent.com/a/ACg8ocLEOSytrY3jlLjdDuf8XrfYRQrDIvDJsNZRP3PtdPNdGM3Ivw=s120-c-rp-mo-ba12-br100",
+      "authorLink": "https://www.google.com/maps/contrib/109457271207435282444?hl=en-GB",
+      "isLocalGuide": true,
+      "rating": 5,
+      "date": "5 months ago",
+      "isoDate": "2026-03-22T19:04:18Z",
+      "text": "Graham installed outdoor lighting at my home and I couldn’t be happier. The effect in the evenings is absolutely stunning and really elevates the look of the house. He was professional, reliable, and his workmanship is top quality. Highly recommend!!",
+      "images": [],
+      "likes": 0,
+      "link": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT21wUFV5MXdTRmQzTW5CWVYydFBhamRHTlhsT2RGRRAB!2m1!1s0x0:0xb4ba2d3b5caf5b45!3m1!1s2@1:CAIQACodChtycF9oOmpPUy1wSFd3MnBYV2tPajdGNXlOdFE%7C%7C?hl=en-GB"
+    },
+    {
+      "id": "Ci9DQUlRQUNvZENodHljRjlvT20wemFsQnBka2hIUzBKblRURktUV05QTkUxalRXYxAB",
+      "author": "Marvetta Brass",
+      "authorThumbnail": "https://lh3.googleusercontent.com/a/ACg8ocImjjjpUeZiISLhHEaW7sf5FDVMnv6DvLvAoytKwXEl3iMqCg=s120-c-rp-mo-br100",
+      "authorLink": "https://www.google.com/maps/contrib/102683490062584031270?hl=en-GB",
+      "isLocalGuide": true,
+      "rating": 5,
+      "date": "6 months ago",
+      "isoDate": "2026-03-07T23:31:15Z",
+      "text": "Permanent lights placed by Graham . If you are looking for someone to put up your permanent lights Graham is your guy, reasonable price professional , detail oriented., Friendly, , explain the process. Graham did such a great job . I will definitely use him for other projects. Thank you Graham for your hard work  installing the beautiful lights .",
+      "images": [],
+      "likes": 0,
+      "link": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT20wemFsQnBka2hIUzBKblRURktUV05QTkUxalRXYxAB!2m1!1s0x0:0xb4ba2d3b5caf5b45!3m1!1s2@1:CAIQACodChtycF9oOm0zalBpdkhHS0JnTTFKTWNPNE1jTWc%7C%7C?hl=en-GB",
+      "response": {
+        "date": "6 months ago",
+        "text": "Thank you, Marvetta! The pleasure was really all mine - you and your husband are wonderful. It's fun to see you so excited about your new front and backyard lighting. Looking forward to our future projects!"
+      }
+    },
+    {
+      "id": "Ci9DQUlRQUNvZENodHljRjlvT21Ob1pHaEhNR3RuUzI4M1drZHRZMlZzVTIxUFZHYxAB",
+      "author": "Amanda Riddell",
+      "authorThumbnail": "https://lh3.googleusercontent.com/a/ACg8ocLoioIhBmVpbE0nKkiI60F_0grO5dwWQZuw0Qqmi2K2qa4Y9A=s120-c-rp-mo-br100",
+      "authorLink": "https://www.google.com/maps/contrib/115710118727375208463?hl=en-GB",
+      "isLocalGuide": true,
+      "rating": 5,
+      "date": "7 months ago",
+      "isoDate": "2026-01-30T05:41:52Z",
+      "text": "We were on the hunt for someone to install permanent lights we bought at Costco, but all the quotes we were getting were astronomical—until we came across Graham.\n\nGraham was affordable, super responsive, kind, and professional from the start. He was incredibly detail-oriented and thorough, yet still quick and efficient with the install. While he was up there, he noticed a significant amount of moss on our roof and even sent us photos—we never would have known how much there was without him pointing it out.\n\nHe’s coming back soon to wash the roof and clean our solar panels, and we couldn’t be happier to work with him again. We highly recommend Graham and can’t wait to refer him to all our friends and family!",
+      "images": [],
+      "likes": 0,
+      "link": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT21Ob1pHaEhNR3RuUzI4M1drZHRZMlZzVTIxUFZHYxAB!2m1!1s0x0:0xb4ba2d3b5caf5b45!3m1!1s2@1:CAIQACodChtycF9oOmNoZGhHMGtnS283WkdtY2VsU21PVGc%7C%7C?hl=en-GB",
+      "response": {
+        "date": "7 months ago",
+        "text": "Thank you, Amanda! It was a breeze to work with you guys as well. We are loving this space we've created with help from customers like you - with efficient, professional work, we don't need to charge insane amounts of money to make our efforts worth it. We are happy being your one-stop shop for all things roof-care-related!"
+      }
+    },
+    {
+      "id": "Ci9DQUlRQUNvZENodHljRjlvT25aNFUxTnRUa2xSUkROWGNrSmFjbXg0V25OWFNtYxAB",
+      "author": "Shannon McGraw",
+      "authorThumbnail": "https://lh3.googleusercontent.com/a-/ALV-UjWgl1UwvOJDiEx1N9eYeoMZLd4f240u0bEp9s6XQwIduOQUGBU=s120-c-rp-mo-ba12-br100",
+      "authorLink": "https://www.google.com/maps/contrib/103623329594705937203?hl=en-GB",
+      "isLocalGuide": true,
+      "rating": 5,
+      "date": "8 months ago",
+      "isoDate": "2026-01-03T19:32:23Z",
+      "text": "Graham is amazing!!!!! He hung Christmas lights on my house this year. My roofline is sooooo tall I’ve never dared try to hang lights myself. I was so happy to finally have lights on the house this year…made the holiday so much more magical! He is incredibly professional, quick and friendly. His prices are more than fair. I’m so grateful to have found him! He also removed the lights timely and I’ll have him back in the summer to pressure wash the roof and hopefully back every Christmas. Thank you Graham!",
+      "images": [],
+      "likes": 0,
+      "link": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT25aNFUxTnRUa2xSUkROWGNrSmFjbXg0V25OWFNtYxAB!2m1!1s0x0:0xb4ba2d3b5caf5b45!3m1!1s2@1:CAIQACodChtycF9oOnZ4U1NtTklRRDNXckJacmx4WnNXSmc%7C%7C?hl=en-GB",
+      "response": {
+        "date": "8 months ago",
+        "text": "Shannon, I can't thank you enough for this incredible review. It was my pleasure to help you with your Christmas lighting. I'm looking forward to pressure washing all that Moss off your roof and out of your gutters! And yes, I would be more than happy to continue to help you install your lights each holiday season. Thank you!"
+      }
+    },
+    {
+      "id": "Ci9DQUlRQUNvZENodHljRjlvT2tONVNVaFFSek5MV0RkWVdrc3ROV3R5Y2xaYWNsRRAB",
+      "author": "Micayla Luddy",
+      "authorThumbnail": "https://lh3.googleusercontent.com/a-/ALV-UjWdquev6AKUjpMu523GCe4cqHUxQ-N3He7iRcySHeowrp_BHAof=s120-c-rp-mo-br100",
+      "authorLink": "https://www.google.com/maps/contrib/117615612132410227014?hl=en-GB",
+      "isLocalGuide": true,
+      "rating": 5,
+      "date": "9 months ago",
+      "isoDate": "2025-12-11T04:19:37Z",
+      "text": "Graham did an exceptional job installing our second-story Govee lights today. He first came out to give us a quote, and to our surprise, he was able to complete the install within just a few hours. We had already done our first story ourselves and needed help with the second, and Graham was more than willing to match the exact method and style we used on the first level.\n\nHis attention to detail was outstanding, and the final result looks fantastic. We’re extremely happy with his work and would highly recommend him to anyone looking for a permanent lighting installation.",
+      "images": [
+        "https://lh3.googleusercontent.com/grass-cs/ACvplmNhk9HZOoTFe-OwgKfebvuNNUnc7bqvNdgFeZfBbPm2Ks_sluJGrcxsBbF6o6cTF9-yI9lqA0FRuHSv75tifjuY86lv7pqSYJbl36Ql7URl69jUj-6rJndgC_UHhk8iX5aIKmpdhHOe3x8=k-no"
+      ],
+      "likes": 0,
+      "link": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2tONVNVaFFSek5MV0RkWVdrc3ROV3R5Y2xaYWNsRRAB!2m1!1s0x0:0xb4ba2d3b5caf5b45!3m1!1s2@1:CAIQACodChtycF9oOkN5SUhQRzNLWDdYWkstNWtyclZaclE%7C%7C?hl=en-GB",
+      "response": {
+        "date": "9 months ago",
+        "text": "Micayla, this review, and the one you left on Facebook, are more than I ever could have asked for. Growing this business has been such a journey - I never thought I'd be so fortunate as to have customers like you to help me along the way. I'm happy I could help you a little in return. Thank you for the support!"
+      }
+    },
+    {
+      "id": "Ci9DQUlRQUNvZENodHljRjlvT2twSVpUVjJlVFpCZEdvNWNHaFJWRkJ5TVdkbFNHYxAB",
+      "author": "Heather Nethaway",
+      "authorThumbnail": "https://lh3.googleusercontent.com/a-/ALV-UjXZN9sMTkW-gYdBzC6HMNfa8TiDp-zKZLsrBLjwQZ8-7cyDkmw=s120-c-rp-mo-br100",
+      "authorLink": "https://www.google.com/maps/contrib/103217922128099002060?hl=en",
+      "isLocalGuide": false,
+      "rating": 5,
+      "date": "9 months ago",
+      "isoDate": "2025-11-30T15:45:11Z",
+      "text": "Graham did an outstanding job installing our permanent lights. His work ethic is truly one of the best—he’s meticulous, detail-oriented, and makes sure everything is absolutely perfect before he’s done. You can tell he takes great pride in his craft. He’s a definite hire for any job you have. Highly recommend!",
+      "images": [],
+      "likes": 0,
+      "link": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2twSVpUVjJlVFpCZEdvNWNHaFJWRkJ5TVdkbFNHYxAB!2m1!1s0x0:0xb4ba2d3b5caf5b45!3m1!1s2@1:CAIQACodChtycF9oOkpIZTV2eTZBdGo5cGhRVFByMWdlSGc%7C%7C?hl=en",
+      "response": {
+        "date": "9 months ago",
+        "text": "This is amazing, Heather - thank you so much. I really appreciate you sharing this. It was a pleasure helping you guys. Please let me know if I can help with anything else!"
+      }
+    },
+    {
+      "id": "Ci9DQUlRQUNvZENodHljRjlvT2toMWQwYzNSRkl5ZG1oWlJEZzVTRjlrVjBaVFFrRRAB",
+      "author": "Rick Englehardt",
+      "authorThumbnail": "https://lh3.googleusercontent.com/a/ACg8ocLTqK-zt0GJh67O5oWszAb1Qs7UxjlrUnwOz59L3k-bxHDVdA=s120-c-rp-mo-br100",
+      "authorLink": "https://www.google.com/maps/contrib/109975986092108863193?hl=en",
+      "isLocalGuide": false,
+      "rating": 5,
+      "date": "9 months ago",
+      "isoDate": "2025-11-26T22:20:39Z",
+      "text": "Graham is a perfectionist. Our permanent lights that he installed look amazing.  Couldn’t be happier with his work.",
+      "images": [],
+      "likes": 0,
+      "link": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2toMWQwYzNSRkl5ZG1oWlJEZzVTRjlrVjBaVFFrRRAB!2m1!1s0x0:0xb4ba2d3b5caf5b45!3m1!1s2@1:CAIQACodChtycF9oOkh1d0c3RFIydmhZRDg5SF9kV0ZTQkE%7C%7C?hl=en",
+      "response": {
+        "date": "9 months ago",
+        "text": "Rick I thoroughly enjoyed meeting you and your wife. I cant thank you enough for trusting me with your lighting project. Please reach out if there's anyrging else I can for you."
+      }
+    },
+    {
+      "id": "Ci9DQUlRQUNvZENodHljRjlvT2xnd1dVRlZURk5YV1hWbVpXTjJjMnBvTlV4QlZWRRAB",
+      "author": "A A",
+      "authorThumbnail": "https://lh3.googleusercontent.com/a/ACg8ocIbAbbBUUmEevNxFIDxDXXgHzrXGr3jYLbTLqHHoI2iid6r_Q=s120-c-rp-mo-br100",
+      "authorLink": "https://www.google.com/maps/contrib/113860762796753910068?hl=en",
+      "isLocalGuide": false,
+      "rating": 5,
+      "date": "Edited 9 months ago",
+      "isoDate": "2025-11-21T07:59:41Z",
+      "text": "Amazing results from solar panel cleaning; actually scrubbed spotless by his soft brush power cleaner, much better than I was able to achieve through my method. As a result of great work also had him clean my gutters allowing for his repair of several leaks.  I will definitely have him clean/polish my solar panels on a routine schedule.  Highly recommend!",
+      "images": [],
+      "likes": 0,
+      "link": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2xnd1dVRlZURk5YV1hWbVpXTjJjMnBvTlV4QlZWRRAB!2m1!1s0x0:0xb4ba2d3b5caf5b45!3m1!1s2@1:CAIQACodChtycF9oOlgwWUFVTFNXWXVmZWN2c2poNUxBVVE%7C%7C?hl=en",
+      "response": {
+        "date": "9 months ago",
+        "text": "Malcom, I'm so very fortunate to have earned your trust. Working with you was my pleasure - I look forward to our upcoming projects!"
+      }
+    },
+    {
+      "id": "Ci9DQUlRQUNvZENodHljRjlvT2pabFMxVXpabVozYmxoSGNYTktOM1pWZHpsdVFuYxAB",
+      "author": "Kayla Haynes",
+      "authorThumbnail": "https://lh3.googleusercontent.com/a-/ALV-UjVJIv6CP-hVZCLnSkih_5nm8Gk3VlVSgu5AoRNMXXMV-5R9AQRaVA=s120-c-rp-mo-br100",
+      "authorLink": "https://www.google.com/maps/contrib/116406192081522011040?hl=en",
+      "isLocalGuide": false,
+      "rating": 5,
+      "date": "9 months ago",
+      "isoDate": "2025-11-22T03:03:13Z",
+      "text": "We recently hired Graham to put up Christmas lights for us after seeing his sign in our neighborhood. Super easy to schedule (text). He did an INCREDIBLE job! We’ve had lights put up in the past and they were sloppily hung with drooping and everything. Graham also installs permanent lights and he hung ours (non permanent) to the same standard. We even had a faulty timer which he came back and replaced for us. Super service. Will definitely be hiring again next year and for solar panel cleaning!",
+      "images": [
+        "https://lh3.googleusercontent.com/grass-cs/ACvplmPe3IMkB3AAEJzqO7nmSTU2ZQdM5KoOxW99Vl9QG3mMTOlhU7K25oqNIXQBphAgEI5PLIDawUSQd5i3MDEYdTP6qPZIwBm729ixFatCqBkfHAu3H7VAG6HFzgceJHXQcoeA-aU75gsI5lmI=k-no",
+        "https://lh3.googleusercontent.com/grass-cs/ACvplmMGMqHe2c4YXp-EaN-e9AbnPplKSt0EnpkIBx0YANLZzwpvA4awOjI-G4Lq6OoA7qfFBAMK0_bDh8AJIT0qv7H_RDSR-xLnqtPrSNF-BeQ5eUHAU3HklZpF92BJCZQ7NWCOXPw0ndfwG4j2=k-no",
+        "https://lh3.googleusercontent.com/grass-cs/ACvplmP2tqPUr1zLRAJuf1XlTOtY6EgRZ1PLKQx7CWBe4cc8M-7HwfSC_xz80ktiuh4eoDjHImArssSvu43OLg_SEgWED9dAWh2Gn1ZfheecDjMyyk1dQttrpwvVqzVmXOxCTKVTp-pDpoWqXys=k-no"
+      ],
+      "likes": 0,
+      "link": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2pabFMxVXpabVozYmxoSGNYTktOM1pWZHpsdVFuYxAB!2m1!1s0x0:0xb4ba2d3b5caf5b45!3m1!1s2@1:CAIQACodChtycF9oOjZlS1UzZmZ3blhHcXNKN3ZVdzluQnc%7C%7C?hl=en",
+      "response": {
+        "date": "9 months ago",
+        "text": "Kayla i really appreciate you taking the time to share all of this. I'm glad we could get that timer situation handled. Hearing how excited your daughter was to see the lights reinforced how much I really do love this job."
+      }
+    },
+    {
+      "id": "Ci9DQUlRQUNvZENodHljRjlvT25vemJEVXdPRWRNUXpKUlYzZGxTMnBDVDNaMFpXYxAB",
+      "author": "Cathy Moss",
+      "authorThumbnail": "https://lh3.googleusercontent.com/a/ACg8ocKulPjkuXlNNM3-otvy4AAgNJJpgaXNFC6piaspjzFAmnJrGg=s120-c-rp-mo-br100",
+      "authorLink": "https://www.google.com/maps/contrib/105562904115271553034?hl=en",
+      "isLocalGuide": false,
+      "rating": 5,
+      "date": "9 months ago",
+      "isoDate": "2025-11-21T14:44:21Z",
+      "text": "Graham is the best! We love our new lights and working with Graham was easy and fun.\nGraham showed up when he said he would, completed the install with efficiency and exactly to our requests, and was very patient as he explained the control app to us. We highly recommend this polite and amazing young man and his business! No more climbing ladders for us!",
+      "images": [],
+      "likes": 0,
+      "link": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT25vemJEVXdPRWRNUXpKUlYzZGxTMnBDVDNaMFpXYxAB!2m1!1s0x0:0xb4ba2d3b5caf5b45!3m1!1s2@1:CAIQACodChtycF9oOnozbDUwOEdMQzJRV3dlS2pCT3Z0ZWc%7C%7C?hl=en",
+      "response": {
+        "date": "9 months ago",
+        "text": "Thank you so much for the wonderful review, Cathy! I’m really glad you’re loving the new lights. It was a pleasure working with you, and I appreciate your trust in me and my business. Please let me know when I can give you another hand!"
+      }
+    },
+    {
+      "id": "Ci9DQUlRQUNvZENodHljRjlvT25ZeWJrdE9iM1Z3V2tOdGNURjZjbEZJY2xadk4wRRAB",
+      "author": "Jennifer Dithridge-Saigeon",
+      "authorThumbnail": "https://lh3.googleusercontent.com/a-/ALV-UjWI71ODiEo5Hv7ueR8rPr5Y78S1QnJYl6HvFa8FtB4JdYMOz07E=s120-c-rp-mo-br100",
+      "authorLink": "https://www.google.com/maps/contrib/106242395891146026443?hl=en",
+      "isLocalGuide": false,
+      "rating": 5,
+      "date": "9 months ago",
+      "isoDate": "2025-11-21T05:41:20Z",
+      "text": "Graham did a fantastic job on our lights! He was meticulous and the lights look fantastic! He books fast so reach out soon!!",
+      "images": [],
+      "likes": 0,
+      "link": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT25ZeWJrdE9iM1Z3V2tOdGNURjZjbEZJY2xadk4wRRAB!2m1!1s0x0:0xb4ba2d3b5caf5b45!3m1!1s2@1:CAIQACodChtycF9oOnYybktOb3VwWkNtcTF6clFIclZvN0E%7C%7C?hl=en",
+      "response": {
+        "date": "9 months ago",
+        "text": "Thank you Jennifer! You and your husband were wonderful hosts - I look forward to working with you more in the future!"
+      }
+    },
+    {
+      "id": "Ci9DQUlRQUNvZENodHljRjlvT2pFMGRsbzBjVWhZTkhCUE56UnphbWRHWDNsd1JrRRAB",
+      "author": "Adam Acrich",
+      "authorThumbnail": "https://lh3.googleusercontent.com/a/ACg8ocKWkyP3G17i9b4Zxr9Nlq2reZS6Z6tWo7XHoYNZvp1nnfaEKw=s120-c-rp-mo-br100",
+      "authorLink": "https://www.google.com/maps/contrib/103262292888175626399?hl=en",
+      "isLocalGuide": false,
+      "rating": 5,
+      "date": "10 months ago",
+      "isoDate": "2025-11-07T04:15:41Z",
+      "text": "Great work! Graham cleaned solar panels and gutters for us. Came out within a week and was very professional. Great work,  very professional and friendly. Thank you!!",
+      "images": [
+        "https://lh3.googleusercontent.com/grass-cs/ACvplmPU3K4MOIy0ISPSPtOGzpNv8XI9Ky8o_NvmiACXWltT6HYS118AyV1w75BUQuVz544q6LQw815Vqn_AtoJYO2QnRC4lLykmBqdtomfjWXeS-V2Wqy2TmPeuBC_mtf8i3_rfuJLcQ361dAq4=k-no",
+        "https://lh3.googleusercontent.com/grass-cs/ACvplmP6eM85Wk6XrIq8M1dSUYpCAtos9vQBxjvbFOm2lHKGrm_RH0REnxwJAMAy751GXG6FgiyiZgBHeCgo0U06CWCV8MVRi8ErredMMmQdX4gqckD3V1i-xmS-8jG46QDbBFw89uMuOI9QOvV1=k-no",
+        "https://lh3.googleusercontent.com/grass-cs/ACvplmPvN78LI2V4Ozx78k-K7nnRcdFWUlhev-zCv6FQOxjdEFxKR2hMmR73hgT4mlXr-Z-vrKIZXhgO5ihadpqZzOUdZuksoG7LmRCmt4XjZp-OLykPSJvieRyImQaK_-QHwUu_wB9j2l-n5Oc=k-no",
+        "https://lh3.googleusercontent.com/grass-cs/ACvplmNPMCfoJB8D1c5vGEcmSTmkFaCF_48Q_248ygMFhjTmbEb8RDiCUppppon930bJtAaKss3BsKux6SGDOJwb2Bfli82SuAwhUCoTd7E2nmZKZbIa7P5mhV_FqoDZTdQh68JKDkQbpTGY6kiZ=k-no"
+      ],
+      "likes": 0,
+      "link": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2pFMGRsbzBjVWhZTkhCUE56UnphbWRHWDNsd1JrRRAB!2m1!1s0x0:0xb4ba2d3b5caf5b45!3m1!1s2@1:CAIQACodChtycF9oOjE0dlo0cUhYNHBPNzRzamdGX3lwRkE%7C%7C?hl=en",
+      "response": {
+        "date": "9 months ago",
+        "text": "Adam, these pictures are fantastic! It means a lot to us that you've taken the time to share your experience. We are happy to hear that you're on our ever-growing list of happy customers."
+      }
+    },
+    {
+      "id": "Ci9DQUlRQUNvZENodHljRjlvT2sxSlNXMWtWMGhqTW1jMU9GcG9iREZCWjJ4TVlXYxAB",
+      "author": "Brent Thibodo",
+      "authorThumbnail": "https://lh3.googleusercontent.com/a/ACg8ocJPXDCNRl-i_9huZvGCtsJvX17gtpdyY6sSSeabHAMsNFXTog=s120-c-rp-mo-br100",
+      "authorLink": "https://www.google.com/maps/contrib/101036046393344724528?hl=en",
+      "isLocalGuide": false,
+      "rating": 5,
+      "date": "a year ago",
+      "isoDate": "2025-08-29T22:05:53Z",
+      "text": "I called Graham to get my solar panels cleaned.  He quickly came back with an estimate and scheduled a day to come out to service my panels.  He was knowledgeable about the equipment he used and the benefits of getting the solar panels cleaned.  It has been almost a week since my solar panels have been cleaned and on average my panels have produced 6 KW more electricity per day.  I would highly recommend using him to clean your solar panels.",
+      "images": [
+        "https://lh3.googleusercontent.com/grass-cs/ACvplmPCt3LTjWqLr23D8u_CtCP6tvkRz1SpiKYMGKf_WGQHfmovG7zAa1PIIG22AcXEQzXAlXiTKt7DIxjNq4a3sbW6UAmbaRuDpkyyo0bZkMIKagsFTN3DaPe8EEtH9cgxtWXKEoDUlke0XPlW=k-no",
+        "https://lh3.googleusercontent.com/grass-cs/ACvplmOodFTu_z76yvxSvDwNHdhqGVA3g9ffGp9cFEK1UV3R_RGkzZ1fVRh2h1XIqTNJiVvRvPwQ60DVSl30l1cELHiZ0XiPzUNpSeqkhbRdr8spWeLYkaMmeUlbl4ZXNdCSvNrCLKFBjl66GinW=k-no",
+        "https://lh3.googleusercontent.com/grass-cs/ACvplmP--35d6QkHxGngFnZS2ZXFWDF7Vmw4sWKRhOZBMl_HkIA4VyxAppaAFX0qRNjv_RDViC1Uhjfl4I0pUktYjJwSRGLkdxcncFkkHIggEeQ1Dhl6ZsSVH2hdnxFOzyWNkCdyZlxgNSWZEV8=k-no",
+        "https://lh3.googleusercontent.com/grass-cs/ACvplmNbYVcH9KMBOP2LTx1GMuzi1TIXMPVEZWL7IM3uRgEOxcB5a56B3rMToStzN1r48pwbDrbeg_rnHeEUSK0OKUJBpZbEo8oW9WT4hkAKpY7hF-yTZ1JAoeRnFT-aqf0XAP0gi7ZRqBMeEtHB=k-no",
+        "https://lh3.googleusercontent.com/grass-cs/ACvplmN0fN9VpIq7zGjJK0uS5-chNp2jFZiO5i4B4R8OOkp81GraG2eauZ_J-JrSeQ71flgtK2SdK-dGGlstXdOfZjikc_XOf9c-WPP8b_0U5SQ2Lh5w5Z2fy5wOSn5qYeeL12ZiiEJV4PbQOVD2=k-no",
+        "https://lh3.googleusercontent.com/grass-cs/ACvplmPXYWGUgjgLelHD2A4e7IXK1K26JLDvplGA0-l4nCbu_Szaxao_gyPTGb8OmBrFn2Jhq91wscFTKtLIRmWTkSPWJdKmV_1mnn49AczA51kN2Qrh4hnPnwV5zalPDoyK6xqtXitGFc1IVjBq=k-no"
+      ],
+      "likes": 0,
+      "link": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2sxSlNXMWtWMGhqTW1jMU9GcG9iREZCWjJ4TVlXYxAB!2m1!1s0x0:0xb4ba2d3b5caf5b45!3m1!1s2@1:CAIQACodChtycF9oOk1JSW1kV0hjMmc1OFpobDFBZ2xMYWc%7C%7C?hl=en",
+      "response": {
+        "date": "a year ago",
+        "text": "Brent, thank you so much for sharing your experience and results! I’m thrilled to hear that your solar panels are now producing an extra 6 kW of electricity per day after the cleaning. That’s exactly why regular maintenance is so important—not only do clean panels look better, but they also perform better and save you money in the long run. I really appreciate you taking the time to point this out, because it helps other homeowners see the real benefits of professional solar panel cleaning. Looking forward to keeping your system running at its best for years to come!"
+      }
+    },
+    {
+      "id": "Ci9DQUlRQUNvZENodHljRjlvT21KT2JYQkxkWE5hWms0MU0zcElNbGg2YjJrNU5FRRAB",
+      "author": "Cole Kachmar",
+      "authorThumbnail": "https://lh3.googleusercontent.com/a/ACg8ocLk5N-rtqs-SENP6toZR-WKbKVqZao_9TDl3iMwj-yGrDyZlQ=s120-c-rp-mo-br100",
+      "authorLink": "https://www.google.com/maps/contrib/105696350103982276930?hl=en",
+      "isLocalGuide": false,
+      "rating": 5,
+      "date": "a year ago",
+      "isoDate": "2025-08-26T03:33:42Z",
+      "text": "WOW! My trash can was absolutely disgusting. The smells and gunks were horrendous. If I had before and after pictures I would post them to show! Very impressed with his work and professionalism! Thank you! Will definitely be signing up for a monthly cleaning.",
+      "images": [
+        "https://lh3.googleusercontent.com/grass-cs/ACvplmMVEQxRCBcRevSN5NZQPGnqO7L1p3yDjdawghnVfS4U83DeGNXhjo8hAbs1aC3Vu9C_SULP3_nPoIkPWBHsanFhgPMbr2fCn92--5gFzXUeTfATrQE3VXrqjTR1h8dw-TbXf1btz8S29YY=k-no",
+        "https://lh3.googleusercontent.com/grass-cs/ACvplmP501tL6Hjp19XYg2aDZmlqolquFAp4nuHrZFZPUbh5cODtaNhvLoXb3brxeA3GhBQxXYrKz5webT0Yy5wxb9TrfBwZKAuUm4PXqgqWxUuuzD22zlZbEjQZ1fYBBLBh19Ah4K7pzQ3splI=k-no"
+      ],
+      "likes": 0,
+      "link": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT21KT2JYQkxkWE5hWms0MU0zcElNbGg2YjJrNU5FRRAB!2m1!1s0x0:0xb4ba2d3b5caf5b45!3m1!1s2@1:CAIQACodChtycF9oOmJObXBLdXNaZk41M3pIMlh6b2k5NEE%7C%7C?hl=en",
+      "response": {
+        "date": "a year ago",
+        "text": "Cole, I’ve seen some pretty nasty bins, but yours was the first to make me shower immediately after the service! Glad we could kick the stink to the curb and get it fresh again. My family and I are very grateful for your business, and I’m happy to have you set up with our hassle-free monthly bin cleaning service!"
+      }
+    },
+    {
+      "id": "Ci9DQUlRQUNvZENodHljRjlvT21kdlQxTnRRVFpUTW1obE9XaFlRMFZrWDJ0V05XYxAB",
+      "author": "Nicole Fulton",
+      "authorThumbnail": "https://lh3.googleusercontent.com/a/ACg8ocKxmf-64fj3GO6PBN9LNagS2ES-5pncQDsTgREwdyTCqefNGQ=s120-c-rp-mo-br100",
+      "authorLink": "https://www.google.com/maps/contrib/113839147603940676994?hl=en",
+      "isLocalGuide": false,
+      "rating": 5,
+      "date": "a year ago",
+      "isoDate": "2025-08-26T04:04:17Z",
+      "text": "Graham was fantastic! Always professional, knowledgeable, and attentive to detail. Our roof and solar panels have never looked better. We’d definitely recommend Graham and his services!",
+      "images": [],
+      "likes": 0,
+      "link": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT21kdlQxTnRRVFpUTW1obE9XaFlRMFZrWDJ0V05XYxAB!2m1!1s0x0:0xb4ba2d3b5caf5b45!3m1!1s2@1:CAIQACodChtycF9oOmdvT1NtQTZTMmhlOWhYQ0VkX2tWNWc%7C%7C?hl=en",
+      "response": {
+        "date": "9 months ago",
+        "text": "Nicole, I cant believe i missed this review. I have always valued having you and mark as customers - from bird-proofing to permanent light installation, you and Mark have been some of my greatest supporters. Thank you!"
+      }
+    },
+    {
+      "id": "Ci9DQUlRQUNvZENodHljRjlvT2xvMllqWkVlVzFrYmtRMk1UaFhaWGxHVDJSdmIxRRAB",
+      "author": "Ali Nuckles",
+      "authorThumbnail": "https://lh3.googleusercontent.com/a/ACg8ocIaY6boWCU8DrfgHu0Ib-jehTZ94sPrkltX0u_eeZ5iT_arng=s120-c-rp-mo-br100",
+      "authorLink": "https://www.google.com/maps/contrib/105321425661654369668?hl=en",
+      "isLocalGuide": false,
+      "rating": 5,
+      "date": "a year ago",
+      "isoDate": "2025-08-25T01:32:12Z",
+      "text": "Graham is the hardest working guy I know. And his company proves it. He’s done a ton of work for us- he’s been the only reliable worker we’ve had in the area since we moved here 6 years ago. He’s knowledgeable and completely trustworthy. I hope he helps you too!",
+      "images": [],
+      "likes": 0,
+      "link": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2xvMllqWkVlVzFrYmtRMk1UaFhaWGxHVDJSdmIxRRAB!2m1!1s0x0:0xb4ba2d3b5caf5b45!3m1!1s2@1:CAIQACodChtycF9oOlo2YjZEeW1kbkQ2MThXZXlGT2Rvb1E%7C%7C?hl=en",
+      "response": {
+        "date": "a year ago",
+        "text": "Ali, I've been very fortunate to earn your business over the years. And as you know,  you were the very person who encouraged me to start this business in the first place. I’ll always be grateful for that push, and for trusting me with so many projects over the years. Your confidence and loyalty mean the world to me, and I look forward to helping you for years to come!"
+      }
+    },
+    {
+      "id": "Ci9DQUlRQUNvZENodHljRjlvT2sweFpFcDViREJxZDFKMVl6TldVekV5WVRnemFGRRAB",
+      "author": "Justin Mottram",
+      "authorThumbnail": "https://lh3.googleusercontent.com/a-/ALV-UjXQUR-Fp0pAP6ut2oguBFku3FBgMAEdNpN7y4UxNzT5PLrDWz4=s120-c-rp-mo-ba12-br100",
+      "authorLink": "https://www.google.com/maps/contrib/110826702649233507441?hl=en",
+      "isLocalGuide": false,
+      "rating": 5,
+      "date": "a year ago",
+      "isoDate": "2025-08-15T14:27:38Z",
+      "text": "I hired this company to clean my solar panels and was extremely impressed with the results. They arrived on time, worked efficiently, and handled the job with great care. The panels looked brand new afterward, and I’ve already noticed improved energy production. Their professionalism, attention to detail, and use of proper cleaning techniques gave me confidence the work was done right.\n\nI highly recommend them to anyone looking to maintain their solar panels and maximize performance.",
+      "images": [
+        "https://lh3.googleusercontent.com/grass-cs/ACvplmOorhS3nP5qxye66zTbb7i4ddKyyXlin5pbWAACsYa0PAZJVPiEhViuK-Id1aWMwx94ygnoxVHoOW5iWGrR-qfC7ltvWVfcAZUyOnRGWDU5X7udTUJ-azX34h5a6D4CQe4E92-6pBpNvRM=k-no"
+      ],
+      "likes": 0,
+      "link": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2sweFpFcDViREJxZDFKMVl6TldVekV5WVRnemFGRRAB!2m1!1s0x0:0xb4ba2d3b5caf5b45!3m1!1s2@1:CAIQACodChtycF9oOk0xZEp5bDBqd1J1YzNWUzEyYTgzaFE%7C%7C?hl=en",
+      "response": {
+        "date": "a year ago",
+        "text": "Thank you so much for the wonderful review! I’m glad we could make your panels look brand new and that you’re already seeing improved energy production—that’s exactly why regular cleaning makes such a big difference. We really appreciate your trust in our process and your kind words about our professionalism. We are looking forward to helping you keep your investment in peak performance!"
+      }
+    },
+    {
+      "id": "Ci9DQUlRQUNvZENodHljRjlvT2pGb1pWRXphak5VUmtaM2FYSnlibE5PUWxobGFHYxAB",
+      "author": "enrique oyola",
+      "authorThumbnail": "https://lh3.googleusercontent.com/a/ACg8ocKFLsC0YGs2I1jr8rFADDJn2Kci-GpY-ok0QRh-iHHjFuLGHQ=s120-c-rp-mo-br100",
+      "authorLink": "https://www.google.com/maps/contrib/110533718214298730900?hl=en",
+      "isLocalGuide": false,
+      "rating": 5,
+      "date": "a year ago",
+      "isoDate": "2025-08-14T21:19:14Z",
+      "text": "My solar panels look brand new,very professional work,they were super dirty and now so clean, 100% satisfied with the work,I will definitely recommend it to friends and family.",
+      "images": [
+        "https://lh3.googleusercontent.com/grass-cs/ACvplmMpP69dFIhc8q3pvSS2oncLG6ziTMOZvbyb6ImU5S4jei89UBm2s009qbsKbQVsIIcxrsE9tTQvjiLqO_sssiTUc0YL9eUl-aOfxgcVQNhgKmDg2oMFlzQ-VSdee9e4n_G6k-mNPc1Yp3g9=k-no",
+        "https://lh3.googleusercontent.com/grass-cs/ACvplmP9_SoDTpXfSmosx9GTK6XHf6aXetHgXs3LLgAqMg-tE9caUAPSYbz3Xgj8XQFH2OUr2btaRE213Z1rymagEU8r7Q354bka25PH-3L3HNLgsL-Ng5pdvN8bq6V7CZji7uA1Lw6cVCH-qmE=k-no"
+      ],
+      "likes": 0,
+      "link": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2pGb1pWRXphak5VUmtaM2FYSnlibE5PUWxobGFHYxAB!2m1!1s0x0:0xb4ba2d3b5caf5b45!3m1!1s2@1:CAIQACodChtycF9oOjFoZVEzajNURkZ3aXJyblNOQlhlaGc%7C%7C?hl=en",
+      "response": {
+        "date": "a year ago",
+        "text": "Hearing this feedback never gets old - we love to please! Thank you for trusting us to restore your solar efficiency. We look forward to working with you again!"
+      }
+    },
+    {
+      "id": "Ci9DQUlRQUNvZENodHljRjlvT2xCZlQxSnhlbEJ6WDBWcE5VNURSSE40U0VwWFluYxAB",
+      "author": "Rex Schmidt",
+      "authorThumbnail": "https://lh3.googleusercontent.com/a/ACg8ocIf0ivFN7A3H4ZZ58Nc-8a0dEpS-f3eYVQhU-VyD3P680No7g=s120-c-rp-mo-br100",
+      "authorLink": "https://www.google.com/maps/contrib/117537241910164830462?hl=en",
+      "isLocalGuide": false,
+      "rating": 5,
+      "date": "a year ago",
+      "isoDate": "2025-08-14T20:38:35Z",
+      "text": "Graham was very professional and did a great job cleaning our solar panels. I would recommend him for your house as well.",
+      "images": [],
+      "likes": 0,
+      "link": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2xCZlQxSnhlbEJ6WDBWcE5VNURSSE40U0VwWFluYxAB!2m1!1s0x0:0xb4ba2d3b5caf5b45!3m1!1s2@1:CAIQACodChtycF9oOlBfT1JxelBzX0VpNU5DRHN4SEpXYnc%7C%7C?hl=en",
+      "response": {
+        "date": "a year ago",
+        "text": "Rex, it was great to meet you. Thank you for using our services. And thank you for sharing your positive experience here - we look forward to helping you again."
+      }
+    },
+    {
+      "id": "Ci9DQUlRQUNvZENodHljRjlvT2tOamJrbzNNVTVxUkc5NWEwZEJVR3B5ZVRoaFlrRRAB",
+      "author": "Nick P",
+      "authorThumbnail": "https://lh3.googleusercontent.com/a-/ALV-UjUGYCMrATbZPrKmCgPqCSyZoOd8z9xkP95wJSi1qe1uKfmzRslQ=s120-c-rp-mo-ba12-br100",
+      "authorLink": "https://www.google.com/maps/contrib/110961368134949030463?hl=en",
+      "isLocalGuide": false,
+      "rating": 5,
+      "date": "a year ago",
+      "isoDate": "2025-08-14T04:44:02Z",
+      "text": "Graham deserves 10/5 stars. If you are interested in having your trash cans cleaned don’t hesitate calling him. I am very impressed with his responsiveness and professionalism. He went above and beyond to accommodate my busy schedule, and the final product was better than I thought was possible! I ended up getting my solar panels cleaned after just hanging out chatting, not realizing how much they needed it. He had all the top of the line equipment to handle the job, he is licensed and insured and the before and after photos speak for themselves. I’m a happy customer, and look forward to having my concrete cleaned by him soon! Support this honest and genuine man with a local business, you’ll be glad you did!",
+      "images": [
+        "https://lh3.googleusercontent.com/grass-cs/ACvplmPNgRR5HMZJpRVrRZ9n9Jhf-HK9OFoEZFjFrrKuftvabpqo7Ea0STcGg-77vhdpU-9Kb8uwL4yPM1fjPHPkY_0FrvZP07wewDh0wW00Np3vcH1OcbPJxZQIrQ3UfLIMTAU7O08kBH192vNh=k-no",
+        "https://lh3.googleusercontent.com/grass-cs/ACvplmPw0Bakb9TP9UT6fiDqQbbvY70IFWWCOSMcHIkgfbC2_fziZpklrmMegGSxrvKFFcKIBkm4mAQV8knvFtZUtQkl_P11RJFSyXgZNrdGXUqME7eyt4nnf4nB4s9rYjcLyCetjfXAPkwAzigL=k-no",
+        "https://lh3.googleusercontent.com/grass-cs/ACvplmNoBf3LWaqL2FBAeW60oLv38J0E4k1lfqXwcbEKAqcL76jgZ5w05WHYv7WO-78U0ShNOP_RGmOyF59x0nf51JfoG4Dgx5VNxH3A3Xhr7wthtLSglDYBKhz-FsTYydo9YCrc6QJdNwdHn1I=k-no",
+        "https://lh3.googleusercontent.com/grass-cs/ACvplmM_-cfv5Dsq0EWPkM5AdSPG9ai2nCotMbqg5Pr57dIo738YFzTaMYyA_bT2X0bLXmo5oqNgDjLmbDZSLdTnexNvzl3voXAoyS59mlD4spsuhWluiFGmmABhm4Evm-nDuRl8QbjQKevPAv9Q=k-no"
+      ],
+      "likes": 0,
+      "link": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2tOamJrbzNNVTVxUkc5NWEwZEJVR3B5ZVRoaFlrRRAB!2m1!1s0x0:0xb4ba2d3b5caf5b45!3m1!1s2@1:CAIQACodChtycF9oOkNjbko3MU5qRG95a0dBUGpyeThhYkE%7C%7C?hl=en",
+      "response": {
+        "date": "a year ago",
+        "text": "Wow — Nick, we are truly humbled by your kind words! Thank you so much for trusting us with not just your trash bin, but also your solar panels, and soon your concrete, too. We take a lot of pride in being responsive, professional, and equipped to do the job right, so hearing that our efforts made such an impact means the world to us. We are forever grateful for your support of our growing business. Customers like you make it all worthwhile. We look forward to working with you again soon! Thank you."
+      }
+    },
+    {
+      "id": "Ci9DQUlRQUNvZENodHljRjlvT21ORGMwSndjbGd4YUcxUWFYRm5XVkJ4T1ZkRE0xRRAB",
+      "author": "Amber Burak",
+      "authorThumbnail": "https://lh3.googleusercontent.com/a-/ALV-UjUHZ6Hv56O9n4HQWWPF8ZCicjFpQ2nXhGjaDDc6I05ZRII-g8Gq=s120-c-rp-mo-ba12-br100",
+      "authorLink": "https://www.google.com/maps/contrib/115998846051088430047?hl=en",
+      "isLocalGuide": false,
+      "rating": 5,
+      "date": "a year ago",
+      "isoDate": "2025-08-13T12:10:31Z",
+      "text": "Graham is always a pleasure to work with! He is communicative, kind, and reliable. His perfectionism shows with the completed work. Although this specific company is new, we have used Graham for many years now and would never think of going elsewhere!",
+      "images": [
+        "https://lh3.googleusercontent.com/grass-cs/ACvplmMzI2mrS6HPgvPYhXHIBaeZfE0jutaEp2OXvVnw_Ni6v1ZIpEMwr3MX4ieG4qnl9TRAqz_xvs5GCbRGzHhVZzCe5a6SNn2pzXRPlg00YsDX-80JKUGgE9GNJICAYiNyMLm5zf8m8qROh6ii=k-no",
+        "https://lh3.googleusercontent.com/grass-cs/ACvplmMKhouSinuzUwhsrCqF7hEK2IpCc-UP3OZ0i5HRWoTlwa3HzbgV5Wan_R1VkP5LNE0GDktwOtf1P9ATLAKz87sO8E1mAhIFBgbgkuUWP6IGRZObrWYGhXbZyaXjRvTUCRHg53swPeCGk_w=k-no",
+        "https://lh3.googleusercontent.com/grass-cs/ACvplmP5iM3jUugxcW92H6rL7Jx9jjD6LdUhRu2H0dFjSftaobM6_XNHwTfvLz4QwloNFgn84mo5n9QoIFvb8Niw3qjlPwNRqfJKf9EiEG4lthBv7w4An6eo09afMS4DwQSCWlWG-eM8_2wGqOY=k-no"
+      ],
+      "likes": 0,
+      "link": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT21ORGMwSndjbGd4YUcxUWFYRm5XVkJ4T1ZkRE0xRRAB!2m1!1s0x0:0xb4ba2d3b5caf5b45!3m1!1s2@1:CAIQACodChtycF9oOmNDc0JwclgxaG1QaXFnWVBxOVdDM1E%7C%7C?hl=en",
+      "response": {
+        "date": "a year ago",
+        "text": "Thank you so much for the wonderful feedback! It’s been a privilege to work with you over the years, and I truly appreciate your trust in my services. I’m grateful for your kind words about my communication, reliability, and attention to detail—it means a lot. I look forward to continuing to help with your projects for many years to come!"
+      }
+    },
+    {
+      "id": "Ci9DQUlRQUNvZENodHljRjlvT25wdFQyeHhMVzgwVUVnMVdHcDFkVGgzYlRsYVFsRRAB",
+      "author": "Michael Harbison",
+      "authorThumbnail": "https://lh3.googleusercontent.com/a-/ALV-UjXVmqeniU5Gw1_Ixw7E_c3EbEEWrtz3zoguizKWcivlt9HKJ0qC=s120-c-rp-mo-ba12-br100",
+      "authorLink": "https://www.google.com/maps/contrib/107499868879633685748?hl=en",
+      "isLocalGuide": false,
+      "rating": 5,
+      "date": "a year ago",
+      "isoDate": "2025-08-09T17:28:04Z",
+      "text": "We have known Graham for a few years and have enlisted his handyman services for home repairs that are beyond my expertise.  I noticed moss growing on the shady side of our 20 year old concrete tile roof, and Graham indicated he was now equipped to do a thorough cleaning.  He was very careful in navigating our roof, cleaned it like new, took pictures of previously damaged tiles for us, and cleaned the gutters and ground, leaving everything better than he found it.  This is a young man with a great work ethic and a bright future ahead of him.",
+      "images": [],
+      "likes": 0,
+      "link": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT25wdFQyeHhMVzgwVUVnMVdHcDFkVGgzYlRsYVFsRRAB!2m1!1s0x0:0xb4ba2d3b5caf5b45!3m1!1s2@1:CAIQACodChtycF9oOnptT2xxLW80UEg1WGp1dTh3bTlaQlE%7C%7C?hl=en",
+      "response": {
+        "date": "a year ago",
+        "text": "Mike, this review showcases one of the many reasons for which I will always be happy to help you two. Thank you so much for taking the time to write this thoughtful message. I generally consult Google Reviews before placing my trust in a new business. This post is sure to show readers that I am not only trustworthy, but that I will work hard to continue to earn that privilege. Thank you for trusting me with your home over the years, and I simply cannot find words to thank you for your continued support."
+      }
+    },
+    {
+      "id": "Ci9DQUlRQUNvZENodHljRjlvT2xwTVQzcDVSREJPTWtFeWRFWnlWa00zWjNvNWNHYxAB",
+      "author": "Dave Dover",
+      "authorThumbnail": "https://lh3.googleusercontent.com/a/ACg8ocI51Zebs5t2YzzYXJt1BjoBYJCdAeT_HFqLWYXoH-vy8znztw=s120-c-rp-mo-br100",
+      "authorLink": "https://www.google.com/maps/contrib/111166542604828388654?hl=en",
+      "isLocalGuide": false,
+      "rating": 5,
+      "date": "a year ago",
+      "isoDate": "2025-08-07T22:10:22Z",
+      "text": "I’m very happy with the job Graham did with my driveway.  The 30 years of dirt and grime was no match for his equipment.  He was professional, courteous and skilled at his job.  I will definitely use his services again.",
+      "images": [],
+      "likes": 0,
+      "link": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2xwTVQzcDVSREJPTWtFeWRFWnlWa00zWjNvNWNHYxAB!2m1!1s0x0:0xb4ba2d3b5caf5b45!3m1!1s2@1:CAIQACodChtycF9oOlpMT3p5RDBOMkEydEZyVkM3Z3o5cGc%7C%7C?hl=en",
+      "response": {
+        "date": "a year ago",
+        "text": "Dave, I can't thank you enough for leaving these kind words. Congrats on the new house - I'm glad I could help freshen it up a bit for you! I'm looking forward to returning to clean the windows and backyard patios."
+      }
+    },
+    {
+      "id": "Ci9DQUlRQUNvZENodHljRjlvT2s5YWN6UmZNa2R5U0VGM1IzZElaR3RSZURSaFEyYxAB",
+      "author": "Tarek C",
+      "authorThumbnail": "https://lh3.googleusercontent.com/a-/ALV-UjWVcXI6oWuCfQRmkdmLGkVjHSDNZZiDWuFP8jgymnJ6HahM8FfB=s120-c-rp-mo-br100",
+      "authorLink": "https://www.google.com/maps/contrib/112135796881348543263?hl=en",
+      "isLocalGuide": false,
+      "rating": 5,
+      "date": "a year ago",
+      "isoDate": "2025-08-06T16:46:33Z",
+      "text": "It’s not something that immediately comes to mind as needed, but the before and after on my bin cleaning was awesome. They did a great job and my bin look as new. No odors, no residue. Will definitely be doing this annually or semi-annually going forward.",
+      "images": [],
+      "likes": 0,
+      "link": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2s5YWN6UmZNa2R5U0VGM1IzZElaR3RSZURSaFEyYxAB!2m1!1s0x0:0xb4ba2d3b5caf5b45!3m1!1s2@1:CAIQACodChtycF9oOk9aczRfMkdySEF3R3dIZGtReDRhQ2c%7C%7C?hl=en",
+      "response": {
+        "date": "a year ago",
+        "text": "Tarek, we are happy to have you aboard. Thank you so much for sharing your experience here. It was our pleasure to serve you - we know that you will enjoy your subscription cleaning plan! We would love to evaluate your solar panels for need of bird-proofing when you're ready."
+      }
+    },
+    {
+      "id": "Ci9DQUlRQUNvZENodHljRjlvT2twcGVuUm9YMlJOU2tKSVdGUjZXWFJFWDNKUFJIYxAB",
+      "author": "Katie Diaz",
+      "authorThumbnail": "https://lh3.googleusercontent.com/a-/ALV-UjXE5WFPkyGRnKFgTu5fGUCAOjvm660Rhj4XTULTJJqWN8vkHedQ=s120-c-rp-mo-br100",
+      "authorLink": "https://www.google.com/maps/contrib/111747656538705525643?hl=en",
+      "isLocalGuide": false,
+      "rating": 5,
+      "date": "a year ago",
+      "isoDate": "2025-08-06T02:14:59Z",
+      "text": "Graham did a great job on my driveway! It looks brand new! He was friendly and professional. I highly recommend him for any pressure washing needs!",
+      "images": [],
+      "likes": 0,
+      "link": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2twcGVuUm9YMlJOU2tKSVdGUjZXWFJFWDNKUFJIYxAB!2m1!1s0x0:0xb4ba2d3b5caf5b45!3m1!1s2@1:CAIQACodChtycF9oOkppenRoX2RNSkJIWFR6WXREX3JPRHc%7C%7C?hl=en",
+      "response": {
+        "date": "a year ago",
+        "text": "Thank you for the great feedback, Katie! We won't leave a job until we can say that we are proud of our work - it's rewarding to hear that your are pleased as well. We appreciate your trust and support."
+      }
+    },
+    {
+      "id": "Ci9DQUlRQUNvZENodHljRjlvT2xOeWNGZElRWGRvTkhwWmIwMWFlSEZ5T1hwUmRHYxAB",
+      "author": "Nick Borunda",
+      "authorThumbnail": "https://lh3.googleusercontent.com/a/ACg8ocLA19zyOSg5f8ejkBc6qvMKfOCa-OpJTDCK-SWEPueCUC-a9g=s120-c-rp-mo-br100",
+      "authorLink": "https://www.google.com/maps/contrib/104761991608813715377?hl=en",
+      "isLocalGuide": false,
+      "rating": 5,
+      "date": "a year ago",
+      "isoDate": "2025-08-03T01:53:37Z",
+      "text": "Graham is the man!  He cleaned our driveway and the concrete around our house.   It looks brand new.  He was nice,  clean, and he explained the whole process.  We will definitely hire him again and recommend him to friends and family!",
+      "images": [],
+      "likes": 0,
+      "link": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2xOeWNGZElRWGRvTkhwWmIwMWFlSEZ5T1hwUmRHYxAB!2m1!1s0x0:0xb4ba2d3b5caf5b45!3m1!1s2@1:CAIQACodChtycF9oOlNycFdIQXdoNHpZb01aeHFyOXpRdGc%7C%7C?hl=en",
+      "response": {
+        "date": "a year ago",
+        "text": "We are always happy to lend you a hand, Nick! We are glad that our team left a great impression - customer satisfaction is paramount to our business model. Thank you for choosing us!"
+      }
+    },
+    {
+      "id": "Ci9DQUlRQUNvZENodHljRjlvT2sxaWRXaFBRMjlKYmkwMVMydzNibTlQUlhkSFZrRRAB",
+      "author": "Rhiannon Borunda",
+      "authorThumbnail": "https://lh3.googleusercontent.com/a-/ALV-UjWhigcc1AgXf2OO8V2F7KasaKVJHtq8-kaAxdI7BQlWEiRzxjrIMw=s120-c-rp-mo-br100",
+      "authorLink": "https://www.google.com/maps/contrib/102649569769993301551?hl=en",
+      "isLocalGuide": false,
+      "rating": 5,
+      "date": "a year ago",
+      "isoDate": "2025-08-03T00:33:11Z",
+      "text": "Graham did an amazing job on our driveway and walkway! We had some stains that he was able to get out, it's looking brand new. He's very friendly and professional as well. Highly recommend using his services!",
+      "images": [],
+      "likes": 0,
+      "link": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2sxaWRXaFBRMjlKYmkwMVMydzNibTlQUlhkSFZrRRAB!2m1!1s0x0:0xb4ba2d3b5caf5b45!3m1!1s2@1:CAIQACodChtycF9oOk1idWhPQ29Jbi01S2w3bm9PRXdHVkE%7C%7C?hl=en",
+      "response": {
+        "date": "a year ago",
+        "text": "Hearing that your driveway looks brand new is the best compliment for which we could ask! Thank you for your trust and for recognizing our professionalism. We know you have choices when it comes to these services - we will always work hard to earn your business."
+      }
+    },
+    {
+      "id": "Ci9DQUlRQUNvZENodHljRjlvT204MGFVTklOM0ZCVVdwaGJEbFdhSHBQVnpsTlJFRRAB",
+      "author": "Robert Schaulis",
+      "authorThumbnail": "https://lh3.googleusercontent.com/a/ACg8ocKCXopwQcRN4zUVJevVkoznimHR1gmAKcxq8CNRtqrgYIGiaA=s120-c-rp-mo-br100",
+      "authorLink": "https://www.google.com/maps/contrib/107431484377246374501?hl=en",
+      "isLocalGuide": false,
+      "rating": 5,
+      "date": "a year ago",
+      "isoDate": "2025-08-01T22:12:58Z",
+      "text": "Thanks, Graham. You made my 32 year old driveway look new! Having never had it cleaned, I was unsure what to expect. You exceeded my expectations as it truly does look great. Thanks for your hard work! Highly recommend your service!",
+      "images": [],
+      "likes": 0,
+      "link": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT204MGFVTklOM0ZCVVdwaGJEbFdhSHBQVnpsTlJFRRAB!2m1!1s0x0:0xb4ba2d3b5caf5b45!3m1!1s2@1:CAIQACodChtycF9oOm80aUNIN3FBUWphbDlWaHpPVzlNREE%7C%7C?hl=en",
+      "response": {
+        "date": "a year ago",
+        "text": "Thank you for your business, Robert! We appreciate the kind words as well. Seeing the brand new driveway emerge was well worth the hard work! We are glad you're pleased, and we hope to see you again."
+      }
+    },
+    {
+      "id": "Ci9DQUlRQUNvZENodHljRjlvT2toRVlVUjRWalIyUmxWd2NHaENRWHBHYWtoWVdGRRAB",
+      "author": "Alexis Rogers",
+      "authorThumbnail": "https://lh3.googleusercontent.com/a/ACg8ocKAHHDmnGmgMRDsWsyVHsdUYj2HHfPNUq79-Iz2sfDQbRzo7w=s120-c-rp-mo-br100",
+      "authorLink": "https://www.google.com/maps/contrib/111312129114099516727?hl=en",
+      "isLocalGuide": false,
+      "rating": 5,
+      "date": "a year ago",
+      "isoDate": "2025-07-30T03:43:49Z",
+      "text": "Graham recently cleaned our solar panels making them nice and spotless. He was super efficient and was easy to work with. Definitely recommend him to anyone in need of spotless solar panels!",
+      "images": [],
+      "likes": 0,
+      "link": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2toRVlVUjRWalIyUmxWd2NHaENRWHBHYWtoWVdGRRAB!2m1!1s0x0:0xb4ba2d3b5caf5b45!3m1!1s2@1:CAIQACodChtycF9oOkhEYUR4VjR2RlVwcGhCQXpGakhYWFE%7C%7C?hl=en",
+      "response": {
+        "date": "a year ago",
+        "text": "Alexis, thank you so much for the kind words! We’re glad you loved the service. If you ever want regular cleanings, we offer convenient subscription plans for both trash bins and solar panels. See you next time!"
+      }
+    },
+    {
+      "id": "Ci9DQUlRQUNvZENodHljRjlvT25kcll6RkNkRTR5T1ZGTlNHVlllbnBwWW5kQlZVRRAB",
+      "author": "Rayna Hoda",
+      "authorThumbnail": "https://lh3.googleusercontent.com/a/ACg8ocIRgPeTl4zXAV6cGj77YQnQm005a91lrkMZyUKk--eikmxMGQ=s120-c-rp-mo-br100",
+      "authorLink": "https://www.google.com/maps/contrib/117337108942512509675?hl=en",
+      "isLocalGuide": false,
+      "rating": 5,
+      "date": "a year ago",
+      "isoDate": "2025-07-29T20:05:33Z",
+      "text": "",
+      "images": [],
+      "likes": 0,
+      "link": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT25kcll6RkNkRTR5T1ZGTlNHVlllbnBwWW5kQlZVRRAB!2m1!1s0x0:0xb4ba2d3b5caf5b45!3m1!1s2@1:CAIQACodChtycF9oOndrYzFCdE4yOVFNSGVYenppYndBVUE%7C%7C?hl=en",
+      "response": {
+        "date": "a year ago",
+        "text": "Rayna, it was our pleasure to have crossed paths. Thank you so much for the review. Our reputation is EVERYTHING to us! We hope to see you again."
+      }
+    },
+    {
+      "id": "Ci9DQUlRQUNvZENodHljRjlvT2xWUE1ta3dRV3A0VFhBNU5YUmhSRFJUZFMxdmRIYxAB",
+      "author": "Jayden Patel",
+      "authorThumbnail": "https://lh3.googleusercontent.com/a/ACg8ocL08E4q_q1jSRQM8k0L1YsAckyLCxgkIm82R-daREsiwL763fs=s120-c-rp-mo-br100",
+      "authorLink": "https://www.google.com/maps/contrib/106461272719969882885?hl=en",
+      "isLocalGuide": false,
+      "rating": 5,
+      "date": "a year ago",
+      "isoDate": "2025-07-29T19:43:47Z",
+      "text": "Graham did an amazing job cleaning my home’s exterior and solar panels! Their pressure washing and solar panel cleaning services are top-notch. My driveway and panels were spotless, looking brand new without any damage. Graham was prompt, friendly, and clearly knew his stuff. Using eco-friendly solutions, they nailed every detail. If you need reliable pressure washing or solar panel cleaning, Graham’s is the way to go. Highly recommend!",
+      "images": [],
+      "likes": 0,
+      "link": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2xWUE1ta3dRV3A0VFhBNU5YUmhSRFJUZFMxdmRIYxAB!2m1!1s0x0:0xb4ba2d3b5caf5b45!3m1!1s2@1:CAIQACodChtycF9oOlVPMmkwQWp4TXA5NXRhRDRTdS1vdHc%7C%7C?hl=en",
+      "response": {
+        "date": "a year ago",
+        "text": "Jayden - I simply cannot thank you enough for your support. It’s our goal to make life a little cleaner and easier—thanks for choosing us for your driveway and solar panel cleaning. If you're ever interested in keeping that clean going year-round, we offer simple subscription options! No hidden fees, no hassle - just convenient and quality cleaning."
+      }
+    },
+    {
+      "id": "Ci9DQUlRQUNvZENodHljRjlvT2xka1NuVjFabFUxTTJ0TFJXZElObTkzUlZWb09FRRAB",
+      "author": "emma kachmar",
+      "authorThumbnail": "https://lh3.googleusercontent.com/a/ACg8ocK9iQrteJVy6xCutTySD47-i7v_FVdx_1csPl22jewYzPV8gg=s120-c-rp-mo-br100",
+      "authorLink": "https://www.google.com/maps/contrib/110240169508385392730?hl=en",
+      "isLocalGuide": false,
+      "rating": 5,
+      "date": "a year ago",
+      "isoDate": "2025-07-29T19:42:23Z",
+      "text": "",
+      "images": [],
+      "likes": 0,
+      "link": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2xka1NuVjFabFUxTTJ0TFJXZElObTkzUlZWb09FRRAB!2m1!1s0x0:0xb4ba2d3b5caf5b45!3m1!1s2@1:CAIQACodChtycF9oOldkSnV1ZlU1M2tLRWdINm93RVVoOEE%7C%7C?hl=en",
+      "response": {
+        "date": "a year ago",
+        "text": "Emma - thank you for the 5-star review. We appreciate you taking the time to leave post this. Please let us know if you need assistance in the future."
+      }
+    },
+    {
+      "id": "Ci9DQUlRQUNvZENodHljRjlvT2pWeWN6RkhMV001ZGxoMFZHOW1UMjF3YzI1dmVXYxAB",
+      "author": "Danny Wiest",
+      "authorThumbnail": "https://lh3.googleusercontent.com/a-/ALV-UjWag9VCMjpKPyYJtrAzBy8VZPIW46r3hwnVyfJULcZ8nJMvf7_S=s120-c-rp-mo-br100",
+      "authorLink": "https://www.google.com/maps/contrib/104939191421650927293?hl=en",
+      "isLocalGuide": false,
+      "rating": 5,
+      "date": "a year ago",
+      "isoDate": "2025-07-29T11:48:52Z",
+      "text": "Graham was amazing! I truly felt that he cared about what he was doing and did an exceptional job cleaning my solar panels. Would absolutely recommend for anyone that is looking for professional, well organized and friendly service!",
+      "images": [],
+      "likes": 0,
+      "link": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2pWeWN6RkhMV001ZGxoMFZHOW1UMjF3YzI1dmVXYxAB!2m1!1s0x0:0xb4ba2d3b5caf5b45!3m1!1s2@1:CAIQACodChtycF9oOjVyczFHLWM5dlh0VG9mT21wc25veWc%7C%7C?hl=en",
+      "response": {
+        "date": "a year ago",
+        "text": "Danny, Thanks for the great review! We’re so glad that you're happy with our work. Many of our customers choose a quarterly plan so their panels always stay clean and efficient —let us know if you'd like details!"
+      }
+    },
+    {
+      "id": "Ci9DQUlRQUNvZENodHljRjlvT2xCTFNWSjJZMEpCVXpCQmFFeHBUV2syYmtzM1VIYxAB",
+      "author": "Anthony Rogers",
+      "authorThumbnail": "https://lh3.googleusercontent.com/a-/ALV-UjU3PYpPhN66YqnwcHg46mnDcDzMIuJcD4eh3YI7NFMYfLq2KKUf=s120-c-rp-mo-br100",
+      "authorLink": "https://www.google.com/maps/contrib/111388456324018099369?hl=en",
+      "isLocalGuide": false,
+      "rating": 5,
+      "date": "a year ago",
+      "isoDate": "2025-07-29T04:33:00Z",
+      "text": "I couldn't be happier with the results after getting my solar panels cleaned. Graham was professional, punctual, and clearly knew what he was doing. He took great care to avoid any damage and left the panels spotless. Highly recommend this service to anyone looking to boost their solar efficiency and keep things running smoothly.",
+      "images": [],
+      "likes": 0,
+      "link": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2xCTFNWSjJZMEpCVXpCQmFFeHBUV2syYmtzM1VIYxAB!2m1!1s0x0:0xb4ba2d3b5caf5b45!3m1!1s2@1:CAIQACodChtycF9oOlBLSVJ2Y0JBUzBBaExpTWk2bks3UHc%7C%7C?hl=en",
+      "response": {
+        "date": "a year ago",
+        "text": "Anthony - thank you so much for sharing this. We take great pride in offering the best customer experience possible. Let's talk soon about getting you on a discounted subscription plan to keep your solar efficiency at its peak."
+      }
+    },
+    {
+      "id": "Ci9DQUlRQUNvZENodHljRjlvT25WTGJqUktTWE5aZFdsNFluQlZXbHBsZVdZMGNIYxAB",
+      "author": "Colin",
+      "authorThumbnail": "https://lh3.googleusercontent.com/a/ACg8ocL2HWPyWltrJgir47c_M7V0Svak-RSyjqJEjkJX2UPCyFeEg-g=s120-c-rp-mo-br100",
+      "authorLink": "https://www.google.com/maps/contrib/118050994599495979185?hl=en",
+      "isLocalGuide": false,
+      "rating": 5,
+      "date": "a year ago",
+      "isoDate": "2025-07-29T02:34:38Z",
+      "text": "Absolutely fantastic experience! Graham was incredibly professional, friendly, and made the whole process smooth and stress-free. He went above and beyond to ensure everything was perfect, and you can tell he genuinely cares about his clients. It’s rare to find that level of service these days.\n\nAlready got on his calendar to come back as it’s filing up.",
+      "images": [],
+      "likes": 0,
+      "link": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT25WTGJqUktTWE5aZFdsNFluQlZXbHBsZVdZMGNIYxAB!2m1!1s0x0:0xb4ba2d3b5caf5b45!3m1!1s2@1:CAIQACodChtycF9oOnVLbjRKSXNZdWl4YnBVWlpleWY0cHc%7C%7C?hl=en",
+      "response": {
+        "date": "a year ago",
+        "text": "Colin - We really appreciate the great review! Clean bins and spotless panels make a big difference, and our goal is to make that easy for you. We are happy that you've subscribed to one of our regular cleaning plans. We look forward to seeing you again in the very near future!"
+      }
+    },
+    {
+      "id": "Ci9DQUlRQUNvZENodHljRjlvT2pSc1dWbFZibEl4TTAxWGRESjVVR05hWVhCbVkzYxAB",
+      "author": "Carsten",
+      "authorThumbnail": "https://lh3.googleusercontent.com/a/ACg8ocLle2zF949qE2DYFHqt7oxHiZktjGYFs0Ak5dIUVCHPGXGVdA=s120-c-rp-mo-br100",
+      "authorLink": "https://www.google.com/maps/contrib/112143598698235979949?hl=en",
+      "isLocalGuide": false,
+      "rating": 5,
+      "date": "a year ago",
+      "isoDate": "2025-07-28T22:30:15Z",
+      "text": "Excellent pressure washing service! Graham is super friendly and personable. 5/5 would recommend !",
+      "images": [],
+      "likes": 0,
+      "link": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2pSc1dWbFZibEl4TTAxWGRESjVVR05hWVhCbVkzYxAB!2m1!1s0x0:0xb4ba2d3b5caf5b45!3m1!1s2@1:CAIQACodChtycF9oOjRsWVlVblIxM01XdDJ5UGNaYXBmY3c%7C%7C?hl=en",
+      "response": {
+        "date": "a year ago",
+        "text": "Thank you so much for the great review. It means a lot to us that you trusted us to clean your driveway, sidewalks, and rear patio. We work hard to keep our great reputation - please don't hesitate to reach out if you'd like to learn more about the other great services that we offer."
+      }
+    },
+    {
+      "id": "Ci9DQUlRQUNvZENodHljRjlvT2tOellXSnRTRlZhVEV0bVdHUktZbTkzT0ZsT05HYxAB",
+      "author": "Kristin Strand",
+      "authorThumbnail": "https://lh3.googleusercontent.com/a/ACg8ocI8cX5a6-VfMxSRz1ELqKKaUraD5OOF7E4xzrmr5uXgc9_nZw=s120-c-rp-mo-br100",
+      "authorLink": "https://www.google.com/maps/contrib/114756656449073343779?hl=en",
+      "isLocalGuide": false,
+      "rating": 5,
+      "date": "a year ago",
+      "isoDate": "2025-07-28T22:24:23Z",
+      "text": "Graham did an excellent job pressure washing our driveway and front walk. He is great to work with and I will definitely use him again. Highly recommend!",
+      "images": [],
+      "likes": 0,
+      "link": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2tOellXSnRTRlZhVEV0bVdHUktZbTkzT0ZsT05HYxAB!2m1!1s0x0:0xb4ba2d3b5caf5b45!3m1!1s2@1:CAIQACodChtycF9oOkNzYWJtSFVaTEtmWGRKYm93OFlONGc%7C%7C?hl=en",
+      "response": {
+        "date": "a year ago",
+        "text": "Thank you, Kristin! We appreciate your awesome review! We're proud to serve the Rocklin community with reliable, eco-friendly cleaning. If you'd like to learn more about our solar panel and bin cleaning opportunities, please reach out for more info!"
+      }
+    },
+    {
+      "id": "Ci9DQUlRQUNvZENodHljRjlvT25OWWRXZFlVM2xoV0hsWGFXZFdNRVJoT1dSa1RGRRAB",
+      "author": "Steve Kulaga",
+      "authorThumbnail": "https://lh3.googleusercontent.com/a-/ALV-UjXeZE-9t6BlDsK07CIfvMfuNqTDYES2JOthYW-AVoC5vhGMGiaL=s120-c-rp-mo-br100",
+      "authorLink": "https://www.google.com/maps/contrib/105840388018412301386?hl=en",
+      "isLocalGuide": false,
+      "rating": 5,
+      "date": "a year ago",
+      "isoDate": "2025-07-28T10:02:46Z",
+      "text": "Graham cleaned my bins and solar panels and they are spotless! I’d recommend him to anyone who needs power washing services done. He’s professional, punctual, and easy to work with. I even got a discount since I subscribed to both bin cleaning and solar panel cleaning!",
+      "images": [],
+      "likes": 0,
+      "link": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT25OWWRXZFlVM2xoV0hsWGFXZFdNRVJoT1dSa1RGRRAB!2m1!1s0x0:0xb4ba2d3b5caf5b45!3m1!1s2@1:CAIQACodChtycF9oOnNYdWdYU3lhWHlXaWdWMERhOWRkTFE%7C%7C?hl=en",
+      "response": {
+        "date": "a year ago",
+        "text": "Thanks for the kind words and 5 stars! Happy customers like you are the reason we love what we do. If you know anyone else who needs clean bins or solar panels, feel free to send them our way. Thank you for taking advantage of our convenient subscription plans to keep things fresh all year long!"
+      }
+    },
+    {
+      "id": "Ci9DQUlRQUNvZENodHljRjlvT2poVU5VeGpUWEIzZVhaVlVFNTNhVzl5VjFseWRsRRAB",
+      "author": "Joey Lazar",
+      "authorThumbnail": "https://lh3.googleusercontent.com/a/ACg8ocJltJBIu7ei60kVNHVId6O_HnYXQQ0EJY7OJeS2aQN9aUtLiw=s120-c-rp-mo-br100",
+      "authorLink": "https://www.google.com/maps/contrib/101347410411403698180?hl=en",
+      "isLocalGuide": false,
+      "rating": 5,
+      "date": "a year ago",
+      "isoDate": "2025-07-28T00:47:03Z",
+      "text": "Fantastic Service! Had solar panels and our trash bin cleaned and they look amazing. I definitely recommend! Here’s the before and after of our panels, awesome.",
+      "images": [
+        "https://lh3.googleusercontent.com/grass-cs/ACvplmP7zJpoNabF6sPi6roIeDP2cyyGXNKJWw6_yaT_APdfpzZl06FXMLSzjo7CJ8OyBdaaE-wHA3QyiKwKH2E68SATRVVOePoH0pdet8wrpbp-Y78u2NP9m8jnbYLz6LPKPPW80FtCps4YF0se=k-no",
+        "https://lh3.googleusercontent.com/grass-cs/ACvplmOWGIWFF2gHM5iuwdLk9sJO5S2GcWgZzV6KofI13zE6jG_f0QhXLXVPAVlBOIia3yC64CP9-2sBIJz456pA_wxdLok5GrtgKB59T2aol6Pa2VEAHakqrQWuaEfXu49AdAHZtp3FwTpEkVgc=k-no"
+      ],
+      "likes": 0,
+      "link": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2poVU5VeGpUWEIzZVhaVlVFNTNhVzl5VjFseWRsRRAB!2m1!1s0x0:0xb4ba2d3b5caf5b45!3m1!1s2@1:CAIQACodChtycF9oOjhUNUxjTXB3eXZVUE53aW9yV1lydlE%7C%7C?hl=en",
+      "response": {
+        "date": "a year ago",
+        "text": "Thanks so much for the review, Joey! We use high heat at high pressure to clean trash bins and 100% pure filtered water and very special equipment to safely and effectively clean, with the environment in mind. If you want to stay eco-clean all year, our subscription services are a great option!"
+      }
+    },
+    {
+      "id": "Ci9DQUlRQUNvZENodHljRjlvT2xwc1oxVmtNRnBSVGtVM1NuTjVWbEl0U0RCQmJHYxAB",
+      "author": "Destyn Thomas",
+      "authorThumbnail": "https://lh3.googleusercontent.com/a/ACg8ocITBjCBv69oDQ0uuLngo03RZ8ux7M32U7qaGaxH7OAdJTe6JQ=s120-c-rp-mo-br100",
+      "authorLink": "https://www.google.com/maps/contrib/109248428875379137945?hl=en",
+      "isLocalGuide": false,
+      "rating": 5,
+      "date": "a year ago",
+      "isoDate": "2025-07-27T22:59:36Z",
+      "text": "Graham’s pressure washing is phenomenal! I highly recommend this professional, efficient and cost effective service.",
+      "images": [],
+      "likes": 0,
+      "link": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2xwc1oxVmtNRnBSVGtVM1NuTjVWbEl0U0RCQmJHYxAB!2m1!1s0x0:0xb4ba2d3b5caf5b45!3m1!1s2@1:CAIQACodChtycF9oOlpsZ1VkMFpRTkU3SnN5VlItSDBBbGc%7C%7C?hl=en",
+      "response": {
+        "date": "a year ago",
+        "text": "Destyn, thank you so much for the review. Customer satisfaction is our greatest priority. We hope you help you again in the near future."
+      }
+    },
+    {
+      "id": "Ci9DQUlRQUNvZENodHljRjlvT25nNGEwOU5aSHAwTmpaM2RFVlpOazFMTFcxeGNXYxAB",
+      "author": "Debbie Ginther",
+      "authorThumbnail": "https://lh3.googleusercontent.com/a-/ALV-UjUETKBTdMF_DegMpz-UKv0Ql7ubgkyX9QATa-t0fsuf6RBe58Inew=s120-c-rp-mo-br100",
+      "authorLink": "https://www.google.com/maps/contrib/109721411223414794771?hl=en",
+      "isLocalGuide": false,
+      "rating": 5,
+      "date": "a year ago",
+      "isoDate": "2025-07-27T21:54:45Z",
+      "text": "Graham was on time, professional and very thorough in his job cleaning our solar panels. They look fantastic! Thank you Graham.\nI would highly recommend him for any power cleaning job or cleaning of your solar panels!",
+      "images": [],
+      "likes": 0,
+      "link": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT25nNGEwOU5aSHAwTmpaM2RFVlpOazFMTFcxeGNXYxAB!2m1!1s0x0:0xb4ba2d3b5caf5b45!3m1!1s2@1:CAIQACodChtycF9oOng4a09NZHp0NjZ3dEVZNk1LLW1xcWc%7C%7C?hl=en",
+      "response": {
+        "date": "a year ago",
+        "text": "Thanks a ton, Debbie! We’re proud to be a local Rocklin business, and we’re so happy you’re satisfied with our hard work. Regular cleanings really help maintain your home’s curb appeal—feel free to reach out if you want to get on our schedule with a monthly or seasonal plan. Thank you!"
+      }
+    },
+    {
+      "id": "Ci9DQUlRQUNvZENodHljRjlvT2poRGJsaHdXamg0TnpsamFrOUdaekpTY1d4aU5IYxAB",
+      "author": "Nick Waldron",
+      "authorThumbnail": "https://lh3.googleusercontent.com/a/ACg8ocKOxBEQqfFDXtpH6IU-9P41XeamNavnf0H4ey5liNeAtRe6Vw=s120-c-rp-mo-br100",
+      "authorLink": "https://www.google.com/maps/contrib/118042112591317148366?hl=en",
+      "isLocalGuide": false,
+      "rating": 5,
+      "date": "a year ago",
+      "isoDate": "2025-07-27T21:47:16Z",
+      "text": "GREAT service!! Very prompt to respond and showed up on time. Things looked sooo clean after he was done!!",
+      "images": [],
+      "likes": 0,
+      "link": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2poRGJsaHdXamg0TnpsamFrOUdaekpTY1d4aU5IYxAB!2m1!1s0x0:0xb4ba2d3b5caf5b45!3m1!1s2@1:CAIQACodChtycF9oOjhDblhwWjh4Nzljak9GZzJScWxiNHc%7C%7C?hl=en",
+      "response": {
+        "date": "a year ago",
+        "text": "Nick, it was our pleasure to serve you. Thank you for the kind words and 5-star review. We hope to see you again soon!"
+      }
+    },
+    {
+      "id": "Ci9DQUlRQUNvZENodHljRjlvT21WNE0yZFBkRXh5TW5aR2JIbFJjalZvVEhoSlNXYxAB",
+      "author": "Levi Webster",
+      "authorThumbnail": "https://lh3.googleusercontent.com/a-/ALV-UjXmYIwuMsvg-E2DsXusVyRCBF_6x8EgVqKUXkUZWIfV1rDFJhXA=s120-c-rp-mo-br100",
+      "authorLink": "https://www.google.com/maps/contrib/117352813771925832747?hl=en",
+      "isLocalGuide": false,
+      "rating": 5,
+      "date": "a year ago",
+      "isoDate": "2025-07-27T17:53:51Z",
+      "text": "Graham did an amazing job with both our trash bin and then our solar panels. Both were just beyond cleaning I thought but he made them look new! The service is worth it and I will keep using his service for as long as I can!",
+      "images": [],
+      "likes": 0,
+      "link": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT21WNE0yZFBkRXh5TW5aR2JIbFJjalZvVEhoSlNXYxAB!2m1!1s0x0:0xb4ba2d3b5caf5b45!3m1!1s2@1:CAIQACodChtycF9oOmV4M2dPdExyMnZGbHlRcjVoTHhJSWc%7C%7C?hl=en",
+      "response": {
+        "date": "a year ago",
+        "text": "Levi, this is exactly the kind of feedback that we work so hard to hear. We will always provide the best customer experience possible, and we are so thankful to have you on recurrent schedules to clean your bins and panels!"
+      }
+    },
+    {
+      "id": "Ci9DQUlRQUNvZENodHljRjlvT21oTlkwWlZjREJQYkRSa1NuQm5UWGx6YXpJMWNFRRAB",
+      "author": "Glenn Ballard",
+      "authorThumbnail": "https://lh3.googleusercontent.com/a-/ALV-UjUZlD-Pv4UB_sfhhlTeoaMBgltUjDdcgxeGHaO-jZuRa05CSDS0=s120-c-rp-mo-ba12-br100",
+      "authorLink": "https://www.google.com/maps/contrib/106488405421101071444?hl=en",
+      "isLocalGuide": false,
+      "rating": 5,
+      "date": "a year ago",
+      "isoDate": "2025-07-27T05:34:09Z",
+      "text": "Graham did a wonderful job. He brought the ionized water filter and all the equipment needed. I have had them cleaned before. But this time they actually shine. Great job. I’ll use him again next year. I checked and the solar delivered 2 kWh more today. The 1st photo is before.",
+      "images": [
+        "https://lh3.googleusercontent.com/grass-cs/ACvplmMZO9nuUVg0Q2cFaTAXkWxxuh0i2JNptPKYV2lU0m5g76ghSxNpkPL62W9pVe4Mky0gfcrGsku_oJ0kxJsTzXR_XjYpb5dvOMX6XqEW6UElYD8MpSrsFwThUaaQOsFmQ9C-FCb9T6pmrV98=k-no",
+        "https://lh3.googleusercontent.com/grass-cs/ACvplmNo0T_O4hOukOiKzVXyzAjoddBky63QXnKZgYxgA_AqSHFCFDu9uplpANQ5zJbZBc0fi_MPgj2kGE0qfZ_cxqA6I8z12-hHbXdvJLrNmZqhJX-9iwhFgc_DHdzDT6DprMTEjZ1COlt61Nbu=k-no",
+        "https://lh3.googleusercontent.com/grass-cs/ACvplmPKSGgZ6trn63GmAQ-UTxnhRqYHKEhlTyKUGhZ86vEgt2BBVbU4jZZwFkyS5HRxyPLH8XE8LGwirR5FgPqI94HEPL1eicTb7aI9SalZeXj3MDOR9SGBAYlljEHWAuzcJirJdYJlk-DLNs4=k-no"
+      ],
+      "likes": 0,
+      "link": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT21oTlkwWlZjREJQYkRSa1NuQm5UWGx6YXpJMWNFRRAB!2m1!1s0x0:0xb4ba2d3b5caf5b45!3m1!1s2@1:CAIQACodChtycF9oOmhNY0ZVcDBPbDRkSnBnTXlzazI1cEE%7C%7C?hl=en",
+      "response": {
+        "date": "a year ago",
+        "text": "Glenn, Thanks for the awesome review! Clean panels mean better energy efficiency—and regular cleanings help maintain that boost. The cleanings really pay for themselves in that regard. Thank you for being on a subscription plan and keep those savings and efficiency flowing!"
+      }
+    },
+    {
+      "id": "Ci9DQUlRQUNvZENodHljRjlvT25ScE5qaDVaRmwzTldWVFMyYzViWE5MTjFwUFpuYxAB",
+      "author": "Keith Mottram",
+      "authorThumbnail": "https://lh3.googleusercontent.com/a/ACg8ocKAyUn2LcsFyVQJPX_2JkYOv4IU-mPy-2xoHPikBc2X8vM6TQ=s120-c-rp-mo-ba12-br100",
+      "authorLink": "https://www.google.com/maps/contrib/115110811680865247781?hl=en",
+      "isLocalGuide": false,
+      "rating": 5,
+      "date": "a year ago",
+      "isoDate": "2025-07-26T00:47:43Z",
+      "text": "Wow, Graham was very professional, prompt and did a great job. My panels were so n desperate need of a cleaning. I have done this myself but cant quite get them as clean as he did?? Very impressed with service and more importantly Did not create a mess and did not create an imposition on my wife who stays home. It was if they were never here. Except my panels are outputting 15% more today then they were yesterday!!! Well worth it, Highly recommend this service. We will be having Graham do this every year!!!!!",
+      "images": [],
+      "likes": 0,
+      "link": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT25ScE5qaDVaRmwzTldWVFMyYzViWE5MTjFwUFpuYxAB!2m1!1s0x0:0xb4ba2d3b5caf5b45!3m1!1s2@1:CAIQACodChtycF9oOnRpNjh5ZFl3NWVTS2c5bXNLN1pPZnc%7C%7C?hl=en",
+      "response": {
+        "date": "a year ago",
+        "text": "Keith, your panels sure did need a refresh! We are so grateful for your trust in our services and your great review. We also appreciate your referrals - your next invoice will reflect that gratitude. We look forward to servicing you again!"
+      }
+    }
+  ],
+  "fetchedAt": "2026-09-16T20:06:08.584Z",
   "source": "snapshot"
 }
