@@ -194,24 +194,28 @@ export async function sendResendEmail(payload: {
   const toSet = new Set(to.map((addr) => addr.toLowerCase()));
   const bcc = (payload.bcc || []).filter((addr) => !toSet.has(addr.toLowerCase()));
   const replyTo = payload.replyTo || site.email;
+  const timeoutMs = resendTimeoutMs();
   let res: Response;
   try {
-    res = await fetch("https://api.resend.com/emails", {
-      method: "POST",
-      headers: {
-        Authorization: `Bearer ${apiKey}`,
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        from,
-        to,
-        bcc: bcc.length ? bcc : undefined,
-        reply_to: replyTo,
-        subject: payload.subject,
-        text: payload.text,
-        html: payload.html,
+    res = await fetchWithTimeout(timeoutMs, (signal) =>
+      fetch("https://api.resend.com/emails", {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${apiKey}`,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          from,
+          to,
+          bcc: bcc.length ? bcc : undefined,
+          reply_to: replyTo,
+          subject: payload.subject,
+          text: payload.text,
+          html: payload.html,
+        }),
+        signal,
       }),
-    });
+    );
   } catch (error) {
     const message = error instanceof Error ? error.message : "Resend request failed";
     return { ok: false as const, skipped: false as const, error: message };
@@ -223,6 +227,22 @@ export async function sendResendEmail(payload: {
   }
 
   return { ok: true as const, skipped: false as const };
+}
+
+const DEFAULT_RESEND_TIMEOUT_MS = 10_000;
+
+function resendTimeoutMs() {
+  const raw = Number(process.env.RESEND_TIMEOUT_MS);
+  if (Number.isFinite(raw) && raw > 0) return raw;
+  return DEFAULT_RESEND_TIMEOUT_MS;
+}
+
+function fetchWithTimeout(timeoutMs: number, run: (signal: AbortSignal) => Promise<Response>) {
+  const controller = new AbortController();
+  const timer = setTimeout(() => {
+    controller.abort(new DOMException(`Resend request timed out after ${timeoutMs}ms`, "TimeoutError"));
+  }, timeoutMs);
+  return run(controller.signal).finally(() => clearTimeout(timer));
 }
 
 export function parseRecipients(value: string | undefined, fallback: string) {

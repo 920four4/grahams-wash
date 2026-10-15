@@ -40,6 +40,8 @@ export async function POST(request: Request) {
   }
 
   if (body.website) {
+    // Quiet success for the trap. Do not log form fields or the honeypot value.
+    console.info("[contact-honeypot]", JSON.stringify({ discarded: true, receivedAt: new Date().toISOString() }));
     return NextResponse.json({ ok: true });
   }
 
@@ -119,13 +121,11 @@ export async function POST(request: Request) {
     });
     if (!customerResult.ok) {
       console.error("[contact-resend-customer]", customerResult.error);
-      return NextResponse.json(
-        {
-          error:
-            "Your request reached Graham, but the confirmation email could not be sent. You do not need to submit again.",
-        },
-        { status: 502 },
-      );
+      return NextResponse.json({
+        ok: true,
+        notice:
+          "Your request reached Graham, but the confirmation email could not be sent. You do not need to submit again.",
+      });
     }
   }
 
