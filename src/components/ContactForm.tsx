@@ -41,6 +41,7 @@ export function ContactForm({ defaultService }: { defaultService?: string }) {
   });
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [error, setError] = useState("");
+  const [notice, setNotice] = useState("");
   const [started, setStarted] = useState(false);
 
   function update<K extends keyof FormState>(key: K, value: FormState[K]) {
@@ -61,6 +62,7 @@ export function ContactForm({ defaultService }: { defaultService?: string }) {
   async function onSubmit(e: React.FormEvent) {
     e.preventDefault();
     setError("");
+    setNotice("");
 
     if (form.preferredContact === "email" && !form.email.trim()) {
       setStatus("error");
@@ -76,8 +78,12 @@ export function ContactForm({ defaultService }: { defaultService?: string }) {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(form),
       });
-      const data = await res.json().catch(() => ({}));
-      if (!res.ok) {
+      const data = (await res.json().catch(() => ({}))) as {
+        ok?: boolean;
+        error?: string;
+        notice?: string;
+      };
+      if (!res.ok || data.ok !== true) {
         throw new Error(data.error || "Something went wrong. Please try again in a moment.");
       }
       track("generate_lead", {
@@ -89,6 +95,7 @@ export function ContactForm({ defaultService }: { defaultService?: string }) {
         value: 1,
         currency: "USD",
       });
+      setNotice(typeof data.notice === "string" ? data.notice.trim() : "");
       setStatus("success");
       setForm(initial);
       setStarted(false);
@@ -111,11 +118,23 @@ export function ContactForm({ defaultService }: { defaultService?: string }) {
         <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-success/15 text-success">
           <CheckCircle2 className="h-7 w-7" />
         </div>
-        <h3 className="font-display mt-4 text-2xl font-bold text-navy">Message received</h3>
+        <h3 className="font-display mt-4 text-2xl font-bold text-navy">Message sent</h3>
         <p className="mx-auto mt-2 max-w-sm text-muted">
           Graham will get back to you using the contact method you chose. Thanks for reaching out.
         </p>
-        <Button className="mt-6" variant="outline" onClick={() => setStatus("idle")}>
+        {notice ? (
+          <p className="mx-auto mt-3 max-w-sm text-sm text-navy" role="status">
+            {notice}
+          </p>
+        ) : null}
+        <Button
+          className="mt-6"
+          variant="outline"
+          onClick={() => {
+            setNotice("");
+            setStatus("idle");
+          }}
+        >
           Send another message
         </Button>
       </div>
