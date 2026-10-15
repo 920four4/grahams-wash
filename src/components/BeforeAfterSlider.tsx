@@ -64,6 +64,7 @@ export function BeforeAfterSlider({
   const [dragging, setDragging] = useState(false);
   const [showHintUi, setShowHintUi] = useState(showHint);
   const [mounted, setMounted] = useState(priority); // skip heavy work until visible
+  if (priority && !mounted) setMounted(true);
 
   const applyPosition = useCallback((raw: number) => {
     const pct = Math.min(96, Math.max(4, raw));
@@ -85,10 +86,7 @@ export function BeforeAfterSlider({
 
   // Mount only when near viewport (saves image decode + observers)
   useEffect(() => {
-    if (priority) {
-      setMounted(true);
-      return;
-    }
+    if (priority) return;
     const el = containerRef.current;
     if (!el) return;
     const io = new IntersectionObserver(
