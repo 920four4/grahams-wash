@@ -89,7 +89,10 @@ export default async function ContactPage({
 
         <div className="rounded-[1.75rem] border border-border bg-white p-5 shadow-sm sm:p-8">
           <h2 className="font-display text-2xl font-bold text-navy">Contact form</h2>
-          <p className="mt-1 text-sm text-muted">All requests go through this form so nothing gets lost.</p>
+          <p className="mt-1 text-sm text-muted">
+            You&apos;ll see a confirmation here only after the message is sent. If it can&apos;t be sent, the form shows
+            an error instead.
+          </p>
           <div className="mt-6">
             <ContactForm defaultService={defaultService} />
           </div>

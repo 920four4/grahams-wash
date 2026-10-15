@@ -40,6 +40,8 @@ export async function POST(request: Request) {
   }
 
   if (body.website) {
+    // Quiet success for the trap. Do not log form fields or the honeypot value.
+    console.info("[contact-honeypot]", JSON.stringify({ discarded: true, receivedAt: new Date().toISOString() }));
     return NextResponse.json({ ok: true });
   }
 
@@ -85,7 +87,6 @@ export async function POST(request: Request) {
 
   console.info("[contact-lead]", JSON.stringify({ ...lead, receivedAt: new Date().toISOString() }));
 
-  const requireResend = process.env.RESEND_REQUIRED === "true";
   const grahamTo = resolveOpsRecipients();
   const bcc = parseRecipients(process.env.CONTACT_BCC, site.opsBcc);
   const grahamMail = grahamLeadEmail(lead);
@@ -98,14 +99,14 @@ export async function POST(request: Request) {
     replyTo: email || undefined,
   });
 
+  // A missing key, a skipped send, or a Resend error is not delivery.
+  // Do not report success. This does not depend on RESEND_REQUIRED.
   if (!grahamResult.ok) {
     console.error("[contact-resend-graham]", grahamResult.error);
-    if (requireResend) {
-      return NextResponse.json(
-        { error: "Could not send message. Please try again in a moment." },
-        { status: 502 },
-      );
-    }
+    return NextResponse.json(
+      { error: "Could not send message. Please try again in a moment." },
+      { status: 502 },
+    );
   }
 
   if (email) {
@@ -120,6 +121,11 @@ export async function POST(request: Request) {
     });
     if (!customerResult.ok) {
       console.error("[contact-resend-customer]", customerResult.error);
+      return NextResponse.json({
+        ok: true,
+        notice:
+          "Your request reached Graham, but the confirmation email could not be sent. You do not need to submit again.",
+      });
     }
   }
 
