@@ -39,3 +39,7 @@ vercel --scope 920four
 ```
 
 Git author for this project: `team@920four.com`
+
+## Google reviews
+
+`npm run refresh:reviews` writes a committed snapshot to `src/data/google-reviews.json`. The site reads that file at build time. It does not call SerpAPI when a page is requested. The script needs `SERP_API_KEY` or `SERPAPI_API_KEY` (from the environment, `.env.local`, or `.env.serp`). Commit the updated JSON to publish new reviews.
