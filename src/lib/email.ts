@@ -171,6 +171,11 @@ export function resolveOpsRecipients() {
   return requested.length ? requested : [site.email];
 }
 
+/**
+ * Send one message through Resend.
+ * `{ ok: false }` means it was not sent: missing `RESEND_API_KEY` (`skipped`)
+ * or the API rejected the request. Callers must not report that as success.
+ */
 export async function sendResendEmail(payload: {
   to: string[];
   bcc?: string[];
@@ -189,22 +194,28 @@ export async function sendResendEmail(payload: {
   const toSet = new Set(to.map((addr) => addr.toLowerCase()));
   const bcc = (payload.bcc || []).filter((addr) => !toSet.has(addr.toLowerCase()));
   const replyTo = payload.replyTo || site.email;
-  const res = await fetch("https://api.resend.com/emails", {
-    method: "POST",
-    headers: {
-      Authorization: `Bearer ${apiKey}`,
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      from,
-      to,
-      bcc: bcc.length ? bcc : undefined,
-      reply_to: replyTo,
-      subject: payload.subject,
-      text: payload.text,
-      html: payload.html,
-    }),
-  });
+  let res: Response;
+  try {
+    res = await fetch("https://api.resend.com/emails", {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${apiKey}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        from,
+        to,
+        bcc: bcc.length ? bcc : undefined,
+        reply_to: replyTo,
+        subject: payload.subject,
+        text: payload.text,
+        html: payload.html,
+      }),
+    });
+  } catch (error) {
+    const message = error instanceof Error ? error.message : "Resend request failed";
+    return { ok: false as const, skipped: false as const, error: message };
+  }
 
   if (!res.ok) {
     const error = await res.text();

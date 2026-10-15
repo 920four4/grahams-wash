@@ -23,7 +23,7 @@ npm run dev
 
 ## Contact form / Resend
 
-Form posts to `/api/contact`. Without `RESEND_API_KEY`, leads are logged server-side and the UI still succeeds.
+Form posts to `/api/contact`. The page shows success only after Resend accepts the lead email. If `RESEND_API_KEY` is missing or the send fails, the API returns an error (not `ok`) and the form shows that error. A customer confirmation is sent when the visitor includes an email; if that confirmation fails, the API still returns an error so the page does not show success. Valid requests are logged on the server either way, but a log line is not delivery.
 
 ```bash
 cp .env.example .env.local
