@@ -162,19 +162,23 @@ export function customerConfirmationEmail(lead: Lead) {
   return { subject, text, html };
 }
 
-export function opsInbox() {
-  return site.email;
+/**
+ * Graham's inbox comes only from `CONTACT_TO` (set in Vercel). The address is
+ * not in the code, so it can never end up on a page.
+ */
+export function resolveOpsRecipients() {
+  return parseRecipients(process.env.CONTACT_TO);
 }
 
-export function resolveOpsRecipients() {
-  const requested = parseRecipients(process.env.CONTACT_TO, site.email);
-  return requested.length ? requested : [site.email];
+export function opsInbox(): string | undefined {
+  return resolveOpsRecipients()[0];
 }
 
 /**
  * Send one message through Resend.
- * `{ ok: false }` means it was not sent: missing `RESEND_API_KEY` (`skipped`)
- * or the API rejected the request. Callers must not report that as success.
+ * `{ ok: false }` means it was not sent: missing `RESEND_API_KEY`, `RESEND_FROM`,
+ * or a recipient (`skipped`), or the API rejected the request. Callers must not
+ * report that as success.
  */
 export async function sendResendEmail(payload: {
   to: string[];
@@ -189,11 +193,17 @@ export async function sendResendEmail(payload: {
     return { ok: false as const, skipped: true as const, error: "RESEND_API_KEY is not set" };
   }
 
-  const from = process.env.RESEND_FROM || `Graham's Wash <${site.email}>`;
-  const to = payload.to.length ? payload.to : [site.email];
+  const from = (process.env.RESEND_FROM || "").trim();
+  if (!from) {
+    return { ok: false as const, skipped: true as const, error: "RESEND_FROM is not set" };
+  }
+  const to = payload.to;
+  if (!to.length) {
+    return { ok: false as const, skipped: true as const, error: "No recipient (is CONTACT_TO set?)" };
+  }
   const toSet = new Set(to.map((addr) => addr.toLowerCase()));
   const bcc = (payload.bcc || []).filter((addr) => !toSet.has(addr.toLowerCase()));
-  const replyTo = payload.replyTo || site.email;
+  const replyTo = payload.replyTo || undefined;
   const timeoutMs = resendTimeoutMs();
   let res: Response;
   try {
@@ -245,7 +255,7 @@ function fetchWithTimeout(timeoutMs: number, run: (signal: AbortSignal) => Promi
   return run(controller.signal).finally(() => clearTimeout(timer));
 }
 
-export function parseRecipients(value: string | undefined, fallback: string) {
+export function parseRecipients(value: string | undefined, fallback = "") {
   return (value || fallback)
     .split(",")
     .map((item) => item.trim())

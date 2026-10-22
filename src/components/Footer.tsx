@@ -96,9 +96,9 @@ export function Footer() {
               back — text, call, or email.
             </p>
             <p className="mt-4 space-y-1 text-sm">
-              <a href={`mailto:${site.email}`} className="block text-white/70 hover:text-white">
-                {site.email}
-              </a>
+              <Link href="/contact" className="block text-white/70 hover:text-white">
+                Contact form
+              </Link>
               <a
                 href={site.social.instagram}
                 target="_blank"
