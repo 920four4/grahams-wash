@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { MapPin } from "lucide-react";
+import { ArrowRight, MapPin } from "lucide-react";
 import { CtaBand } from "@/components/CtaBand";
 import { BreadcrumbJsonLd } from "@/components/JsonLd";
+import { cityPageHref, cityPages } from "@/lib/city-pages";
 import { services, cities, site } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -28,26 +29,60 @@ export default function ServiceAreasPage() {
             Based in Rocklin. Serving nearby cities.
           </h1>
           <p className="mt-4 text-lg text-muted">
-            Graham lives in {site.city} and regularly works across Placer County and northern Sacramento County. Outside
+            Graham lives in {site.city}{" "}and regularly works across Placer County and northern Sacramento County. Outside
             the list? Still send a message through the contact form and he&apos;ll confirm.
           </p>
         </div>
 
+        <div className="mt-10">
+          <h2 className="font-display text-2xl font-bold text-navy">City pages</h2>
+          <ul className="mt-4 grid gap-3 sm:grid-cols-3">
+            {cityPages.map((c) => (
+              <li key={c.slug}>
+                <Link
+                  href={cityPageHref(c.slug)}
+                  className="flex items-center justify-between rounded-2xl border border-brand/30 bg-brand-soft/40 px-4 py-4 font-semibold text-navy transition hover:bg-brand-soft"
+                >
+                  <span className="flex items-center gap-2">
+                    <MapPin className="h-4 w-4 text-brand" />
+                    {c.name} services
+                  </span>
+                  <ArrowRight className="h-4 w-4 text-brand" />
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+
         <div className="mt-10 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-          {cities.map((city) => (
-            <div
-              key={city}
-              className="flex items-center gap-3 rounded-2xl border border-border bg-white px-4 py-4 shadow-sm"
-            >
-              <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-brand-soft text-brand">
-                <MapPin className="h-4 w-4" />
-              </span>
-              <div>
-                <p className="font-semibold text-navy">{city}</p>
-                <p className="text-xs text-muted">Pressure · Solar · Bins · Lights</p>
+          {cities.map((city) => {
+            const cityPage = cityPages.find((c) => c.name === city);
+            const content = (
+              <>
+                <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-brand-soft text-brand">
+                  <MapPin className="h-4 w-4" />
+                </span>
+                <div>
+                  <p className="font-semibold text-navy">{city}</p>
+                  <p className="text-xs text-muted">Pressure · Solar · Bins · Lights</p>
+                </div>
+              </>
+            );
+            const className = "flex items-center gap-3 rounded-2xl border border-border bg-white px-4 py-4 shadow-sm";
+            return cityPage ? (
+              <Link
+                key={city}
+                href={cityPageHref(cityPage.slug)}
+                className={`${className} transition hover:border-brand/30 hover:bg-brand-soft/40`}
+              >
+                {content}
+              </Link>
+            ) : (
+              <div key={city} className={className}>
+                {content}
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
 
         <div className="mt-14 rounded-[2rem] border border-border bg-white p-6 sm:p-8">
