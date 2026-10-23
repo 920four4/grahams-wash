@@ -11,8 +11,29 @@ const isWww = (rule) => rule.has?.some((item) => item.type === "host" && item.va
 const wwwCatchAll = redirects.findIndex((rule) => isWww(rule) && rule.source === "/:path*");
 const oldPathRules = redirects.filter((rule) => !rule.has);
 
-test("sitemap lists only the 13 live pages", () => {
-  assert.equal(livePaths.length, 13);
+// The sitemap is the list of live pages. No live page may redirect, and every
+// page that existed before this change must still be listed.
+const PAGES_BEFORE_REDIRECT_CLEANUP = [
+  "/",
+  "/about",
+  "/contact",
+  "/faq",
+  "/reviews",
+  "/results",
+  "/service-areas",
+  "/services",
+  "/services/pressure-washing",
+  "/services/solar-panel-cleaning",
+  "/services/trash-bin-cleaning",
+  "/services/permanent-christmas-lights",
+  "/services/birdproofing",
+];
+
+test("sitemap lists only live pages, and none of them redirect", () => {
+  for (const path of PAGES_BEFORE_REDIRECT_CLEANUP) {
+    assert.ok(livePaths.includes(path), `${path} dropped out of the sitemap`);
+  }
+  assert.equal(new Set(livePaths).size, livePaths.length);
   for (const rule of redirects) {
     assert.ok(!livePaths.includes(rule.source), `${rule.source} is a live page and must not redirect`);
   }
