@@ -182,6 +182,7 @@ test("honeypot is a quiet success with no mail and no form-field log", async () 
 
   assert.equal(res.status, 200);
   assert.equal(body.ok, true);
+  assert.equal(body.discarded, true);
   assert.equal(fetchMock.mock.calls.length, 0);
   assert.match(logged, /\[contact-honeypot\]/);
   for (const secret of secrets) {
@@ -230,6 +231,7 @@ test("successful send without a visitor email is ok", async () => {
 
   assert.equal(res.ok, true);
   assert.equal(body.ok, true);
+  assert.equal("discarded" in body, false);
   assert.equal(fetchMock.mock.calls.length, 1);
 });
 

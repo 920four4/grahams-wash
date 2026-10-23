@@ -41,8 +41,9 @@ export async function POST(request: Request) {
 
   if (body.website) {
     // Quiet success for the trap. Do not log form fields or the honeypot value.
+    // `discarded` tells the form not to count this as a lead in analytics.
     console.info("[contact-honeypot]", JSON.stringify({ discarded: true, receivedAt: new Date().toISOString() }));
-    return NextResponse.json({ ok: true });
+    return NextResponse.json({ ok: true, discarded: true });
   }
 
   const name = (body.name || "").trim();
