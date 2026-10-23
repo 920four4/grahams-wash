@@ -1,11 +1,6 @@
 import type { cities, ServiceSlug } from "@/lib/site";
 
-/**
- * City landing pages under /service-areas/<slug>.
- * An intro paragraph written as [Z TO CONFIRM: ...] is a placeholder for a
- * local detail Z still has to confirm. Previews show it highlighted; production
- * builds leave it out (see `visibleIntro`).
- */
+/** City landing pages under /service-areas/<slug>. */
 export type CityPage = {
   slug: string;
   name: (typeof cities)[number];
@@ -38,7 +33,6 @@ export const cityPages: CityPage[] = [
     intro: [
       "Roseville is Rocklin’s next-door neighbor, so Graham is often already working nearby. He quotes the job, does the work, and handles the cleanup himself, and you reach him the same way every customer does: through the contact form.",
       "One Roseville property can have a concrete driveway, a stamped or aggregate patio, and stucco walls, and each one needs a different approach. Oil-stained concrete gets hot water up to 210°F. Paint, stucco, and wood get a gentler wash so the finish isn’t damaged.",
-      "[Z TO CONFIRM: Roseville neighborhoods Graham works in most often, to name here]",
     ],
     services: [
       {
@@ -92,7 +86,6 @@ export const cityPages: CityPage[] = [
     intro: [
       "Lincoln is a short drive up Highway 65 from Graham’s home base in Rocklin, and it’s part of his regular service area.",
       "Plenty of homeowners would rather not climb a ladder, whether that means hanging Christmas lights every December or scrubbing panels on a two-story roof. Permanent lights stay mounted all year and change from your phone, and solar panels are cleaned with a soft brush and filtered water instead of a pressure washer.",
-      "[Z TO CONFIRM: Lincoln neighborhoods to name here, for example Twelve Bridges, Lincoln Crossing, or Sun City Lincoln Hills]",
     ],
     services: [
       {
@@ -147,7 +140,6 @@ export const cityPages: CityPage[] = [
       "Granite Bay sits between Roseville, Loomis, and Folsom Lake, a short drive from Graham’s base in Rocklin.",
       "If your property has a long driveway, a pool deck, or a lot of patio, that’s a lot of surface, and not all of it should be cleaned the same way. Graham chooses the method for each one: hot water for oily concrete, a gentler wash for painted or wood surfaces, and a soft brush for solar glass.",
       "If your panels sit under trees, they pick up leaves, pollen, and droppings faster, and birds look for shade under the array. A cleaning plus critter-guard mesh takes care of both.",
-      "[Z TO CONFIRM: Granite Bay neighborhoods or local details to mention here]",
     ],
     services: [
       {
@@ -189,13 +181,6 @@ export const cityPages: CityPage[] = [
     ctaSubtitle: "Describe the surfaces, roofline, or panels you want handled, and Graham will follow up.",
   },
 ];
-
-export const PLACEHOLDER = /\[Z TO CONFIRM:[^\]]*\]/;
-
-/** Intro paragraphs to render. Placeholder paragraphs never reach production. */
-export function visibleIntro(page: CityPage, env = process.env.VERCEL_ENV) {
-  return env === "production" ? page.intro.filter((p) => !PLACEHOLDER.test(p)) : page.intro;
-}
 
 export function getCityPage(slug: string) {
   return cityPages.find((c) => c.slug === slug);

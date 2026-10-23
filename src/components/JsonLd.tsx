@@ -233,7 +233,12 @@ export function BreadcrumbJsonLd({
  * areaServed, plus a WebPage about it. No email or phone: the contact form is
  * the only public contact.
  */
-export function CityLocalBusinessJsonLd({
+/**
+ * City page: a Service for that city, provided by the sitewide business.
+ * The business is referenced by @id only, so search engines see one business,
+ * not a second entity per city.
+ */
+export function CityServiceJsonLd({
   city,
   placeType,
   county,
@@ -253,21 +258,22 @@ export function CityLocalBusinessJsonLd({
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": ["LocalBusiness", "HomeAndConstructionBusiness"],
-        "@id": BUSINESS_ID,
-        name: site.name,
-        url: site.url,
-        address: {
-          "@type": "PostalAddress",
-          addressLocality: site.city,
-          addressRegion: site.region,
-          postalCode: "95677",
-          addressCountry: site.country,
-        },
+        "@type": "Service",
+        "@id": `${absolute}#service`,
+        name: `${site.name} in ${city}, CA`,
+        serviceType: services.map((s) => s.name),
+        url: absolute,
+        provider: { "@id": BUSINESS_ID },
         areaServed: {
           "@type": placeType,
           name: `${city}, CA`,
           containedInPlace: { "@type": "AdministrativeArea", name: `${county}, CA` },
+        },
+        offers: {
+          "@type": "Offer",
+          url: `${site.url}/contact`,
+          availability: "https://schema.org/InStock",
+          priceCurrency: "USD",
         },
       },
       {
@@ -278,6 +284,7 @@ export function CityLocalBusinessJsonLd({
         description,
         isPartOf: { "@id": WEBSITE_ID },
         about: { "@id": BUSINESS_ID },
+        mainEntity: { "@id": `${absolute}#service` },
       },
     ],
   });
