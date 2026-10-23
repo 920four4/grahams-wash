@@ -229,14 +229,10 @@ export function BreadcrumbJsonLd({
 }
 
 /**
- * The sitewide business (same @id, so it is one entity) with this city as
- * areaServed, plus a WebPage about it. No email or phone: the contact form is
- * the only public contact.
- */
-/**
  * City page: a Service for that city, provided by the sitewide business.
  * The business is referenced by @id only, so search engines see one business,
- * not a second entity per city.
+ * not a second entity per city. No email or phone: the contact form is the
+ * only public contact.
  */
 export function CityServiceJsonLd({
   city,
@@ -268,12 +264,6 @@ export function CityServiceJsonLd({
           "@type": placeType,
           name: `${city}, CA`,
           containedInPlace: { "@type": "AdministrativeArea", name: `${county}, CA` },
-        },
-        offers: {
-          "@type": "Offer",
-          url: `${site.url}/contact`,
-          availability: "https://schema.org/InStock",
-          priceCurrency: "USD",
         },
       },
       {
