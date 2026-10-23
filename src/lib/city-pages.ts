@@ -2,8 +2,9 @@ import type { cities, ServiceSlug } from "@/lib/site";
 
 /**
  * City landing pages under /service-areas/<slug>.
- * Text wrapped in [Z TO CONFIRM: ...] is a placeholder for a local detail Z
- * still has to confirm. It renders highlighted so it can't slip through unseen.
+ * An intro paragraph written as [Z TO CONFIRM: ...] is a placeholder for a
+ * local detail Z still has to confirm. Previews show it highlighted; production
+ * builds leave it out (see `visibleIntro`).
  */
 export type CityPage = {
   slug: string;
@@ -72,7 +73,7 @@ export const cityPages: CityPage[] = [
       },
       {
         title: "No need to be home",
-        text: "Usually you don’t have to be there. Graham just needs to reach the work area and an outdoor spigot.",
+        text: "Usually you don’t have to be there. Graham just needs to reach the work area, plus outdoor water when the job needs it.",
       },
     ],
     ctaTitle: "Need something cleaned in Roseville?",
@@ -145,7 +146,7 @@ export const cityPages: CityPage[] = [
     intro: [
       "Granite Bay sits between Roseville, Loomis, and Folsom Lake, a short drive from Graham’s base in Rocklin.",
       "If your property has a long driveway, a pool deck, or a lot of patio, that’s a lot of surface, and not all of it should be cleaned the same way. Graham chooses the method for each one: hot water for oily concrete, a gentler wash for painted or wood surfaces, and a soft brush for solar glass.",
-      "Under tall oaks and pines, panels pick up leaves, pollen, and droppings faster, and birds look for shade under the array. A cleaning plus critter-guard mesh takes care of both.",
+      "If your panels sit under trees, they pick up leaves, pollen, and droppings faster, and birds look for shade under the array. A cleaning plus critter-guard mesh takes care of both.",
       "[Z TO CONFIRM: Granite Bay neighborhoods or local details to mention here]",
     ],
     services: [
@@ -159,7 +160,7 @@ export const cityPages: CityPage[] = [
       },
       {
         slug: "solar-panel-cleaning",
-        text: "Leaf litter and pollen from nearby trees cleaned off by hand, with filtered water and no pressure washer on the glass.",
+        text: "Leaf litter and pollen cleaned off by hand, with filtered water and no pressure washer on the glass.",
       },
       {
         slug: "permanent-christmas-lights",
@@ -188,6 +189,13 @@ export const cityPages: CityPage[] = [
     ctaSubtitle: "Describe the surfaces, roofline, or panels you want handled, and Graham will follow up.",
   },
 ];
+
+export const PLACEHOLDER = /\[Z TO CONFIRM:[^\]]*\]/;
+
+/** Intro paragraphs to render. Placeholder paragraphs never reach production. */
+export function visibleIntro(page: CityPage, env = process.env.VERCEL_ENV) {
+  return env === "production" ? page.intro.filter((p) => !PLACEHOLDER.test(p)) : page.intro;
+}
 
 export function getCityPage(slug: string) {
   return cityPages.find((c) => c.slug === slug);

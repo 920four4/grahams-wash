@@ -6,7 +6,7 @@ import { ArrowRight, CheckCircle2, MapPin } from "lucide-react";
 import { CtaBand } from "@/components/CtaBand";
 import { BreadcrumbJsonLd, CityLocalBusinessJsonLd } from "@/components/JsonLd";
 import { Button } from "@/components/ui/Button";
-import { cityPageHref, cityPages, getCityPage } from "@/lib/city-pages";
+import { cityPageHref, cityPages, getCityPage, PLACEHOLDER, visibleIntro } from "@/lib/city-pages";
 import { services } from "@/lib/site";
 
 export const dynamicParams = false;
@@ -34,11 +34,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-const PLACEHOLDER = /(\[Z TO CONFIRM:[^\]]*\])/;
+const PLACEHOLDER_SPLIT = new RegExp(`(${PLACEHOLDER.source})`);
 
-/** Highlights [Z TO CONFIRM: ...] placeholders so they can't go live unnoticed. */
+/** Highlights [Z TO CONFIRM: ...] placeholders on previews so they're easy to spot. */
 function WithPlaceholders({ text }: { text: string }) {
-  return text.split(PLACEHOLDER).map((part, i) =>
+  return text.split(PLACEHOLDER_SPLIT).map((part, i) =>
     PLACEHOLDER.test(part) ? (
       <mark key={i} className="rounded bg-yellow-200 px-1 text-navy">
         {part}
@@ -64,6 +64,7 @@ export default async function CityPage({ params }: Props) {
         city={page.name}
         placeType={page.placeType}
         county={page.county}
+        title={page.metaTitle}
         description={page.metaDescription}
         url={href}
       />
@@ -92,7 +93,7 @@ export default async function CityPage({ params }: Props) {
             {page.headline}
           </h1>
           <div className="mt-5 max-w-2xl space-y-4 text-lg text-white/85">
-            {page.intro.map((paragraph) => (
+            {visibleIntro(page).map((paragraph) => (
               <p key={paragraph}>
                 <WithPlaceholders text={paragraph} />
               </p>

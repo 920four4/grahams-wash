@@ -231,59 +231,56 @@ export function BreadcrumbJsonLd({
 }
 
 /**
- * LocalBusiness for one city page, with that city as areaServed.
- * No email or phone: the contact form is the only public contact.
+ * The sitewide business (same @id, so it is one entity) with this city as
+ * areaServed, plus a WebPage about it. No email or phone: the contact form is
+ * the only public contact.
  */
 export function CityLocalBusinessJsonLd({
   city,
   placeType,
   county,
+  title,
   description,
   url,
 }: {
   city: string;
   placeType: "City" | "Place";
   county: string;
+  title: string;
   description: string;
   url: string;
 }) {
   const absolute = `${site.url}${url}`;
-  const area = {
-    "@type": placeType,
-    name: `${city}, CA`,
-    containedInPlace: { "@type": "AdministrativeArea", name: `${county}, CA` },
-  };
   return jsonLdScript({
     "@context": "https://schema.org",
-    "@type": ["LocalBusiness", "HomeAndConstructionBusiness"],
-    "@id": `${absolute}#business`,
-    name: site.name,
-    url: site.url,
-    mainEntityOfPage: absolute,
-    description,
-    image: `${site.url}/images/hero/neighborhood.webp`,
-    logo: LOGO,
-    priceRange: "$$",
-    address: {
-      "@type": "PostalAddress",
-      addressLocality: site.city,
-      addressRegion: site.region,
-      postalCode: "95677",
-      addressCountry: site.country,
-    },
-    areaServed: area,
-    contactPoint: {
-      "@type": "ContactPoint",
-      contactType: "customer service",
-      url: `${site.url}/contact`,
-      availableLanguage: "English",
-    },
-    sameAs: [site.social.instagram, GOOGLE_PLACE.mapsUrl],
-    makesOffer: services.map((s) => ({
-      "@type": "Offer",
-      url: `${site.url}${s.href}`,
-      areaServed: area,
-      itemOffered: { "@id": `${site.url}${s.href}#service`, "@type": "Service", name: s.name },
-    })),
+    "@graph": [
+      {
+        "@type": ["LocalBusiness", "HomeAndConstructionBusiness"],
+        "@id": BUSINESS_ID,
+        name: site.name,
+        url: site.url,
+        address: {
+          "@type": "PostalAddress",
+          addressLocality: site.city,
+          addressRegion: site.region,
+          postalCode: "95677",
+          addressCountry: site.country,
+        },
+        areaServed: {
+          "@type": placeType,
+          name: `${city}, CA`,
+          containedInPlace: { "@type": "AdministrativeArea", name: `${county}, CA` },
+        },
+      },
+      {
+        "@type": "WebPage",
+        "@id": `${absolute}#webpage`,
+        url: absolute,
+        name: title,
+        description,
+        isPartOf: { "@id": WEBSITE_ID },
+        about: { "@id": BUSINESS_ID },
+      },
+    ],
   });
 }

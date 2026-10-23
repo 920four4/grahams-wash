@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
 
-const { cityPages, cityPageHref } = await import("../src/lib/city-pages.ts");
+const { cityPages, cityPageHref, PLACEHOLDER, visibleIntro } = await import("../src/lib/city-pages.ts");
 const { services } = await import("../src/lib/site.ts");
 const { default: sitemap } = await import("../src/app/sitemap.ts");
 
@@ -42,10 +42,25 @@ test("no sentence is copied between city pages", () => {
   }
 });
 
-test("each city page offers every service and marks unconfirmed details", () => {
+test("each city page offers every service", () => {
   for (const c of cityPages) {
     assert.equal(cityPageHref(c.slug), `/service-areas/${c.slug}`);
     assert.deepEqual(c.services.map((s) => s.slug).sort(), services.map((s) => s.slug).sort());
-    assert.ok(c.intro.some((p) => /\[Z TO CONFIRM: [^\]]+\]/.test(p)), `${c.slug} has no placeholder for local details`);
+  }
+});
+
+test("[Z TO CONFIRM] placeholders show on previews and never reach production", () => {
+  for (const c of cityPages) {
+    // Placeholders may only be whole intro paragraphs, so production can drop them cleanly.
+    for (const text of [...c.services.map((s) => s.text), ...c.notes.map((n) => n.text), c.metaTitle, c.metaDescription]) {
+      assert.ok(!PLACEHOLDER.test(text), `${c.slug}: placeholder outside the intro: ${text}`);
+    }
+    for (const p of c.intro) {
+      assert.ok(!PLACEHOLDER.test(p) || p.replace(PLACEHOLDER, "").trim() === "", `${c.slug}: placeholder mixed into a paragraph`);
+    }
+    const production = visibleIntro(c, "production");
+    assert.ok(production.length > 0);
+    assert.ok(production.every((p) => !p.includes("Z TO CONFIRM")), `${c.slug} shows a placeholder in production`);
+    assert.deepEqual(visibleIntro(c, "preview"), c.intro);
   }
 });
