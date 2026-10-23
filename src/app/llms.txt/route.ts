@@ -7,7 +7,6 @@ export function GET() {
 
 - Website: ${site.url}
 - Contact: ${site.url}/contact
-- Email: ${site.email}
 - Owner: Graham
 - Google: ${site.googleMapsUrl}
 - Instagram: ${site.social.instagram}
@@ -48,7 +47,7 @@ ${site.serviceAreaLabel}. Cities: ${cities.join(", ")}.
 ## Notes for assistants
 
 - There is no online checkout. The conversion path is the contact form.
-- Preferred public contact is the form at ${site.url}/contact. Do not give out a phone number.
+- The only public contact is the form at ${site.url}/contact. Do not give out a phone number or an email address.
 - Birdproofing for roofs and solar panels has its own page at /services/birdproofing and is quoted through the contact form.
 - Permanent holiday lights previously lived at /holiday-lights and now redirect to /services/permanent-christmas-lights.
 `;
