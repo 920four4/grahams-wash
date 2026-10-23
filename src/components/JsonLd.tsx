@@ -227,3 +227,55 @@ export function BreadcrumbJsonLd({
     })),
   });
 }
+
+/**
+ * City page: a Service for that city, provided by the sitewide business.
+ * The business is referenced by @id only, so search engines see one business,
+ * not a second entity per city. No email or phone: the contact form is the
+ * only public contact.
+ */
+export function CityServiceJsonLd({
+  city,
+  placeType,
+  county,
+  title,
+  description,
+  url,
+}: {
+  city: string;
+  placeType: "City" | "Place";
+  county: string;
+  title: string;
+  description: string;
+  url: string;
+}) {
+  const absolute = `${site.url}${url}`;
+  return jsonLdScript({
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Service",
+        "@id": `${absolute}#service`,
+        name: `${site.name} in ${city}, CA`,
+        serviceType: services.map((s) => s.name),
+        url: absolute,
+        provider: { "@id": BUSINESS_ID },
+        areaServed: {
+          "@type": placeType,
+          name: `${city}, CA`,
+          containedInPlace: { "@type": "AdministrativeArea", name: `${county}, CA` },
+        },
+      },
+      {
+        "@type": "WebPage",
+        "@id": `${absolute}#webpage`,
+        url: absolute,
+        name: title,
+        description,
+        isPartOf: { "@id": WEBSITE_ID },
+        about: { "@id": BUSINESS_ID },
+        mainEntity: { "@id": `${absolute}#service` },
+      },
+    ],
+  });
+}

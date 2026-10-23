@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { cityPageHref, cityPages } from "@/lib/city-pages";
 import { services, site } from "@/lib/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -16,5 +17,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.9,
   }));
 
-  return [...staticRoutes, ...serviceRoutes];
+  const cityRoutes = cityPages.map((c) => ({
+    url: `${site.url}${cityPageHref(c.slug)}`,
+    lastModified: new Date(),
+    changeFrequency: "monthly" as const,
+    priority: 0.7,
+  }));
+
+  return [...staticRoutes, ...serviceRoutes, ...cityRoutes];
 }
