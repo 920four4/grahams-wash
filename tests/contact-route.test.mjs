@@ -39,6 +39,12 @@ function leadRequest(overrides = {}) {
   });
 }
 
+function configureInbox() {
+  process.env.RESEND_FROM = "Graham's Wash <sender@example.com>";
+  process.env.CONTACT_TO = "inbox@example.com";
+  process.env.CONTACT_BCC = "ops@example.com";
+}
+
 function stubFetch(impl) {
   return mock.method(globalThis, "fetch", async (url, init) => {
     assert.match(String(url), /^https:\/\/api\.resend\.com\/emails$/);
@@ -48,6 +54,7 @@ function stubFetch(impl) {
 
 test("failed send is an error and not ok", async () => {
   process.env.RESEND_API_KEY = "re_test_key";
+  configureInbox();
   delete process.env.RESEND_REQUIRED;
   const fetchMock = stubFetch(async () => new Response("upstream down", { status: 500 }));
 
@@ -63,6 +70,7 @@ test("failed send is an error and not ok", async () => {
 
 test("failed send is an error when RESEND_REQUIRED is false", async () => {
   process.env.RESEND_API_KEY = "re_test_key";
+  configureInbox();
   process.env.RESEND_REQUIRED = "false";
   stubFetch(async () => new Response("nope", { status: 422 }));
 
@@ -94,6 +102,7 @@ test("missing API key is an error and not ok", async () => {
 
 test("network error is an error and not ok", async () => {
   process.env.RESEND_API_KEY = "re_test_key";
+  configureInbox();
   delete process.env.RESEND_REQUIRED;
   stubFetch(async () => {
     throw new Error("network down");
@@ -110,6 +119,7 @@ test("network error is an error and not ok", async () => {
 
 test("successful send is ok", async () => {
   process.env.RESEND_API_KEY = "re_test_key";
+  configureInbox();
   delete process.env.RESEND_REQUIRED;
   const fetchMock = stubFetch(async () => new Response(JSON.stringify({ id: "email_test" }), { status: 200 }));
 
@@ -125,6 +135,7 @@ test("successful send is ok", async () => {
 
 test("confirmation failure is still ok with a soft note", async () => {
   process.env.RESEND_API_KEY = "re_test_key";
+  configureInbox();
   delete process.env.RESEND_REQUIRED;
   let calls = 0;
   stubFetch(async () => {
@@ -147,6 +158,7 @@ test("confirmation failure is still ok with a soft note", async () => {
 
 test("honeypot is a quiet success with no mail and no form-field log", async () => {
   process.env.RESEND_API_KEY = "re_test_key";
+  configureInbox();
   const secrets = ["Secret Name", "secret@example.com", "9165550199", "secret message body", "https://spam.example"];
   const logs = [];
   mock.method(console, "info", (...args) => {
@@ -170,6 +182,7 @@ test("honeypot is a quiet success with no mail and no form-field log", async () 
 
   assert.equal(res.status, 200);
   assert.equal(body.ok, true);
+  assert.equal(body.discarded, true);
   assert.equal(fetchMock.mock.calls.length, 0);
   assert.match(logged, /\[contact-honeypot\]/);
   for (const secret of secrets) {
@@ -179,6 +192,7 @@ test("honeypot is a quiet success with no mail and no form-field log", async () 
 
 test("a hung Resend call fails as a send failure without hanging", { timeout: 2000 }, async () => {
   process.env.RESEND_API_KEY = "re_test_key";
+  configureInbox();
   process.env.RESEND_TIMEOUT_MS = "40";
   stubFetch((_url, init) => {
     const signal = init?.signal;
@@ -209,6 +223,7 @@ test("a hung Resend call fails as a send failure without hanging", { timeout: 20
 
 test("successful send without a visitor email is ok", async () => {
   process.env.RESEND_API_KEY = "re_test_key";
+  configureInbox();
   const fetchMock = stubFetch(async () => new Response(JSON.stringify({ id: "email_lead" }), { status: 200 }));
 
   const res = await POST(leadRequest({ email: "" }));
@@ -216,5 +231,38 @@ test("successful send without a visitor email is ok", async () => {
 
   assert.equal(res.ok, true);
   assert.equal(body.ok, true);
+  assert.equal("discarded" in body, false);
   assert.equal(fetchMock.mock.calls.length, 1);
 });
+
+test("lead email goes to CONTACT_TO and replies go to the visitor", async () => {
+  process.env.RESEND_API_KEY = "re_test_key";
+  configureInbox();
+  const fetchMock = stubFetch(async () => new Response(JSON.stringify({ id: "email_lead" }), { status: 200 }));
+
+  const res = await POST(leadRequest({ email: "" }));
+  const sent = JSON.parse(fetchMock.mock.calls[0].arguments[1].body);
+
+  assert.equal(res.status, 200);
+  assert.deepEqual(sent.to, ["inbox@example.com"]);
+  assert.equal(sent.from, "Graham's Wash <sender@example.com>");
+  assert.equal("reply_to" in sent, false);
+});
+
+for (const key of ["CONTACT_TO", "RESEND_FROM"]) {
+  test(`missing ${key} is an error and sends nothing`, async () => {
+    process.env.RESEND_API_KEY = "re_test_key";
+    configureInbox();
+    delete process.env[key];
+    const fetchMock = stubFetch(async () => {
+      throw new Error(`fetch must not run when ${key} is missing`);
+    });
+
+    const res = await POST(leadRequest());
+    const body = await res.json();
+
+    assert.equal(res.status, 502);
+    assert.notEqual(body.ok, true);
+    assert.equal(fetchMock.mock.calls.length, 0);
+  });
+}

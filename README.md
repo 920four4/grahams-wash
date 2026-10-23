@@ -29,8 +29,10 @@ Form posts to `/api/contact`. The page shows success only after Resend accepts t
 cp .env.example .env.local
 # RESEND_API_KEY=re_...
 # RESEND_FROM="Graham's Wash <hello@yourdomain.com>"
-# CONTACT_TO=service@grahamswash.com
+# CONTACT_TO=graham-inbox@example.com
 ```
+
+`RESEND_FROM` and `CONTACT_TO` are required. Graham's inbox is not in the code, so it can't show up on the site. The form is the only public contact; the site shows no email address and no phone number.
 
 ## Deploy
 

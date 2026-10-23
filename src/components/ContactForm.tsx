@@ -80,21 +80,25 @@ export function ContactForm({ defaultService }: { defaultService?: string }) {
       });
       const data = (await res.json().catch(() => ({}))) as {
         ok?: boolean;
+        discarded?: boolean;
         error?: string;
         notice?: string;
       };
       if (!res.ok || data.ok !== true) {
         throw new Error(data.error || "Something went wrong. Please try again in a moment.");
       }
-      track("generate_lead", {
-        form_id: "contact",
-        form_name: "quote_request",
-        service: form.service,
-        preferred_contact: form.preferredContact,
-        city: form.city,
-        value: 1,
-        currency: "USD",
-      });
+      // A honeypot hit is answered as success but nothing was sent, so it is not a lead.
+      if (!data.discarded) {
+        track("generate_lead", {
+          form_id: "contact",
+          form_name: "quote_request",
+          service: form.service,
+          preferred_contact: form.preferredContact,
+          city: form.city,
+          value: 1,
+          currency: "USD",
+        });
+      }
       setNotice(typeof data.notice === "string" ? data.notice.trim() : "");
       setStatus("success");
       setForm(initial);

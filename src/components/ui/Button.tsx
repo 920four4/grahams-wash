@@ -55,7 +55,7 @@ export function Button({
 
   if ("href" in props && props.href) {
     const { href, external, ...rest } = props as ButtonAsLink;
-    if (external || href.startsWith("tel:") || href.startsWith("mailto:") || href.startsWith("sms:")) {
+    if (external) {
       return (
         <a href={href} className={classes} {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}>
           {icon}

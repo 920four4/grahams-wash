@@ -52,7 +52,6 @@ export function LocalBusinessJsonLd({
         legalName: site.legalName,
         slogan: site.tagline,
         url: site.url,
-        email: site.email,
         image: [
           LOGO,
           `${site.url}/images/hero/neighborhood.webp`,
@@ -90,7 +89,6 @@ export function LocalBusinessJsonLd({
         contactPoint: {
           "@type": "ContactPoint",
           contactType: "customer service",
-          email: site.email,
           url: `${site.url}/contact`,
           availableLanguage: "English",
         },
